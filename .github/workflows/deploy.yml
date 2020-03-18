@@ -7,7 +7,6 @@ on:
 
 jobs:
   build-and-deploy:
-    if: startsWith(github.head_ref, 'dependabot/') == false
     runs-on: ubuntu-latest
 
     steps:
