@@ -69,6 +69,10 @@
   "ember": {
     "edition": "octane"
   },
+  "volta": {
+    "node": "12.16.1",
+    "yarn": "1.21.1"
+  },
   "ember-addon": {
     "configPath": "tests/dummy/config"
   }
