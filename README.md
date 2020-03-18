@@ -9,6 +9,8 @@ content and CSS calcualte the best possible layout, based on the basic rules the
 
 Based on [every-layout.dev](https://every-layout.dev/).
 
+![Test & Lint](https://github.com/fabscale/ember-layout-components/workflows/Test%20&%20Lint/badge.svg)
+
 ## Compatibility
 
 - Ember.js v3.13 or above (Requires Octane!)

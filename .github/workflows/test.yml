@@ -16,7 +16,7 @@ jobs:
     - name: Setup dummy .env file
       run: touch .env
     - name: Run tests
-      run: yarn test
+      run: yarn test:ember
     - name: Lint JS
       run: yarn lint:js
     - name: Lint HBS
