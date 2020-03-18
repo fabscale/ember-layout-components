@@ -40,7 +40,8 @@
           It can take a bit to get used to this layouting approach, but it really pays off once you get it. Ideally, you
           should avoid breaking out of these rules wherever possible.
           If you find yourself constantly overwriting the layouts, chances are your design is not consistent enough.
-          Feel free to nest the layout components as deeply as needed - they are all template-only components and should be reasonably performant.
+          Feel free to nest the layout components as deeply as needed - they are all template-only components and should
+          be reasonably performant.
         </p>
       </SectionItem>
     </Layout::VerticalStack>
@@ -124,6 +125,11 @@
           <CodeInline>1rem</CodeInline>
           ).
           The size options are quarter/half/double of the gap size.
+          The separator color can be customized with
+          <CodeInline>--layout-vertical-stack-separator-color</CodeInline>
+          (default:
+          <CodeInline>grey</CodeInline>
+          ).
         </p>
       </SectionItem>
 
@@ -141,12 +147,22 @@
               @options={{array "xsmall" "small" "large"}}
             />
           </Item>
+
+          <Item>
+            <ConfigOption
+              @label="@withSeparator"
+              @value={{this.verticalStackWithSeparator}}
+              @onChange={{fn this.updateProperty 'verticalStackWithSeparator'}}
+              @options={{array true}}
+            />
+          </Item>
         </Layout::Cluster>
       </SectionItem>
 
       <SectionItem>
         <Layout::VerticalStack
           @size={{this.verticalStackSize}}
+          @withSeparator={{this.verticalStackWithSeparator}}
           as |Item|
         >
           <Item>

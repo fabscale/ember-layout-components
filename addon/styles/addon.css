@@ -2,6 +2,7 @@
   --layout-wrapper-width: 60rem;
   --layout-wrapper-spacing: 2rem;
   --layout-vertical-stack-gap: 1rem;
+  --layout-vertical-stack-separator-color: grey;
   --layout-cluster-gap: 1rem;
   --layout-grid-gap: 2rem;
   --layout-grid-width: 20rem;
@@ -46,6 +47,11 @@
 
 .layout-vertical-stack--large {
   --gap-size: calc(var(--layout-vertical-stack-gap) * 2);
+}
+
+.layout-vertical-stack--with-separator > .layout-vertical-stack-item:not(:last-child) {
+  padding-bottom: var(--gap-size);
+  border-bottom: 1px solid var(--layout-vertical-stack-separator-color);
 }
 
 /* Cluster */
