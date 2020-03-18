@@ -3,6 +3,8 @@ ember-layout-components
 
 [Short description of the addon.]
 
+Based on [every-layout.dev](https://every-layout.dev/).
+
 
 Compatibility
 ------------------------------------------------------------------------------
