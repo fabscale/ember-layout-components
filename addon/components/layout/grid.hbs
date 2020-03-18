@@ -1,0 +1,10 @@
+<div
+  class={{layout-join-classes
+    "layout-grid"
+    (layout-class-if @size "small" "layout-grid--small")
+    (layout-class-if @size "large" "layout-grid--large")
+  }}
+  ...attributes
+>
+  {{yield (component 'layout/grid/item')}}
+</div>

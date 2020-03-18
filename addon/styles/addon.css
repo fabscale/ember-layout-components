@@ -1,0 +1,113 @@
+:root {
+  --layout-wrapper-width: 60rem;
+  --layout-wrapper-spacing: 2rem;
+  --layout-vertical-stack-gap: 1rem;
+  --layout-cluster-gap: 1rem;
+  --layout-grid-gap: 2rem;
+  --layout-grid-width: 20rem;
+}
+
+/* Wrapper */
+.layout-wrapper {
+  margin: 0 auto;
+  padding: 0 var(--layout-wrapper-spacing);
+
+  max-width: calc(
+    var(--layout-wrapper-width) + var(--layout-wrapper-spacing) * 2
+  );
+}
+
+/* Center */
+.layout-center {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Vertical Stack */
+.layout-vertical-stack {
+  --gap-size: var(--layout-vertical-stack-gap);
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-vertical-stack-item:not(:last-child) {
+  margin-bottom: var(--gap-size);
+}
+
+.layout-vertical-stack--xsmall {
+  --gap-size: calc(var(--layout-vertical-stack-gap) * 0.25);
+}
+
+.layout-vertical-stack--small {
+  --gap-size: calc(var(--layout-vertical-stack-gap) * 0.5);
+}
+
+.layout-vertical-stack--large {
+  --gap-size: calc(var(--layout-vertical-stack-gap) * 2);
+}
+
+/* Cluster */
+.layout-cluster {
+  --gap-size: var(--layout-cluster-gap);
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: calc(var(--gap-size) / -2) calc(var(--gap-size) * -1);
+
+  /* ↓ Suppress horizontal scrolling caused by the negative margin in some circumstances */
+  overflow: hidden;
+}
+
+.layout-cluster-item {
+  margin: calc(var(--gap-size) / 2) var(--gap-size);
+}
+
+.layout-cluster--right {
+  justify-content: flex-end;
+}
+
+.layout-cluster--spaced {
+  justify-content: space-between;
+}
+
+.layout-cluster--xsmall {
+  --gap-size: calc(var(--layout-cluster-gap) * 0.25);
+}
+
+.layout-cluster--small {
+  --gap-size: calc(var(--layout-cluster-gap) * 0.5);
+}
+
+.layout-cluster--large {
+  --gap-size: calc(var(--layout-cluster-gap) * 2);
+}
+
+@media all and (max-width: 420px) {
+  .layout-cluster--full-width-on-mobile {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .layout-cluster--full-width-on-mobile > .layout-cluster-item {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Grid */
+.layout-grid {
+  display: grid;
+  --gap-size: var(--layout-grid-gap);
+  --grid-size: var(--layout-grid-width);
+
+  grid-gap: var(--gap-size);
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-size), 1fr));
+}
+
+.layout-grid-item {
+  min-width: 0;
+}

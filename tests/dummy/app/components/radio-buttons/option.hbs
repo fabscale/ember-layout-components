@@ -1,0 +1,20 @@
+<input
+  type="radio"
+  name={{@groupId}}
+  id={{@id}}
+  value={{@id}}
+  checked={{@isSelected}}
+  {{on "change" (fn @onChange @value)}}
+  class="f-radio-button"
+  data-test-radio-button={{@value}}
+  ...attributes
+>
+
+<label
+  for={{@id}}
+  class="f-radio-button__label-wrapper {{@labelClass}}"
+  data-test-radio-button-label={{@value}}
+>
+    {{~@label~}}
+    {{~yield~}}
+</label>

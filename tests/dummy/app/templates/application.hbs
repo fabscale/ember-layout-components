@@ -1,3 +1,188 @@
-<h2 id="title">Welcome to Ember</h2>
+<h1 id="title">ember-layout-components</h1>
 
-{{outlet}}
+<p>
+
+</p>
+
+<h2>
+  Support / Compatibility
+</h2>
+
+<p>
+  All layout components use CSS Properties. If you need to support IE11, you could use something like
+  <a href="https://github.com/MadLittleMods/postcss-css-variables">postcss-css-variables</a> to get a gracious fallback.
+</p>
+
+<Layout::VerticalStack @size="large" as |Section|>
+  <Section>
+    <h2>
+      Center
+    </h2>
+
+    <p>
+      Horizontally center content at it's intrinsic size.
+    </p>
+
+    <Layout::Center>
+      <DemoItem/>
+    </Layout::Center>
+  </Section>
+
+  <Section>
+    <h2>
+      Wrapper
+    </h2>
+
+    <p>
+      A wrapper that will reach the maximum wrapper size (or smaller), keeping horizontal spacing at any time.
+      Can be customized with <code>--layout-wrapper-width</code> (default: <code>60rem</code>) and
+      <code>--layout-wrapper-spacing</code> (default: <code>2rem</code>).
+    </p>
+
+    <Layout::Wrapper>
+      <DemoItem/>
+    </Layout::Wrapper>
+  </Section>
+
+  <Section>
+    <h2>
+      Vertical Stack
+    </h2>
+
+    <p>
+      Place items one below each other, with equal spacing between them.
+      Can be customized with <code>--layout-vertical-stack-gap</code> (default: <code>1rem</code>).
+      The size options are quarter/half/double of the gap size.
+    </p>
+
+    <Layout::VerticalStack as |InnerItem|>
+      <InnerItem>
+        <Layout::Cluster @fullWidthOnMobile={{true}} as |Item|>
+          <Item>
+            <ConfigOption
+              @label="size"
+              @value={{this.verticalStackSize}}
+              @onChange={{fn this.updateProperty 'verticalStackSize'}}
+              @options={{array "xsmall" "small" "large"}}
+            />
+          </Item>
+        </Layout::Cluster>
+      </InnerItem>
+
+      <InnerItem>
+        <Layout::VerticalStack
+          @size={{this.verticalStackSize}}
+          as |Item|
+        >
+          <Item>
+            <DemoItem/>
+          </Item>
+          <Item>
+            <DemoItem/>
+          </Item>
+          <Item>
+            <DemoItem/>
+          </Item>
+        </Layout::VerticalStack>
+      </InnerItem>
+    </Layout::VerticalStack>
+  </Section>
+
+  <Section>
+    <h2>
+      Cluster
+    </h2>
+
+    <p>
+      Lay out items horizontally, but breaking the line if necessary. Each item uses its intrinsic size.
+      There is equal spacing horizontally and vertically between them.
+      Can be customized with <code>--layout-cluster-gap</code> (default: <code>1rem</code>).
+      The size options are quarter/half/double the gap size.
+      The position can be used to align stuff to the right, or space it evenly.
+      The <code>fullWidthOnMobile</code> option will ensure all items get the full width under 420px.
+    </p>
+
+    <Layout::VerticalStack as |InnerItem|>
+      <InnerItem>
+        <Layout::Cluster @fullWidthOnMobile={{true}} as |Item|>
+          <Item>
+            <ConfigOption
+              @label="size"
+              @value={{this.clusterSize}}
+              @onChange={{fn this.updateProperty 'clusterSize'}}
+              @options={{array "xsmall" "small" "large"}}
+            />
+          </Item>
+
+          <Item>
+            <ConfigOption
+              @label="position"
+              @value={{this.clusterPosition}}
+              @onChange={{fn this.updateProperty 'clusterPosition'}}
+              @options={{array "right" "spaced"}}
+            />
+          </Item>
+
+          <Item>
+            <ConfigOption
+              @label="fullWidthOnMobile"
+              @value={{this.clusterFullWidthOnMobile}}
+              @onChange={{fn this.updateProperty 'clusterFullWidthOnMobile'}}
+              @options={{array true}}
+            />
+          </Item>
+        </Layout::Cluster>
+      </InnerItem>
+
+      <InnerItem>
+        <Layout::Cluster
+          @size={{this.clusterSize}}
+          @position={{this.clusterPosition}}
+          @fullWidthOnMobile={{this.clusterFullWidthOnMobile}}
+          as |Item|
+        >
+          <Item>
+            <DemoItem/>
+          </Item>
+          <Item>
+            <DemoItem/>
+          </Item>
+          <Item>
+            <DemoItem/>
+          </Item>
+          <Item>
+            <DemoItem/>
+          </Item>
+        </Layout::Cluster>
+      </InnerItem>
+    </Layout::VerticalStack>
+  </Section>
+
+  <Section>
+    <h2>
+      Grid
+    </h2>
+
+    <p>
+      Lay out items with equal size. Grid item width is calculated based on available width and a given min-width.
+      Can be customized with <code>--layout-grid-gap</code> (default: <code>2rem</code>) and
+      <code>--layout-grid-width</code> (default:<code>20rem</code>).
+      Note: When using larger widths, make sure to add a media query to drop to <code>grid-template-columns: 1fr</code> below that size.
+    </p>
+
+    <Layout::Grid as |Item|>
+      <Item>
+        <DemoItem/>
+      </Item>
+      <Item>
+        <DemoItem/>
+      </Item>
+      <Item>
+        <DemoItem/>
+      </Item>
+      <Item>
+        <DemoItem/>
+      </Item>
+    </Layout::Grid>
+  </Section>
+</Layout::VerticalStack>

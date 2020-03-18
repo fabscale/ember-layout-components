@@ -1,0 +1,21 @@
+<div
+  class={{@containerClass}}
+>
+  <Layout::Cluster as |Item|>
+    {{#each @items key='value' as |item index|}}
+      <Item>
+        <RadioButtons::Option
+          @groupId={{this.groupId}}
+          @id="{{this.groupId}}-{{index}}"
+          @value={{item.value}}
+          @label={{item.label}}
+          @isSelected={{eq item.value @value}}
+          @labelClass={{@labelClass}}
+          @onChange={{@onChange}}
+        >
+          {{yield item index}}
+        </RadioButtons::Option>
+      </Item>
+    {{/each}}
+  </Layout::Cluster>
+</div>

@@ -1,0 +1,43 @@
+name: Test & Lint
+
+on: [push]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: volta-cli/action@v1
+    - uses: mydea/actions-ember-testing@v2
+    - name: Install dependencies
+      run: yarn install
+    - name: Setup dummy .env file
+      run: touch .env
+    - name: Run tests
+      run: yarn test
+    - name: Lint JS
+      run: yarn lint:js
+    - name: Lint HBS
+      run: yarn lint:hbs
+
+  test-matrix:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # Keep this in sync with config/ember-try.js
+        ember: [ember-3.13, ember-release, ember-beta, ember-canary]
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: volta-cli/action@v1
+      - uses: mydea/actions-ember-testing@v2
+      - name: Install dependencies
+        run: yarn install
+      - name: Setup dummy .env file
+        run: touch .env
+      - name: Run tests
+        run: yarn test:one ${{ matrix.ember }}

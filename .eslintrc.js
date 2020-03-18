@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   root: true,
   parser: 'babel-eslint',
@@ -10,19 +8,36 @@ module.exports = {
       legacyDecorators: true
     }
   },
-  plugins: [
-    'ember'
-  ],
+
+  plugins: ['ember', 'ember-es6-class'],
+
   extends: [
     'eslint:recommended',
-    'plugin:ember/recommended'
+    'plugin:ember/recommended',
+    'plugin:prettier/recommended'
   ],
+
   env: {
     browser: true
   },
+
   rules: {
-    'ember/no-jquery': 'error'
+    'ember/no-deeply-nested-dependent-keys-with-each': 2,
+    'ember/no-ember-super-in-es-classes': 2,
+    'ember-es6-class/no-object-extend': 2,
+    'no-console': 2,
+    'ember/no-invalid-debug-function-arguments': 2,
+    'ember/require-return-from-computed': 2,
+    'ember/no-new-mixins': 2,
+    'ember/no-jquery': 2,
+    'ember/route-path-style': 2,
+    'lines-between-class-members': [
+      'error',
+      'always',
+      { exceptAfterSingleLine: true }
+    ]
   },
+
   overrides: [
     // node files
     {
@@ -30,6 +45,7 @@ module.exports = {
         '.eslintrc.js',
         '.template-lintrc.js',
         'ember-cli-build.js',
+        '.ember-cli.js',
         'index.js',
         'testem.js',
         'blueprints/*/index.js',
@@ -50,9 +66,16 @@ module.exports = {
         node: true
       },
       plugins: ['node'],
-      rules: Object.assign({}, require('eslint-plugin-node').configs.recommended.rules, {
-        // add your custom rules and overrides for node files here
-      })
+      rules: Object.assign(
+        {},
+        require('eslint-plugin-node').configs.recommended.rules
+      )
+    },
+    {
+      files: ['tests/**/*.js'],
+      rules: {
+        'ember/avoid-leaking-state-in-ember-objects': 'off'
+      }
     }
   ]
 };

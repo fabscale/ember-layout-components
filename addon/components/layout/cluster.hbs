@@ -1,0 +1,16 @@
+<div
+  class={{layout-join-classes
+    'layout-cluster'
+    (layout-class-if @position "right" "layout-cluster--right")
+    (layout-class-if @position "spaced" "layout-cluster--spaced")
+    (layout-class-if @size "xsmall" "layout-cluster--xsmall")
+    (layout-class-if @size "small" "layout-cluster--small")
+    (layout-class-if @size "large" "layout-cluster--large")
+    (layout-class-if @fullWidthOnMobile true "layout-cluster--full-width-on-mobile")
+  }}
+  ...attributes
+>
+  {{yield
+    (component 'layout/cluster/item')
+  }}
+</div>
