@@ -1,6 +1,9 @@
 name: Test & Lint
 
-on: [push]
+on:
+  push:
+    branches:
+      - '**'
 
 jobs:
   test:
