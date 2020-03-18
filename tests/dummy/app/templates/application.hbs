@@ -244,6 +244,70 @@
           </Item>
         </Layout::Cluster>
       </SectionItem>
+
+      <SectionItem>
+        <h3>
+          Float items to the right
+        </h3>
+      </SectionItem>
+
+      <SectionItem>
+        <CodeBlock @code={{this.clusterCodeRight}} @language="handlebars"/>
+      </SectionItem>
+
+      <SectionItem>
+        <Layout::Cluster
+          @size={{this.clusterSize}}
+          @position={{this.clusterPosition}}
+          @fullWidthOnMobile={{this.clusterFullWidthOnMobile}}
+          as |Item|
+        >
+          <Item>
+            <DemoItem/>
+          </Item>
+          <Item>
+            <DemoItem/>
+          </Item>
+          <Item>
+            <DemoItem/>
+          </Item>
+          <Item @float="right">
+            <DemoItem/>
+          </Item>
+        </Layout::Cluster>
+      </SectionItem>
+
+      <SectionItem>
+        <h3>
+          Float items to the left
+        </h3>
+      </SectionItem>
+
+      <SectionItem>
+        <CodeBlock @code={{this.clusterCodeLeft}} @language="handlebars"/>
+      </SectionItem>
+
+      <SectionItem>
+        <Layout::Cluster
+          @size={{this.clusterSize}}
+          @position={{this.clusterPosition}}
+          @fullWidthOnMobile={{this.clusterFullWidthOnMobile}}
+          as |Item|
+        >
+          <Item>
+            <DemoItem/>
+          </Item>
+          <Item @float="left">
+            <DemoItem/>
+          </Item>
+          <Item>
+            <DemoItem/>
+          </Item>
+          <Item>
+            <DemoItem/>
+          </Item>
+        </Layout::Cluster>
+      </SectionItem>
     </Layout::VerticalStack>
   </Section>
 

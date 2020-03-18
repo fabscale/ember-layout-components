@@ -1,6 +1,6 @@
-import Controller from '@ember/controller';
-import { action } from '@ember/object';
-import { tracked } from '@glimmer/tracking';
+import Controller from "@ember/controller";
+import { action } from "@ember/object";
+import { tracked } from "@glimmer/tracking";
 
 export default class ApplicationController extends Controller {
   @tracked clusterSize;
@@ -27,6 +27,20 @@ export default class ApplicationController extends Controller {
   <Item>First item</Item>
   <Item>Second item</Item>
   <Item>Third item</Item>
+</Layout::Cluster>`;
+
+  clusterCodeLeft = `<Layout::Cluster as |Item|>
+  <Item>First item</Item>
+  <Item @float="left">Second item</Item>
+  <Item>Third item</Item>
+  <Item>Fourth item</Item>
+</Layout::Cluster>`;
+
+  clusterCodeRight = `<Layout::Cluster as |Item|>
+  <Item>First item</Item>
+  <Item>Second item</Item>
+  <Item>Third item</Item>
+  <Item @float="right">Fourth item</Item>
 </Layout::Cluster>`;
 
   gridCode = `<Layout::Grid as |Item|>

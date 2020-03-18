@@ -85,6 +85,15 @@
   --gap-size: calc(var(--layout-cluster-gap) * 2);
 }
 
+/* "Floating" is achieved via margin: auto */
+.layout-cluster-item--left {
+  margin-right: auto;
+}
+
+.layout-cluster-item--right {
+  margin-left: auto;
+}
+
 @media all and (max-width: 420px) {
   .layout-cluster--full-width-on-mobile {
     margin-left: 0;

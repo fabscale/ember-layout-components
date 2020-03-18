@@ -1,1 +1,8 @@
-<div class="layout-cluster-item" ...attributes>{{yield}}</div>
+<div
+  class={{layout-join-classes
+      'layout-cluster-item'
+      (layout-class-if @float "right" "layout-cluster-item--right")
+      (layout-class-if @float "left" "layout-cluster-item--left")
+    }}
+  ...attributes
+>{{yield}}</div>

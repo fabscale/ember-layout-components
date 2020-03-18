@@ -4,7 +4,10 @@ const TEXTS = [
   'one text',
   'another text',
   'try this',
-  'something nice and a bit longer'
+  'what about this?',
+  '"Lorem ipsum" is boring',
+  'something nice and a bit longer',
+  'this is considerably longer. But the UI should also work with more unexpected content, so here we are!'
 ];
 
 export default class DemoItem extends Component {
@@ -15,7 +18,7 @@ export default class DemoItem extends Component {
     this._generateContent(size);
   }
 
-  _generateContent(size) {
+  _generateContent() {
     this.content = TEXTS[Math.floor(Math.random() * TEXTS.length)];
   }
 }
