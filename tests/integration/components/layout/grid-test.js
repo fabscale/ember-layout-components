@@ -7,20 +7,27 @@ module('Integration | Component | layout/grid', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
-    await render(hbs`<Layout::Grid />`);
-
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
     await render(hbs`
-      <Layout::Grid>
-        template block text
+      <Layout::Grid as |Item|>
+        <Item>A</Item>
+        <Item>B</Item>
       </Layout::Grid>
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom('.layout-grid').exists();
+    assert.dom('.layout-grid-item').exists({ count: 2 });
+    assert.dom('.layout-grid-item:nth-child(1)').hasText('A');
+    assert.dom('.layout-grid-item:nth-child(2)').hasText('B');
+  });
+
+  test('it allows to add HTML attributes', async function(assert) {
+    await render(hbs`
+      <Layout::Grid class="my-class" as |Item|>
+      <Item class="item-class"></Item>
+      </Layout::Grid>
+    `);
+
+    assert.dom('.layout-grid').hasClass('my-class');
+    assert.dom('.layout-grid-item').hasClass('item-class');
   });
 });

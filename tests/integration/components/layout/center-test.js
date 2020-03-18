@@ -7,20 +7,23 @@ module('Integration | Component | layout/center', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
-    await render(hbs`<Layout::Center />`);
-
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
     await render(hbs`
       <Layout::Center>
         template block text
       </Layout::Center>
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom('.layout-center').exists();
+  });
+
+  test('it allows to add HTML attributes', async function(assert) {
+    await render(hbs`
+      <Layout::Center class="my-class">
+        template block text
+      </Layout::Center>
+    `);
+
+    assert.dom(this.element).hasText('template block text');
+    assert.dom('.layout-center').hasClass('my-class');
   });
 });

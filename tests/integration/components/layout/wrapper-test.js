@@ -7,20 +7,23 @@ module('Integration | Component | layout/wrapper', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
-    await render(hbs`<Layout::Wrapper />`);
-
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
     await render(hbs`
       <Layout::Wrapper>
         template block text
       </Layout::Wrapper>
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom(this.element).hasText('template block text');
+    assert.dom('.layout-wrapper').exists();
+  });
+
+  test('it allows to add HTML attributes', async function(assert) {
+    await render(hbs`
+      <Layout::Wrapper class="my-class">
+        template block text
+      </Layout::Wrapper>
+    `);
+
+    assert.dom('.layout-wrapper').hasClass('my-class');
   });
 });
