@@ -9,7 +9,7 @@
           @id="{{this.groupId}}-{{index}}"
           @value={{item.value}}
           @label={{item.label}}
-          @isSelected={{eq item.value @value}}
+          @isSelected={{layout-class-if item.value @value true}}
           @labelClass={{@labelClass}}
           @onChange={{@onChange}}
         >
