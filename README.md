@@ -39,6 +39,8 @@ ember install ember-layout-components
 </Layout::Wrapper>
 ```
 
+For more details, see the [documentation](https://fabscale.github.io/ember-layout-components/).
+
 ## Available layout components
 
 * `<Layout::Wrapper>`

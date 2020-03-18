@@ -5,7 +5,7 @@
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": "https://github.com/fabscale/ember-layout-components",
   "license": "MIT",
   "author": "",
   "directories": {
@@ -76,6 +76,7 @@
     "yarn": "1.21.1"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "demoURL": "https://fabscale.github.io/ember-layout-components/"
   }
 }
