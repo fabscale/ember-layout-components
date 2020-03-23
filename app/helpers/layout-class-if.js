@@ -1,4 +1,4 @@
 export {
   default,
-  layoutClassIf
+  layoutClassIf,
 } from 'ember-layout-components/helpers/layout-class-if';

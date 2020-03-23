@@ -7,7 +7,7 @@ const TEXTS = [
   'what about this?',
   '"Lorem ipsum" is boring',
   'something nice and a bit longer',
-  'this is considerably longer. But the UI should also work with more unexpected content, so here we are!'
+  'this is considerably longer. But the UI should also work with more unexpected content, so here we are!',
 ];
 
 export default class DemoItem extends Component {

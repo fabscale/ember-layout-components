@@ -3,10 +3,10 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | layout/vertical-stack', function(hooks) {
+module('Integration | Component | layout/vertical-stack', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
+  test('it renders', async function (assert) {
     await render(hbs`
       <Layout::VerticalStack as |Item|>
         <Item>A</Item>
@@ -20,7 +20,7 @@ module('Integration | Component | layout/vertical-stack', function(hooks) {
     assert.dom('.layout-vertical-stack-item:nth-child(2)').hasText('B');
   });
 
-  test('it allows to add HTML attributes', async function(assert) {
+  test('it allows to add HTML attributes', async function (assert) {
     await render(hbs`
       <Layout::VerticalStack class="my-class" as |Item|>
       <Item class="item-class"></Item>
@@ -31,13 +31,13 @@ module('Integration | Component | layout/vertical-stack', function(hooks) {
     assert.dom('.layout-vertical-stack-item').hasClass('item-class');
   });
 
-  module('@size', function() {
+  module('@size', function () {
     [
       { size: 'xsmall', className: 'layout-vertical-stack--xsmall' },
       { size: 'small', className: 'layout-vertical-stack--small' },
-      { size: 'large', className: 'layout-vertical-stack--large' }
+      { size: 'large', className: 'layout-vertical-stack--large' },
     ].forEach((scenario) => {
-      test(`it works with ${scenario.size}`, async function(assert) {
+      test(`it works with ${scenario.size}`, async function (assert) {
         this.size = scenario.size;
 
         await render(hbs`
@@ -50,14 +50,14 @@ module('Integration | Component | layout/vertical-stack', function(hooks) {
     });
   });
 
-  module('@withSeparator', function() {
+  module('@withSeparator', function () {
     [
       {
         withSeparator: true,
-        className: 'layout-vertical-stack--with-separator'
-      }
+        className: 'layout-vertical-stack--with-separator',
+      },
     ].forEach((scenario) => {
-      test(`it works with ${scenario.withSeparator}`, async function(assert) {
+      test(`it works with ${scenario.withSeparator}`, async function (assert) {
         this.withSeparator = scenario.withSeparator;
 
         await render(hbs`

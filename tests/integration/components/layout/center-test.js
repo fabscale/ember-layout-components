@@ -3,10 +3,10 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | layout/center', function(hooks) {
+module('Integration | Component | layout/center', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
+  test('it renders', async function (assert) {
     await render(hbs`
       <Layout::Center>
         template block text
@@ -16,7 +16,7 @@ module('Integration | Component | layout/center', function(hooks) {
     assert.dom('.layout-center').exists();
   });
 
-  test('it allows to add HTML attributes', async function(assert) {
+  test('it allows to add HTML attributes', async function (assert) {
     await render(hbs`
       <Layout::Center class="my-class">
         template block text
