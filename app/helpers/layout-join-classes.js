@@ -1,4 +1,4 @@
 export {
   default,
-  layoutJoinClasses
+  layoutJoinClasses,
 } from 'ember-layout-components/helpers/layout-join-classes';

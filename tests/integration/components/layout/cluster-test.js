@@ -3,10 +3,10 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | layout/cluster', function(hooks) {
+module('Integration | Component | layout/cluster', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
+  test('it renders', async function (assert) {
     await render(hbs`
       <Layout::Cluster as |Item|>
         <Item>A</Item>
@@ -20,7 +20,7 @@ module('Integration | Component | layout/cluster', function(hooks) {
     assert.dom('.layout-cluster-item:nth-child(2)').hasText('B');
   });
 
-  test('it allows to add HTML attributes', async function(assert) {
+  test('it allows to add HTML attributes', async function (assert) {
     await render(hbs`
       <Layout::Cluster class="my-class" as |Item|>
       <Item class="item-class"></Item>
@@ -31,7 +31,7 @@ module('Integration | Component | layout/cluster', function(hooks) {
     assert.dom('.layout-cluster-item').hasClass('item-class');
   });
 
-  test('float works', async function(assert) {
+  test('float works', async function (assert) {
     await render(hbs`
       <Layout::Cluster as |Item|>
         <Item @float="left">A</Item>
@@ -47,13 +47,13 @@ module('Integration | Component | layout/cluster', function(hooks) {
       .hasClass('layout-cluster-item--right');
   });
 
-  module('@size', function() {
+  module('@size', function () {
     [
       { size: 'xsmall', className: 'layout-cluster--xsmall' },
       { size: 'small', className: 'layout-cluster--small' },
-      { size: 'large', className: 'layout-cluster--large' }
+      { size: 'large', className: 'layout-cluster--large' },
     ].forEach((scenario) => {
-      test(`it works with ${scenario.size}`, async function(assert) {
+      test(`it works with ${scenario.size}`, async function (assert) {
         this.size = scenario.size;
 
         await render(hbs`
@@ -66,12 +66,12 @@ module('Integration | Component | layout/cluster', function(hooks) {
     });
   });
 
-  module('@position', function() {
+  module('@position', function () {
     [
       { position: 'right', className: 'layout-cluster--right' },
-      { position: 'spaced', className: 'layout-cluster--spaced' }
+      { position: 'spaced', className: 'layout-cluster--spaced' },
     ].forEach((scenario) => {
-      test(`it works with ${scenario.position}`, async function(assert) {
+      test(`it works with ${scenario.position}`, async function (assert) {
         this.position = scenario.position;
 
         await render(hbs`
@@ -84,14 +84,14 @@ module('Integration | Component | layout/cluster', function(hooks) {
     });
   });
 
-  module('@fullWidthOnMobile', function() {
+  module('@fullWidthOnMobile', function () {
     [
       {
         fullWidthOnMobile: true,
-        className: 'layout-cluster--full-width-on-mobile'
-      }
+        className: 'layout-cluster--full-width-on-mobile',
+      },
     ].forEach((scenario) => {
-      test(`it works with ${scenario.fullWidthOnMobile}`, async function(assert) {
+      test(`it works with ${scenario.fullWidthOnMobile}`, async function (assert) {
         this.fullWidthOnMobile = scenario.fullWidthOnMobile;
 
         await render(hbs`

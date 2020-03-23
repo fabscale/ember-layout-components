@@ -3,10 +3,10 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | layout/grid', function(hooks) {
+module('Integration | Component | layout/grid', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
+  test('it renders', async function (assert) {
     await render(hbs`
       <Layout::Grid as |Item|>
         <Item>A</Item>
@@ -20,7 +20,7 @@ module('Integration | Component | layout/grid', function(hooks) {
     assert.dom('.layout-grid-item:nth-child(2)').hasText('B');
   });
 
-  test('it allows to add HTML attributes', async function(assert) {
+  test('it allows to add HTML attributes', async function (assert) {
     await render(hbs`
       <Layout::Grid class="my-class" as |Item|>
       <Item class="item-class"></Item>
