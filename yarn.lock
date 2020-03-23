@@ -5165,9 +5165,9 @@ ember-maybe-import-regenerator@~0.1.6:
     regenerator-runtime "^0.9.5"
 
 ember-prism@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/ember-prism/-/ember-prism-0.6.0.tgz#701f631e9581f8916f27cae50785c5440e8f7ea7"
-  integrity sha512-YLOF85GD+OEtbU0V+oLyTfK/CMUjOXaaIfL+CxMSmSG4Ob3I/riOETAt9023mpMgUrgnq7oHX47UmZpSTz2bMA==
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/ember-prism/-/ember-prism-0.6.1.tgz#666a0ef19439f0d1763534b8049a35209ab612d0"
+  integrity sha512-owdRVIaL8K66SlB+NtV/N72zi1ZrcBnnWAn9FlxcxCz7qj1mESxFKcCC1Dwic4MsXEvmAERgLlL9EM6fTJOddQ==
   dependencies:
     ember-cli-babel "^7.17.2"
     ember-cli-htmlbars "^4.2.2"
