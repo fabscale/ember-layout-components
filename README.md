@@ -13,7 +13,7 @@ Based on [every-layout.dev](https://every-layout.dev/).
 
 ## Compatibility
 
-- Ember.js v3.13 or above (Requires Octane!)
+- Ember.js v3.16 or above
 - Ember CLI v2.13 or above
 - Node.js v10 or above
 
@@ -43,11 +43,11 @@ For more details, see the [documentation](https://fabscale.github.io/ember-layou
 
 ## Available layout components
 
-* `<Layout::Wrapper>`
-* `<Layout::Center>`
-* `<Layout::VerticalStack>`
-* `<Layout::Cluster>`
-* `<Layout::Grid>`
+- `<Layout::Wrapper>`
+- `<Layout::Center>`
+- `<Layout::VerticalStack>`
+- `<Layout::Cluster>`
+- `<Layout::Grid>`
 
 ## Contributing
 
