@@ -1,8 +1,10 @@
-<Layout::VerticalStack @size="large" as |Section|>
+<Layout::VerticalStack @size='large' as |Section|>
   <Section>
     <Layout::VerticalStack as |SectionItem|>
       <SectionItem>
-        <h1 id="title">ember-layout-components</h1>
+        <h1 id='title'>
+          ember-layout-components
+        </h1>
       </SectionItem>
 
       <SectionItem>
@@ -11,7 +13,11 @@
           By using these components, your layout will automatically be flexible and consistent.
           Instead of defining exactly how something should look like at a given viewport, let the intrinsic size of
           content and CSS calcualte the best possible layout, based on the basic rules these layout components define.
-          This addon is heavily inspired by <a href="https://every-layout.dev/">every-layout.dev</a>.
+          This addon is heavily inspired by
+          <a href='https://every-layout.dev/'>
+            every-layout.dev
+          </a>
+          .
         </p>
       </SectionItem>
 
@@ -24,7 +30,10 @@
       <SectionItem>
         <p>
           All layout components use CSS Properties. If you need to support IE11, you could use something like
-          <a href="https://github.com/MadLittleMods/postcss-css-variables">postcss-css-variables</a> to get a gracious
+          <a href='https://github.com/MadLittleMods/postcss-css-variables'>
+            postcss-css-variables
+          </a>
+          to get a gracious
           fallback.
         </p>
       </SectionItem>
@@ -62,12 +71,12 @@
       </SectionItem>
 
       <SectionItem>
-        <CodeBlock @code={{this.centerCode}} @language="handlebars"/>
+        <CodeBlock @code={{this.centerCode}} @language='handlebars' />
       </SectionItem>
 
       <SectionItem>
         <Layout::Center>
-          <DemoItem/>
+          <DemoItem />
         </Layout::Center>
       </SectionItem>
     </Layout::VerticalStack>
@@ -85,24 +94,32 @@
         <p>
           A wrapper that will reach the maximum wrapper size (or smaller), keeping horizontal spacing at any time.
           Can be customized with
-          <CodeInline>--layout-wrapper-width</CodeInline>
+          <CodeInline>
+            --layout-wrapper-width
+          </CodeInline>
           (default:
-          <CodeInline>60rem</CodeInline>
+          <CodeInline>
+            60rem
+          </CodeInline>
           ) and
-          <CodeInline>--layout-wrapper-spacing</CodeInline>
+          <CodeInline>
+            --layout-wrapper-spacing
+          </CodeInline>
           (default:
-          <CodeInline>2rem</CodeInline>
+          <CodeInline>
+            2rem
+          </CodeInline>
           ).
         </p>
       </SectionItem>
 
       <SectionItem>
-        <CodeBlock @code={{this.wrapperCode}} @language="handlebars"/>
+        <CodeBlock @code={{this.wrapperCode}} @language='handlebars' />
       </SectionItem>
 
       <SectionItem>
         <Layout::Wrapper>
-          <DemoItem/>
+          <DemoItem />
         </Layout::Wrapper>
       </SectionItem>
     </Layout::VerticalStack>
@@ -120,37 +137,45 @@
         <p>
           Place items one below each other, with equal spacing between them.
           Can be customized with
-          <CodeInline>--layout-vertical-stack-gap</CodeInline>
+          <CodeInline>
+            --layout-vertical-stack-gap
+          </CodeInline>
           (default:
-          <CodeInline>1rem</CodeInline>
+          <CodeInline>
+            1rem
+          </CodeInline>
           ).
           The size options are quarter/half/double of the gap size.
           The separator color can be customized with
-          <CodeInline>--layout-vertical-stack-separator-color</CodeInline>
+          <CodeInline>
+            --layout-vertical-stack-separator-color
+          </CodeInline>
           (default:
-          <CodeInline>grey</CodeInline>
+          <CodeInline>
+            grey
+          </CodeInline>
           ).
         </p>
       </SectionItem>
 
       <SectionItem>
-        <CodeBlock @code={{this.verticalStackCode}} @language="handlebars"/>
+        <CodeBlock @code={{this.verticalStackCode}} @language='handlebars' />
       </SectionItem>
 
       <SectionItem>
         <Layout::Cluster @fullWidthOnMobile={{true}} as |Item|>
           <Item>
             <ConfigOption
-              @label="@size"
+              @label='@size'
               @value={{this.verticalStackSize}}
               @onChange={{fn this.updateProperty 'verticalStackSize'}}
-              @options={{array "xsmall" "small" "large"}}
+              @options={{array 'xsmall' 'small' 'large'}}
             />
           </Item>
 
           <Item>
             <ConfigOption
-              @label="@withSeparator"
+              @label='@withSeparator'
               @value={{this.verticalStackWithSeparator}}
               @onChange={{fn this.updateProperty 'verticalStackWithSeparator'}}
               @options={{array true}}
@@ -162,17 +187,16 @@
       <SectionItem>
         <Layout::VerticalStack
           @size={{this.verticalStackSize}}
-          @withSeparator={{this.verticalStackWithSeparator}}
-          as |Item|
+          @withSeparator={{this.verticalStackWithSeparator}} as |Item|
         >
           <Item>
-            <DemoItem/>
+            <DemoItem />
           </Item>
           <Item>
-            <DemoItem/>
+            <DemoItem />
           </Item>
           <Item>
-            <DemoItem/>
+            <DemoItem />
           </Item>
         </Layout::VerticalStack>
       </SectionItem>
@@ -192,45 +216,51 @@
           Lay out items horizontally, but breaking the line if necessary. Each item uses its intrinsic size.
           There is equal spacing horizontally and vertically between them.
           Can be customized with
-          <CodeInline>--layout-cluster-gap</CodeInline>
+          <CodeInline>
+            --layout-cluster-gap
+          </CodeInline>
           (default:
-          <CodeInline>1rem</CodeInline>
+          <CodeInline>
+            1rem
+          </CodeInline>
           ).
           The size options are quarter/half/double the gap size.
           The position can be used to align stuff to the right, or space it evenly.
           The
-          <CodeInline>fullWidthOnMobile</CodeInline>
+          <CodeInline>
+            fullWidthOnMobile
+          </CodeInline>
           option will ensure all items get the full width under 420px.
         </p>
       </SectionItem>
 
       <SectionItem>
-        <CodeBlock @code={{this.clusterCode}} @language="handlebars"/>
+        <CodeBlock @code={{this.clusterCode}} @language='handlebars' />
       </SectionItem>
 
       <SectionItem>
         <Layout::Cluster @fullWidthOnMobile={{true}} as |Item|>
           <Item>
             <ConfigOption
-              @label="@size"
+              @label='@size'
               @value={{this.clusterSize}}
               @onChange={{fn this.updateProperty 'clusterSize'}}
-              @options={{array "xsmall" "small" "large"}}
+              @options={{array 'xsmall' 'small' 'large'}}
             />
           </Item>
 
           <Item>
             <ConfigOption
-              @label="@position"
+              @label='@position'
               @value={{this.clusterPosition}}
               @onChange={{fn this.updateProperty 'clusterPosition'}}
-              @options={{array "right" "spaced"}}
+              @options={{array 'right' 'spaced'}}
             />
           </Item>
 
           <Item>
             <ConfigOption
-              @label="@fullWidthOnMobile"
+              @label='@fullWidthOnMobile'
               @value={{this.clusterFullWidthOnMobile}}
               @onChange={{fn this.updateProperty 'clusterFullWidthOnMobile'}}
               @options={{array true}}
@@ -243,20 +273,19 @@
         <Layout::Cluster
           @size={{this.clusterSize}}
           @position={{this.clusterPosition}}
-          @fullWidthOnMobile={{this.clusterFullWidthOnMobile}}
-          as |Item|
+          @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
         >
           <Item>
-            <DemoItem/>
+            <DemoItem />
           </Item>
           <Item>
-            <DemoItem/>
+            <DemoItem />
           </Item>
           <Item>
-            <DemoItem/>
+            <DemoItem />
           </Item>
           <Item>
-            <DemoItem/>
+            <DemoItem />
           </Item>
         </Layout::Cluster>
       </SectionItem>
@@ -268,27 +297,26 @@
       </SectionItem>
 
       <SectionItem>
-        <CodeBlock @code={{this.clusterCodeRight}} @language="handlebars"/>
+        <CodeBlock @code={{this.clusterCodeRight}} @language='handlebars' />
       </SectionItem>
 
       <SectionItem>
         <Layout::Cluster
           @size={{this.clusterSize}}
           @position={{this.clusterPosition}}
-          @fullWidthOnMobile={{this.clusterFullWidthOnMobile}}
-          as |Item|
+          @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
         >
           <Item>
-            <DemoItem/>
+            <DemoItem />
           </Item>
           <Item>
-            <DemoItem/>
+            <DemoItem />
           </Item>
           <Item>
-            <DemoItem/>
+            <DemoItem />
           </Item>
-          <Item @float="right">
-            <DemoItem/>
+          <Item @float='right'>
+            <DemoItem />
           </Item>
         </Layout::Cluster>
       </SectionItem>
@@ -300,27 +328,26 @@
       </SectionItem>
 
       <SectionItem>
-        <CodeBlock @code={{this.clusterCodeLeft}} @language="handlebars"/>
+        <CodeBlock @code={{this.clusterCodeLeft}} @language='handlebars' />
       </SectionItem>
 
       <SectionItem>
         <Layout::Cluster
           @size={{this.clusterSize}}
           @position={{this.clusterPosition}}
-          @fullWidthOnMobile={{this.clusterFullWidthOnMobile}}
-          as |Item|
+          @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
         >
           <Item>
-            <DemoItem/>
+            <DemoItem />
           </Item>
-          <Item @float="left">
-            <DemoItem/>
-          </Item>
-          <Item>
-            <DemoItem/>
+          <Item @float='left'>
+            <DemoItem />
           </Item>
           <Item>
-            <DemoItem/>
+            <DemoItem />
+          </Item>
+          <Item>
+            <DemoItem />
           </Item>
         </Layout::Cluster>
       </SectionItem>
@@ -338,38 +365,56 @@
       <SectionItem>
         <p>
           Lay out items with equal size. Grid item width is calculated based on available width and a given min-width.
-          Can be customized with
-          <CodeInline>--layout-grid-gap</CodeInline>
+          Can be customized globally with
+          <CodeInline>
+            --layout-grid-gap
+          </CodeInline>
           (default:
-          <CodeInline>2rem</CodeInline>
+          <CodeInline>
+            2rem
+          </CodeInline>
           ) and
-          <CodeInline>--layout-grid-width</CodeInline>
+          <CodeInline>
+            --layout-grid-width
+          </CodeInline>
           (default:
-          <CodeInline>20rem</CodeInline>
-          ).
+          <CodeInline>
+            20rem
+          </CodeInline>
+          ), or per instance with
+          <CodeInline>
+            @gridGap='2rem'
+          </CodeInline>
+          or
+          <CodeInline>
+            @gridWidth='400px'
+          </CodeInline>
+          .
           Note: When using larger widths, make sure to add a media query to drop to
-          <CodeInline>grid-template-columns: 1fr</CodeInline>
+          <CodeInline>
+            grid-template-columns: 1fr
+          </CodeInline>
           below that size.
         </p>
       </SectionItem>
 
       <SectionItem>
-        <CodeBlock @code={{this.gridCode}} @language="handlebars"/>
+        <CodeBlock @code={{this.gridCode}} @language='handlebars' />
       </SectionItem>
 
       <SectionItem>
         <Layout::Grid as |Item|>
           <Item>
-            <DemoItem/>
+            <DemoItem />
           </Item>
           <Item>
-            <DemoItem/>
+            <DemoItem />
           </Item>
           <Item>
-            <DemoItem/>
+            <DemoItem />
           </Item>
           <Item>
-            <DemoItem/>
+            <DemoItem />
           </Item>
         </Layout::Grid>
       </SectionItem>
