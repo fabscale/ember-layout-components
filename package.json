@@ -72,7 +72,7 @@
     "edition": "octane"
   },
   "volta": {
-    "node": "12.16.1",
+    "node": "12.17.0",
     "yarn": "1.21.1"
   },
   "ember-addon": {
