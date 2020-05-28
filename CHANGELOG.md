@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/fabscale/ember-layout-components/compare/0.2.0...0.3.0) (2020-05-28)
+
+
+### Features
+
+* Allow to specify custom size for <Layout::Grid> ([1d2f4c0](https://github.com/fabscale/ember-layout-components/commit/1d2f4c0f2d8c8491a08b2f97343041196365a627))
+
 # [0.2.0](https://github.com/fabscale/ember-layout-components/compare/0.1.2...0.2.0) (2020-05-12)
 
 ## [0.1.2](https://github.com/fabscale/ember-layout-components/compare/0.1.1...0.1.2) (2020-03-18)
