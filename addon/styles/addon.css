@@ -49,7 +49,12 @@
   --gap-size: calc(var(--layout-vertical-stack-gap) * 2);
 }
 
-.layout-vertical-stack--with-separator > .layout-vertical-stack-item:not(:last-child) {
+.layout-vertical-stack--xlarge {
+  --gap-size: calc(var(--layout-vertical-stack-gap) * 3);
+}
+
+.layout-vertical-stack--with-separator
+  > .layout-vertical-stack-item:not(:last-child) {
   padding-bottom: var(--gap-size);
   border-bottom: 1px solid var(--layout-vertical-stack-separator-color);
 }

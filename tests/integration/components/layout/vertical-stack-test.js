@@ -36,6 +36,7 @@ module('Integration | Component | layout/vertical-stack', function (hooks) {
       { size: 'xsmall', className: 'layout-vertical-stack--xsmall' },
       { size: 'small', className: 'layout-vertical-stack--small' },
       { size: 'large', className: 'layout-vertical-stack--large' },
+      { size: 'xlarge', className: 'layout-vertical-stack--xlarge' },
     ].forEach((scenario) => {
       test(`it works with ${scenario.size}`, async function (assert) {
         this.size = scenario.size;
