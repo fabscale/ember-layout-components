@@ -1,3 +1,11 @@
+# [0.4.0](https://github.com/fabscale/ember-layout-components/compare/0.2.0...0.4.0) (2020-06-16)
+
+
+### Features
+
+* Add 'xlarge' size option to vertical stack ([18deae9](https://github.com/fabscale/ember-layout-components/commit/18deae9900bb9e61bea1e2e0ac99785602e2b1d6))
+* Allow to specify custom size for <Layout::Grid> ([1d2f4c0](https://github.com/fabscale/ember-layout-components/commit/1d2f4c0f2d8c8491a08b2f97343041196365a627))
+
 # [0.3.0](https://github.com/fabscale/ember-layout-components/compare/0.2.0...0.3.0) (2020-05-28)
 
 
