@@ -40,6 +40,6 @@ module('Integration | Component | layout/grid', function (hooks) {
 
     assert
       .dom('.layout-grid')
-      .hasAttribute('style', '--gap-size: 123px; --grid-size: 45px');
+      .hasAttribute('style', '--grid-gap-size: 123px; --grid-size: 45px');
   });
 });

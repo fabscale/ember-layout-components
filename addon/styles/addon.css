@@ -28,52 +28,52 @@
 
 /* Vertical Stack */
 .layout-vertical-stack {
-  --gap-size: var(--layout-vertical-stack-gap);
+  --vertical-stack-gap-size: var(--layout-vertical-stack-gap);
   display: flex;
   flex-direction: column;
 }
 
 .layout-vertical-stack-item:not(:last-child) {
-  margin-bottom: var(--gap-size);
+  margin-bottom: var(--vertical-stack-gap-size);
 }
 
 .layout-vertical-stack--xsmall {
-  --gap-size: calc(var(--layout-vertical-stack-gap) * 0.25);
+  --vertical-stack-gap-size: calc(var(--layout-vertical-stack-gap) * 0.25);
 }
 
 .layout-vertical-stack--small {
-  --gap-size: calc(var(--layout-vertical-stack-gap) * 0.5);
+  --vertical-stack-gap-size: calc(var(--layout-vertical-stack-gap) * 0.5);
 }
 
 .layout-vertical-stack--large {
-  --gap-size: calc(var(--layout-vertical-stack-gap) * 2);
+  --vertical-stack-gap-size: calc(var(--layout-vertical-stack-gap) * 2);
 }
 
 .layout-vertical-stack--xlarge {
-  --gap-size: calc(var(--layout-vertical-stack-gap) * 3);
+  --vertical-stack-gap-size: calc(var(--layout-vertical-stack-gap) * 3);
 }
 
 .layout-vertical-stack--with-separator
   > .layout-vertical-stack-item:not(:last-child) {
-  padding-bottom: var(--gap-size);
+  padding-bottom: var(--vertical-stack-gap-size);
   border-bottom: 1px solid var(--layout-vertical-stack-separator-color);
 }
 
 /* Cluster */
 .layout-cluster {
-  --gap-size: var(--layout-cluster-gap);
+  --cluster-gap-size: var(--layout-cluster-gap);
 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: calc(var(--gap-size) / -2) calc(var(--gap-size) * -1);
+  margin: calc(var(--cluster-gap-size) / -2) calc(var(--cluster-gap-size) * -1);
 
   /* ↓ Suppress horizontal scrolling caused by the negative margin in some circumstances */
   overflow: hidden;
 }
 
 .layout-cluster-item {
-  margin: calc(var(--gap-size) / 2) var(--gap-size);
+  margin: calc(var(--cluster-gap-size) / 2) var(--cluster-gap-size);
 }
 
 .layout-cluster--right {
@@ -85,15 +85,15 @@
 }
 
 .layout-cluster--xsmall {
-  --gap-size: calc(var(--layout-cluster-gap) * 0.25);
+  --cluster-gap-size: calc(var(--layout-cluster-gap) * 0.25);
 }
 
 .layout-cluster--small {
-  --gap-size: calc(var(--layout-cluster-gap) * 0.5);
+  --cluster-gap-size: calc(var(--layout-cluster-gap) * 0.5);
 }
 
 .layout-cluster--large {
-  --gap-size: calc(var(--layout-cluster-gap) * 2);
+  --cluster-gap-size: calc(var(--layout-cluster-gap) * 2);
 }
 
 /* "Floating" is achieved via margin: auto */
@@ -121,11 +121,11 @@
 /* Grid */
 .layout-grid {
   display: grid;
-  --gap-size: var(--layout-grid-gap);
+  --grid-gap-size: var(--layout-grid-gap);
   --grid-size: var(--layout-grid-width);
 
-  grid-gap: var(--gap-size);
-  grid-template-columns: repeat(auto-fit, minmax(var(--grid-size), 1fr));
+  grid-gap: var(--grid-gap-size);
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-gap-size), 1fr));
 }
 
 .layout-grid-item {
