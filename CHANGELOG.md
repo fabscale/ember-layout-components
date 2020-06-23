@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/fabscale/ember-layout-components/compare/0.4.0...0.5.0) (2020-06-23)
+
+
+### Bug Fixes
+
+* Avoid collision of CSS variable names ([86eb6f6](https://github.com/fabscale/ember-layout-components/commit/86eb6f69f701fb7b67c71e972651d803721a03ec))
+
 # [0.4.0](https://github.com/fabscale/ember-layout-components/compare/0.2.0...0.4.0) (2020-06-16)
 
 
