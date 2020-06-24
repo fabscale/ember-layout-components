@@ -1,3 +1,10 @@
+## [0.5.1](https://github.com/fabscale/ember-layout-components/compare/0.5.0...0.5.1) (2020-06-24)
+
+
+### Bug Fixes
+
+* Fix grid width typo ([bf2ab9d](https://github.com/fabscale/ember-layout-components/commit/bf2ab9d7aa5286feb8aae84d9f35a4ff599aa063))
+
 # [0.5.0](https://github.com/fabscale/ember-layout-components/compare/0.4.0...0.5.0) (2020-06-23)
 
 
