@@ -125,7 +125,7 @@
   --grid-size: var(--layout-grid-width);
 
   grid-gap: var(--grid-gap-size);
-  grid-template-columns: repeat(auto-fit, minmax(var(--grid-gap-size), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-size), 1fr));
 }
 
 .layout-grid-item {
