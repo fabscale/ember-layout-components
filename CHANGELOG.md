@@ -1,3 +1,10 @@
+## [0.5.2](https://github.com/fabscale/ember-layout-components/compare/0.5.1...0.5.2) (2020-06-30)
+
+
+### Features
+
+* Add xlarge size to <Layout::Cluster> ([5935254](https://github.com/fabscale/ember-layout-components/commit/59352547af72524a49ad1cd3c0f32d79af839416))
+
 ## [0.5.1](https://github.com/fabscale/ember-layout-components/compare/0.5.0...0.5.1) (2020-06-24)
 
 
