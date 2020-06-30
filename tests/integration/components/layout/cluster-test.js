@@ -52,6 +52,7 @@ module('Integration | Component | layout/cluster', function (hooks) {
       { size: 'xsmall', className: 'layout-cluster--xsmall' },
       { size: 'small', className: 'layout-cluster--small' },
       { size: 'large', className: 'layout-cluster--large' },
+      { size: 'xlarge', className: 'layout-cluster--xlarge' },
     ].forEach((scenario) => {
       test(`it works with ${scenario.size}`, async function (assert) {
         this.size = scenario.size;

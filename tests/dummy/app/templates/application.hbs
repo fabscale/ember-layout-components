@@ -245,7 +245,7 @@
               @label='@size'
               @value={{this.clusterSize}}
               @onChange={{fn this.updateProperty 'clusterSize'}}
-              @options={{array 'xsmall' 'small' 'large'}}
+              @options={{array 'xsmall' 'small' 'large' 'xlarge'}}
             />
           </Item>
 
@@ -387,7 +387,7 @@
           </CodeInline>
           or
           <CodeInline>
-            @gridWidth='400px'
+            @gridSize='400px'
           </CodeInline>
           .
           Note: When using larger widths, make sure to add a media query to drop to
