@@ -96,6 +96,10 @@
   --cluster-gap-size: calc(var(--layout-cluster-gap) * 2);
 }
 
+.layout-cluster--xlarge {
+  --cluster-gap-size: calc(var(--layout-cluster-gap) * 4);
+}
+
 /* "Floating" is achieved via margin: auto */
 .layout-cluster-item--left {
   margin-right: auto;
