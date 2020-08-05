@@ -1,3 +1,10 @@
+# [0.6.0](https://github.com/fabscale/ember-layout-components/compare/0.5.2...0.6.0) (2020-08-05)
+
+
+### Bug Fixes
+
+* Ensure vertical spacing is correct for cluster items ([feb406e](https://github.com/fabscale/ember-layout-components/commit/feb406e935ed5d9580d0be65605c8bbba86d93e4))
+
 ## [0.5.2](https://github.com/fabscale/ember-layout-components/compare/0.5.1...0.5.2) (2020-06-30)
 
 
