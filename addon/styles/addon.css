@@ -62,18 +62,19 @@
 /* Cluster */
 .layout-cluster {
   --cluster-gap-size: var(--layout-cluster-gap);
+  --cluster-half-gap: calc(var(--cluster-gap-size) / 2);
 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: calc(var(--cluster-gap-size) / -2) calc(var(--cluster-gap-size) * -1);
+  margin: calc(var(--cluster-half-gap) * -1) calc(var(--cluster-half-gap) * -1);
 
   /* ↓ Suppress horizontal scrolling caused by the negative margin in some circumstances */
   overflow: hidden;
 }
 
 .layout-cluster-item {
-  margin: calc(var(--cluster-gap-size) / 2) var(--cluster-gap-size);
+  margin: var(--cluster-half-gap);
 }
 
 .layout-cluster--right {
