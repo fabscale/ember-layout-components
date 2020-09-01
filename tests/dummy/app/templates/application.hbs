@@ -94,21 +94,14 @@
         <p>
           A wrapper that will reach the maximum wrapper size (or smaller), keeping horizontal spacing at any time.
           Can be customized with
-          <CodeInline>
-            --layout-wrapper-width
-          </CodeInline>
+          <CodeInline @code='--layout-wrapper-width' />
+
           (default:
-          <CodeInline>
-            60rem
-          </CodeInline>
+          <CodeInline @code='60rem' />
           ) and
-          <CodeInline>
-            --layout-wrapper-spacing
-          </CodeInline>
+          <CodeInline @code='--layout-wrapper-spacing' />
           (default:
-          <CodeInline>
-            2rem
-          </CodeInline>
+          <CodeInline @code='2rem' />
           ).
         </p>
       </SectionItem>
@@ -137,23 +130,15 @@
         <p>
           Place items one below each other, with equal spacing between them.
           Can be customized with
-          <CodeInline>
-            --layout-vertical-stack-gap
-          </CodeInline>
+          <CodeInline @code='--layout-vertical-stack-gap' />
           (default:
-          <CodeInline>
-            1rem
-          </CodeInline>
+          <CodeInline @code='1rem' />
           ).
           The size options are quarter/half/double of the gap size.
           The separator color can be customized with
-          <CodeInline>
-            --layout-vertical-stack-separator-color
-          </CodeInline>
+          <CodeInline @code='--layout-vertical-stack-separator-color' />
           (default:
-          <CodeInline>
-            grey
-          </CodeInline>
+          <CodeInline @code='grey' />
           ).
         </p>
       </SectionItem>
@@ -216,20 +201,14 @@
           Lay out items horizontally, but breaking the line if necessary. Each item uses its intrinsic size.
           There is equal spacing horizontally and vertically between them.
           Can be customized with
-          <CodeInline>
-            --layout-cluster-gap
-          </CodeInline>
+          <CodeInline @code='--layout-cluster-gap' />
           (default:
-          <CodeInline>
-            1rem
-          </CodeInline>
+          <CodeInline @code='1rem' />
           ).
           The size options are quarter/half/double the gap size.
           The position can be used to align stuff to the right, or space it evenly.
           The
-          <CodeInline>
-            fullWidthOnMobile
-          </CodeInline>
+          <CodeInline @code='fullWidthOnMobile' />
           option will ensure all items get the full width under 420px.
         </p>
       </SectionItem>
@@ -366,34 +345,20 @@
         <p>
           Lay out items with equal size. Grid item width is calculated based on available width and a given min-width.
           Can be customized globally with
-          <CodeInline>
-            --layout-grid-gap
-          </CodeInline>
+          <CodeInline @code='--layout-grid-gap' />
           (default:
-          <CodeInline>
-            2rem
-          </CodeInline>
+          <CodeInline @code='2rem' />
           ) and
-          <CodeInline>
-            --layout-grid-width
-          </CodeInline>
+          <CodeInline @code='--layout-grid-width' />
           (default:
-          <CodeInline>
-            20rem
-          </CodeInline>
+          <CodeInline @code='20rem' />
           ), or per instance with
-          <CodeInline>
-            @gapSize='2rem'
-          </CodeInline>
+          <CodeInline @code="@gapSize='2rem'" />
           or
-          <CodeInline>
-            @gridSize='400px'
-          </CodeInline>
+          <CodeInline @code="@gridSize='400px'" />
           .
           Note: When using larger widths, make sure to add a media query to drop to
-          <CodeInline>
-            grid-template-columns: 1fr
-          </CodeInline>
+          <CodeInline @code='grid-template-columns: 1fr' />
           below that size.
         </p>
       </SectionItem>
