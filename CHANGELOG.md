@@ -1,3 +1,10 @@
+# [0.7.0](https://github.com/fabscale/ember-layout-components/compare/0.6.0...0.7.0) (2020-09-07)
+
+
+### Features
+
+* Allow to specify [@vertical](https://github.com/vertical) & [@horizontal](https://github.com/horizontal) for <Layout::Center> ([64a54e6](https://github.com/fabscale/ember-layout-components/commit/64a54e61f42727c0fc45d3a1da0a16c8e85822e8))
+
 # [0.6.0](https://github.com/fabscale/ember-layout-components/compare/0.5.2...0.6.0) (2020-08-05)
 
 
