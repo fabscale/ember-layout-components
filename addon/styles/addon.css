@@ -23,7 +23,16 @@
   width: auto;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+}
+
+.layout-center--horizontal {
   align-items: center;
+}
+
+.layout-center--vertical {
+  height: 100%;
+  justify-content: center;
 }
 
 /* Vertical Stack */

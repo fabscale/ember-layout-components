@@ -8,6 +8,8 @@ export default class ApplicationController extends Controller {
   @tracked clusterFullWidthOnMobile;
   @tracked verticalStackSize;
   @tracked verticalStackWithSeparator;
+  @tracked centerHorizontal;
+  @tracked centerVertical;
 
   @action
   updateProperty(property, value) {
