@@ -71,13 +71,42 @@
       </SectionItem>
 
       <SectionItem>
+        <Layout::Cluster @fullWidthOnMobile={{true}} as |Item|>
+          <Item>
+            <ConfigOption
+              @label='@horizontal'
+              @value={{this.centerHorizontal}}
+              @onChange={{fn this.updateProperty 'centerHorizontal'}}
+              @options={{array false}}
+            />
+          </Item>
+
+          <Item>
+            <ConfigOption
+              @label='@vertical'
+              @value={{this.centerVertical}}
+              @onChange={{fn this.updateProperty 'centerVertical'}}
+              @options={{array true}}
+            />
+          </Item>
+        </Layout::Cluster>
+      </SectionItem>
+
+      <SectionItem>
         <CodeBlock @code={{this.centerCode}} @language='handlebars' />
       </SectionItem>
 
       <SectionItem>
-        <Layout::Center>
-          <DemoItem />
-        </Layout::Center>
+        {{! template-lint-disable no-inline-styles }}
+        <div style='height: 300px; background: lightgrey;'>
+          <Layout::Center
+            @horizontal={{this.centerHorizontal}}
+            @vertical={{this.centerVertical}}
+          >
+            <DemoItem />
+          </Layout::Center>
+        </div>
+        {{! template-lint-enable no-inline-styles }}
       </SectionItem>
     </Layout::VerticalStack>
   </Section>
