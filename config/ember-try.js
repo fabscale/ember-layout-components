@@ -44,6 +44,16 @@ module.exports = async function () {
           devDependencies: {},
         },
       },
+      {
+        name: 'embroider',
+        npm: {
+          devDependencies: {
+            '@embroider/core': '*',
+            '@embroider/webpack': '*',
+            '@embroider/compat': '*',
+          },
+        },
+      },
     ],
   };
 };

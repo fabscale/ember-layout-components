@@ -1,4 +1,1 @@
-export {
-  default,
-  layoutCssVar,
-} from 'ember-layout-components/helpers/layout-css-var';
+export { default } from 'ember-layout-components/helpers/layout-css-var';

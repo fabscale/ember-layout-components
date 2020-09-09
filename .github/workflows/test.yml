@@ -3,7 +3,7 @@ name: Test & Lint
 on:
   push:
     branches:
-      - '**'
+      - "**"
 
 jobs:
   test:
@@ -30,7 +30,8 @@ jobs:
     strategy:
       matrix:
         # Keep this in sync with config/ember-try.js
-        ember: [ember-lts-3.16, ember-release, ember-beta, ember-canary]
+        ember:
+          [ember-lts-3.16, ember-release, ember-beta, ember-canary, embroider]
 
     steps:
       - uses: actions/checkout@v2

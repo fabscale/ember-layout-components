@@ -10,5 +10,17 @@ module.exports = function (defaults) {
     },
   });
 
+  if ('@embroider/webpack' in app.dependencies()) {
+    /* eslint-disable node/no-missing-require */
+    const { Webpack } = require('@embroider/webpack');
+    return require('@embroider/compat').compatBuild(app, Webpack, {
+      staticAddonTestSupportTrees: true,
+      staticAddonTrees: true,
+      staticHelpers: true,
+      staticComponents: true,
+    });
+    /* eslint-enable node/no-missing-require */
+  }
+
   return app.toTree();
 };
