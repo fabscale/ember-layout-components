@@ -101,6 +101,24 @@ module('Integration | Component | layout/cluster', function (hooks) {
     });
   });
 
+  module('@verticalAlign', function () {
+    [
+      { verticalAlign: 'top', className: 'layout-cluster--top' },
+      { verticalAlign: 'bottom', className: 'layout-cluster--bottom' },
+    ].forEach((scenario) => {
+      test(`it works with ${scenario.verticalAlign}`, async function (assert) {
+        this.verticalAlign = scenario.verticalAlign;
+
+        await render(hbs`
+          <Layout::Cluster @verticalAlign={{this.verticalAlign}}>
+          </Layout::Cluster>
+        `);
+
+        assert.dom('.layout-cluster').hasClass(scenario.className);
+      });
+    });
+  });
+
   module('@fullWidthOnMobile', function () {
     test(`it works with undefined`, async function (assert) {
       this.fullWidthOnMobile = undefined;
