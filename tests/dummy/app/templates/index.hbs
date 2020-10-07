@@ -1,0 +1,41 @@
+<Layout::Wrapper>
+  <h1>
+    ember-layout-components
+  </h1>
+
+  <p>
+    This addon provides easy to use and flexible layout components.
+          By using these components, your layout will automatically be flexible and consistent.
+          Instead of defining exactly how something should look like at a given viewport, let the intrinsic size of
+          content and CSS calcualte the best possible layout, based on the basic rules these layout components define.
+          This addon is heavily inspired by
+    <a href='https://every-layout.dev/'>
+      every-layout.dev
+    </a>
+  </p>
+
+  <h2>
+    Support / Compatibility
+  </h2>
+
+  <p>
+    All layout components use CSS Properties. If you need to support IE11, you could use something like
+    <a href='https://github.com/MadLittleMods/postcss-css-variables'>
+      postcss-css-variables
+    </a>
+    to get a gracious
+          fallback.
+  </p>
+
+  <h2>
+    Usage hints & tips
+  </h2>
+
+  <p>
+    It can take a bit to get used to this layouting approach, but it really pays off once you get it. Ideally, you
+    should avoid breaking out of these rules wherever possible.
+    If you find yourself constantly overwriting the layouts, chances are your design is not consistent enough.
+    Feel free to nest the layout components as deeply as needed - they are all template-only components and should
+    be reasonably performant.
+  </p>
+</Layout::Wrapper>

@@ -1,0 +1,223 @@
+<Layout::Wrapper>
+  <Layout::VerticalStack @size='xlarge' as |SectionItem|>
+    <SectionItem>
+      <h1>
+        Cluster
+      </h1>
+
+      <p>
+        Lay out items horizontally, but breaking the line if necessary. Each item uses its intrinsic size.
+        There is equal spacing horizontally and vertically between them.
+        Can be customized with
+        <CodeInline @code='--layout-cluster-gap' />
+        (default:
+        <CodeInline @code='1rem' />
+        ).
+      </p>
+
+      <p>
+        The size options are quarter/half/double the gap size.
+        The position can be used to align stuff to the right, or space it evenly.
+        The
+        <CodeInline @code='fullWidthOnMobile' />
+        option will ensure all items get the full width under 420px.
+      </p>
+    </SectionItem>
+
+    <SectionItem>
+      <h2>
+        Basic usage
+      </h2>
+
+      <CodeBlock @code={{this.clusterCode}} @language='handlebars' />
+    </SectionItem>
+
+    <SectionItem>
+      <h2>
+        Configuration options
+      </h2>
+
+      <Layout::VerticalStack as |StackItem|>
+        <StackItem>
+          <Layout::Cluster @fullWidthOnMobile={{true}} as |Item|>
+            <Item>
+              <ConfigOption
+                @label='@size'
+                @value={{this.clusterSize}}
+                @onChange={{fn this.updateProperty 'clusterSize'}}
+                @options={{array 'xsmall' 'small' 'large' 'xlarge'}}
+              />
+            </Item>
+
+            <Item>
+              <ConfigOption
+                @label='@position'
+                @value={{this.clusterPosition}}
+                @onChange={{fn this.updateProperty 'clusterPosition'}}
+                @options={{array 'right' 'spaced'}}
+              />
+            </Item>
+
+            <Item>
+              <ConfigOption
+                @label='@fullWidthOnMobile'
+                @value={{this.clusterFullWidthOnMobile}}
+                @onChange={{fn this.updateProperty 'clusterFullWidthOnMobile'}}
+                @options={{array true}}
+              />
+            </Item>
+
+            <Item>
+              <ConfigOption
+                @label='@noWrap'
+                @value={{this.clusterNoWrap}}
+                @onChange={{fn this.updateProperty 'clusterNoWrap'}}
+                @options={{array true}}
+              />
+            </Item>
+
+            <Item>
+              <ConfigOption
+                @label='@verticalAlign'
+                @value={{this.clusterVerticalAlign}}
+                @onChange={{fn this.updateProperty 'clusterVerticalAlign'}}
+                @options={{array 'top' 'bottom'}}
+              />
+            </Item>
+          </Layout::Cluster>
+        </StackItem>
+
+        <StackItem>
+          <Layout::Cluster
+            @size={{this.clusterSize}}
+            @position={{this.clusterPosition}}
+            @verticalAlign={{this.clusterVerticalAlign}}
+            @fullWidthOnMobile={{this.clusterFullWidthOnMobile}}
+            @noWrap={{this.clusterNoWrap}} as |Item|
+          >
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+          </Layout::Cluster>
+        </StackItem>
+      </Layout::VerticalStack>
+    </SectionItem>
+
+    <SectionItem>
+      <h2>
+        Configuration options on items
+      </h2>
+
+      <p>
+        You can also specify some options on the cluster items.
+      </p>
+    </SectionItem>
+
+    <SectionItem>
+      <h3>
+        Float items to the right
+      </h3>
+
+      <Layout::VerticalStack as |StackItem|>
+        <StackItem>
+          <CodeBlock @code={{this.clusterCodeRight}} @language='handlebars' />
+        </StackItem>
+        <StackItem>
+          <Layout::Cluster
+            @size={{this.clusterSize}}
+            @position={{this.clusterPosition}}
+            @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
+          >
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item @float='right'>
+              <DemoItem />
+            </Item>
+          </Layout::Cluster>
+        </StackItem>
+      </Layout::VerticalStack>
+    </SectionItem>
+
+    <SectionItem>
+      <h3>
+        Float items to the left
+      </h3>
+
+      <Layout::VerticalStack as |StackItem|>
+        <StackItem>
+          <CodeBlock @code={{this.clusterCodeLeft}} @language='handlebars' />
+        </StackItem>
+
+        <StackItem>
+          <Layout::Cluster
+            @size={{this.clusterSize}}
+            @position={{this.clusterPosition}}
+            @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
+          >
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item @float='left'>
+              <DemoItem />
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+          </Layout::Cluster>
+        </StackItem>
+      </Layout::VerticalStack>
+    </SectionItem>
+
+    <SectionItem>
+      <h3>
+        Grow items
+      </h3>
+
+      <Layout::VerticalStack as |StackItem|>
+        <StackItem>
+          <CodeBlock @code={{this.clusterCodeGrow}} @language='handlebars' />
+        </StackItem>
+
+        <StackItem>
+          <Layout::Cluster
+            @size={{this.clusterSize}}
+            @position={{this.clusterPosition}}
+            @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
+          >
+            <Item @grow={{true}}>
+              <DemoItem />
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+          </Layout::Cluster>
+        </StackItem>
+      </Layout::VerticalStack>
+    </SectionItem>
+  </Layout::VerticalStack>
+</Layout::Wrapper>

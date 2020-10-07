@@ -1,0 +1,41 @@
+<header class='header'>
+  <Layout::Cluster @size='xlarge' as |OuterItem|>
+    <OuterItem>
+      <LinkTo @route='index' class='header-logo-link'>
+        ember-layout-components
+      </LinkTo>
+    </OuterItem>
+
+    <OuterItem>
+      <nav>
+        <Layout::Cluster @size='large' as |Item|>
+          <Item>
+            <LinkTo @route='cluster' class='main-nav-item'>
+              Cluster
+            </LinkTo>
+          </Item>
+          <Item>
+            <LinkTo @route='vertical-stack' class='main-nav-item'>
+              Vertical Stack
+            </LinkTo>
+          </Item>
+          <Item>
+            <LinkTo @route='grid' class='main-nav-item'>
+              Grid
+            </LinkTo>
+          </Item>
+          <Item>
+            <LinkTo @route='wrapper' class='main-nav-item'>
+              Wrapper
+            </LinkTo>
+          </Item>
+          <Item>
+            <LinkTo @route='center' class='main-nav-item'>
+              Center
+            </LinkTo>
+          </Item>
+        </Layout::Cluster>
+      </nav>
+    </OuterItem>
+  </Layout::Cluster>
+</header>

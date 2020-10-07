@@ -1,14 +1,24 @@
-:root,
-html,
-body {
-  font-size: 16px;
+html {
+  font-size: 20px;
   font-family: Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+
+  --primary-color: #0f7799;
 }
 
 body {
-  padding: 2rem;
+  margin: 0;
+  padding: 0 0 4rem 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .demo-item {
@@ -28,7 +38,55 @@ h2,
 h3,
 h4,
 h5,
-h6,
 p {
-  margin: 0;
+  margin: 0 0 0.25em 0;
+}
+
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child),
+h4:not(:first-child),
+p:not(:first-child) {
+  margin-top: 1em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+p {
+  line-height: 1.625;
+  max-width: 80ch;
+}
+
+.header {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--primary-color);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.header-logo-link {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.main-nav-item {
+  color: #fff;
+  font-size: 1.25em;
 }
