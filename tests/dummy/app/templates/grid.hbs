@@ -1,0 +1,71 @@
+<Layout::Wrapper>
+  <Layout::VerticalStack @size='xlarge' as |SectionItem|>
+    <SectionItem>
+      <h1>
+        Grid
+      </h1>
+
+      <p>
+        Lay out items with equal size. Grid item width is calculated based on available width and a given min-width.
+        Can be customized globally with
+        <CodeInline @code='--layout-grid-gap' />
+        (default:
+        <CodeInline @code='2rem' />
+        ) and
+        <CodeInline @code='--layout-grid-width' />
+        (default:
+        <CodeInline @code='20rem' />
+        ), or per instance with
+        <CodeInline @code="@gapSize='2rem'" />
+        or
+        <CodeInline @code="@gridSize='400px'" />
+        .
+      </p>
+
+      <p>
+        Note: When using larger widths, make sure to add a media query to drop to
+        <CodeInline @code='grid-template-columns: 1fr' />
+        below that size.
+      </p>
+    </SectionItem>
+
+    <SectionItem>
+      <h2>
+        Basic usage
+      </h2>
+
+      <CodeBlock @code={{this.gridCode}} @language='handlebars' />
+    </SectionItem>
+
+    <SectionItem>
+      <h2>
+        Configuration options
+      </h2>
+
+      <Layout::VerticalStack as |StackItem|>
+        <StackItem>
+          <p>
+            There are no configuration options for the grid.
+          </p>
+        </StackItem>
+
+        <StackItem>
+          <Layout::Grid as |Item|>
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+          </Layout::Grid>
+        </StackItem>
+      </Layout::VerticalStack>
+    </SectionItem>
+  </Layout::VerticalStack>
+</Layout::Wrapper>

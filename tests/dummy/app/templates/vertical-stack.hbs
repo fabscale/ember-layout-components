@@ -1,0 +1,84 @@
+<Layout::Wrapper>
+  <Layout::VerticalStack @size='xlarge' as |SectionItem|>
+    <SectionItem>
+      <h1>
+        Vertical Stack
+      </h1>
+
+      <p>
+        Place items one below each other, with equal spacing between them.
+        Can be customized with
+        <CodeInline @code='--layout-vertical-stack-gap' />
+        (default:
+        <CodeInline @code='1rem' />
+        ).
+      </p>
+
+      <p>
+        The size options are quarter/half/double of the gap size.
+        The separator color can be customized with
+        <CodeInline @code='--layout-vertical-stack-separator-color' />
+        (default:
+        <CodeInline @code='grey' />
+        ).
+      </p>
+    </SectionItem>
+
+    <SectionItem>
+      <h2>
+        Basic usage
+      </h2>
+
+      <CodeBlock @code={{this.verticalStackCode}} @language='handlebars' />
+    </SectionItem>
+
+    <SectionItem>
+      <h2>
+        Configuration options
+      </h2>
+
+      <Layout::VerticalStack as |StackItem|>
+        <StackItem>
+          <Layout::Cluster @fullWidthOnMobile={{true}} as |Item|>
+            <Item>
+              <ConfigOption
+                @label='@size'
+                @value={{this.verticalStackSize}}
+                @onChange={{fn this.updateProperty 'verticalStackSize'}}
+                @options={{array 'xsmall' 'small' 'large' 'xlarge'}}
+              />
+            </Item>
+
+            <Item>
+              <ConfigOption
+                @label='@withSeparator'
+                @value={{this.verticalStackWithSeparator}}
+                @onChange={{
+                  fn this.updateProperty 'verticalStackWithSeparator'
+                }}
+                @options={{array true}}
+              />
+            </Item>
+          </Layout::Cluster>
+        </StackItem>
+
+        <StackItem>
+          <Layout::VerticalStack
+            @size={{this.verticalStackSize}}
+            @withSeparator={{this.verticalStackWithSeparator}} as |Item|
+          >
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+          </Layout::VerticalStack>
+        </StackItem>
+      </Layout::VerticalStack>
+    </SectionItem>
+  </Layout::VerticalStack>
+</Layout::Wrapper>

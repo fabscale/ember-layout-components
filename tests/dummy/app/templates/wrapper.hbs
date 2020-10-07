@@ -1,0 +1,51 @@
+<Layout::Wrapper>
+  <Layout::VerticalStack @size='xlarge' as |SectionItem|>
+    <SectionItem>
+      <h1>
+        Wrapper
+      </h1>
+
+      <p>
+        A wrapper that will reach the maximum wrapper size (or smaller), keeping horizontal spacing at any time.
+          Can be customized with
+        <CodeInline @code='--layout-wrapper-width' />
+
+        (default:
+        <CodeInline @code='60rem' />
+        ) and
+        <CodeInline @code='--layout-wrapper-spacing' />
+        (default:
+        <CodeInline @code='2rem' />
+        ).
+      </p>
+    </SectionItem>
+
+    <SectionItem>
+      <h2>
+        Basic usage
+      </h2>
+
+      <CodeBlock @code={{this.wrapperCode}} @language='handlebars' />
+    </SectionItem>
+
+    <SectionItem>
+      <h2>
+        Configuration options
+      </h2>
+
+      <Layout::VerticalStack as |StackItem|>
+        <StackItem>
+          <p>
+            There are no configuration options for the wrapper.
+          </p>
+        </StackItem>
+
+        <StackItem>
+          <Layout::Wrapper>
+            <DemoItem />
+          </Layout::Wrapper>
+        </StackItem>
+      </Layout::VerticalStack>
+    </SectionItem>
+  </Layout::VerticalStack>
+</Layout::Wrapper>

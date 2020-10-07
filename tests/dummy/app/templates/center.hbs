@@ -1,0 +1,73 @@
+<Layout::Wrapper>
+  <Layout::VerticalStack @size='xlarge' as |SectionItem|>
+    <SectionItem>
+      <h1>
+        Center
+      </h1>
+
+      <p>
+        Horizontally (and optionally vertically) center content at it's intrinsic size.
+      </p>
+
+      <p>
+        The size options are quarter/half/double of the gap size.
+        The separator color can be customized with
+        <CodeInline @code='--layout-vertical-stack-separator-color' />
+        (default:
+        <CodeInline @code='grey' />
+        ).
+      </p>
+    </SectionItem>
+
+    <SectionItem>
+      <h2>
+        Basic usage
+      </h2>
+
+      <CodeBlock @code={{this.centerCode}} @language='handlebars' />
+    </SectionItem>
+
+    <SectionItem>
+      <h2>
+        Configuration options
+      </h2>
+
+      <Layout::VerticalStack as |StackItem|>
+        <StackItem>
+          <Layout::Cluster @fullWidthOnMobile={{true}} as |Item|>
+            <Item>
+              <ConfigOption
+                @label='@horizontal'
+                @value={{this.centerHorizontal}}
+                @onChange={{fn this.updateProperty 'centerHorizontal'}}
+                @options={{array false}}
+              />
+            </Item>
+
+            <Item>
+              <ConfigOption
+                @label='@vertical'
+                @value={{this.centerVertical}}
+                @onChange={{fn this.updateProperty 'centerVertical'}}
+                @options={{array true}}
+              />
+            </Item>
+          </Layout::Cluster>
+        </StackItem>
+
+        <StackItem>
+          {{! template-lint-disable no-inline-styles }}
+          <div style='height: 300px; background: lightgrey;'>
+            <Layout::Center
+              @horizontal={{this.centerHorizontal}}
+              @vertical={{this.centerVertical}}
+            >
+              <DemoItem />
+            </Layout::Center>
+          </div>
+          {{! template-lint-enable no-inline-styles }}
+        </StackItem>
+      </Layout::VerticalStack>
+    </SectionItem>
+  </Layout::VerticalStack>
+</Layout::Wrapper>
