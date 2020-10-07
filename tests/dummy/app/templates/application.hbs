@@ -192,6 +192,15 @@
               @options={{array true}}
             />
           </Item>
+
+          <Item>
+            <ConfigOption
+              @label='@verticalAlign'
+              @value={{this.clusterVerticalAlign}}
+              @onChange={{fn this.updateProperty 'clusterVerticalAlign'}}
+              @options={{array 'top' 'bottom'}}
+            />
+          </Item>
         </Layout::Cluster>
       </SectionItem>
 
@@ -199,6 +208,7 @@
         <Layout::Cluster
           @size={{this.clusterSize}}
           @position={{this.clusterPosition}}
+          @verticalAlign={{this.clusterVerticalAlign}}
           @fullWidthOnMobile={{this.clusterFullWidthOnMobile}}
           @noWrap={{this.clusterNoWrap}} as |Item|
         >

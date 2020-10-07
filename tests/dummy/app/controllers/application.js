@@ -5,6 +5,7 @@ import { tracked } from '@glimmer/tracking';
 export default class ApplicationController extends Controller {
   @tracked clusterSize;
   @tracked clusterPosition;
+  @tracked clusterVerticalAlign;
   @tracked clusterFullWidthOnMobile;
   @tracked clusterNoWrap;
   @tracked verticalStackSize;
