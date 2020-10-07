@@ -86,22 +86,78 @@ module('Integration | Component | layout/cluster', function (hooks) {
   });
 
   module('@fullWidthOnMobile', function () {
-    [
-      {
-        fullWidthOnMobile: true,
-        className: 'layout-cluster--full-width-on-mobile',
-      },
-    ].forEach((scenario) => {
-      test(`it works with ${scenario.fullWidthOnMobile}`, async function (assert) {
-        this.fullWidthOnMobile = scenario.fullWidthOnMobile;
+    test(`it works with undefined`, async function (assert) {
+      this.fullWidthOnMobile = undefined;
 
-        await render(hbs`
-          <Layout::Cluster @fullWidthOnMobile={{this.fullWidthOnMobile}}>
-          </Layout::Cluster>
-        `);
+      await render(hbs`
+        <Layout::Cluster @fullWidthOnMobile={{this.fullWidthOnMobile}}>
+        </Layout::Cluster>
+      `);
 
-        assert.dom('.layout-cluster').hasClass(scenario.className);
-      });
+      assert
+        .dom('.layout-cluster')
+        .doesNotHaveClass('layout-cluster--full-width-on-mobile');
+    });
+
+    test(`it works with false`, async function (assert) {
+      this.fullWidthOnMobile = false;
+
+      await render(hbs`
+        <Layout::Cluster @fullWidthOnMobile={{this.fullWidthOnMobile}}>
+        </Layout::Cluster>
+      `);
+
+      assert
+        .dom('.layout-cluster')
+        .doesNotHaveClass('layout-cluster--full-width-on-mobile');
+    });
+
+    test(`it works with true`, async function (assert) {
+      this.fullWidthOnMobile = true;
+
+      await render(hbs`
+        <Layout::Cluster @fullWidthOnMobile={{this.fullWidthOnMobile}}>
+        </Layout::Cluster>
+      `);
+
+      assert
+        .dom('.layout-cluster')
+        .hasClass('layout-cluster--full-width-on-mobile');
+    });
+  });
+
+  module('@noWrap', function () {
+    test(`it works with undefined`, async function (assert) {
+      this.noWrap = undefined;
+
+      await render(hbs`
+        <Layout::Cluster @noWrap={{this.noWrap}}>
+        </Layout::Cluster>
+      `);
+
+      assert.dom('.layout-cluster').doesNotHaveClass('layout-cluster--no-wrap');
+    });
+
+    test(`it works with false`, async function (assert) {
+      this.noWrap = false;
+
+      await render(hbs`
+        <Layout::Cluster @noWrap={{this.noWrap}}>
+        </Layout::Cluster>
+      `);
+
+      assert.dom('.layout-cluster').doesNotHaveClass('layout-cluster--no-wrap');
+    });
+
+    test(`it works with true`, async function (assert) {
+      this.noWrap = true;
+
+      await render(hbs`
+        <Layout::Cluster @noWrap={{this.noWrap}}>
+        </Layout::Cluster>
+      `);
+
+      assert.dom('.layout-cluster').hasClass('layout-cluster--no-wrap');
     });
   });
 });

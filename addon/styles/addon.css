@@ -82,6 +82,10 @@
   overflow: hidden;
 }
 
+.layout-cluster--no-wrap {
+  flex-wrap: nowrap;
+}
+
 .layout-cluster-item {
   margin: var(--cluster-half-gap);
 }

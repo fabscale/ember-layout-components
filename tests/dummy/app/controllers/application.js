@@ -6,6 +6,7 @@ export default class ApplicationController extends Controller {
   @tracked clusterSize;
   @tracked clusterPosition;
   @tracked clusterFullWidthOnMobile;
+  @tracked clusterNoWrap;
   @tracked verticalStackSize;
   @tracked verticalStackWithSeparator;
   @tracked centerHorizontal;
