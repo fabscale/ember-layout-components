@@ -60,97 +60,6 @@
     <Layout::VerticalStack as |SectionItem|>
       <SectionItem>
         <h2>
-          Center
-        </h2>
-      </SectionItem>
-
-      <SectionItem>
-        <p>
-          Horizontally center content at it's intrinsic size.
-        </p>
-      </SectionItem>
-
-      <SectionItem>
-        <Layout::Cluster @fullWidthOnMobile={{true}} as |Item|>
-          <Item>
-            <ConfigOption
-              @label='@horizontal'
-              @value={{this.centerHorizontal}}
-              @onChange={{fn this.updateProperty 'centerHorizontal'}}
-              @options={{array false}}
-            />
-          </Item>
-
-          <Item>
-            <ConfigOption
-              @label='@vertical'
-              @value={{this.centerVertical}}
-              @onChange={{fn this.updateProperty 'centerVertical'}}
-              @options={{array true}}
-            />
-          </Item>
-        </Layout::Cluster>
-      </SectionItem>
-
-      <SectionItem>
-        <CodeBlock @code={{this.centerCode}} @language='handlebars' />
-      </SectionItem>
-
-      <SectionItem>
-        {{! template-lint-disable no-inline-styles }}
-        <div style='height: 300px; background: lightgrey;'>
-          <Layout::Center
-            @horizontal={{this.centerHorizontal}}
-            @vertical={{this.centerVertical}}
-          >
-            <DemoItem />
-          </Layout::Center>
-        </div>
-        {{! template-lint-enable no-inline-styles }}
-      </SectionItem>
-    </Layout::VerticalStack>
-  </Section>
-
-  <Section>
-    <Layout::VerticalStack as |SectionItem|>
-      <SectionItem>
-        <h2>
-          Wrapper
-        </h2>
-      </SectionItem>
-
-      <SectionItem>
-        <p>
-          A wrapper that will reach the maximum wrapper size (or smaller), keeping horizontal spacing at any time.
-          Can be customized with
-          <CodeInline @code='--layout-wrapper-width' />
-
-          (default:
-          <CodeInline @code='60rem' />
-          ) and
-          <CodeInline @code='--layout-wrapper-spacing' />
-          (default:
-          <CodeInline @code='2rem' />
-          ).
-        </p>
-      </SectionItem>
-
-      <SectionItem>
-        <CodeBlock @code={{this.wrapperCode}} @language='handlebars' />
-      </SectionItem>
-
-      <SectionItem>
-        <Layout::Wrapper>
-          <DemoItem />
-        </Layout::Wrapper>
-      </SectionItem>
-    </Layout::VerticalStack>
-  </Section>
-
-  <Section>
-    <Layout::VerticalStack as |SectionItem|>
-      <SectionItem>
-        <h2>
           Vertical Stack
         </h2>
       </SectionItem>
@@ -274,6 +183,15 @@
               @options={{array true}}
             />
           </Item>
+
+          <Item>
+            <ConfigOption
+              @label='@noWrap'
+              @value={{this.clusterNoWrap}}
+              @onChange={{fn this.updateProperty 'clusterNoWrap'}}
+              @options={{array true}}
+            />
+          </Item>
         </Layout::Cluster>
       </SectionItem>
 
@@ -281,7 +199,8 @@
         <Layout::Cluster
           @size={{this.clusterSize}}
           @position={{this.clusterPosition}}
-          @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
+          @fullWidthOnMobile={{this.clusterFullWidthOnMobile}}
+          @noWrap={{this.clusterNoWrap}} as |Item|
         >
           <Item>
             <DemoItem />
@@ -411,6 +330,97 @@
             <DemoItem />
           </Item>
         </Layout::Grid>
+      </SectionItem>
+    </Layout::VerticalStack>
+  </Section>
+
+  <Section>
+    <Layout::VerticalStack as |SectionItem|>
+      <SectionItem>
+        <h2>
+          Center
+        </h2>
+      </SectionItem>
+
+      <SectionItem>
+        <p>
+          Horizontally center content at it's intrinsic size.
+        </p>
+      </SectionItem>
+
+      <SectionItem>
+        <Layout::Cluster @fullWidthOnMobile={{true}} as |Item|>
+          <Item>
+            <ConfigOption
+              @label='@horizontal'
+              @value={{this.centerHorizontal}}
+              @onChange={{fn this.updateProperty 'centerHorizontal'}}
+              @options={{array false}}
+            />
+          </Item>
+
+          <Item>
+            <ConfigOption
+              @label='@vertical'
+              @value={{this.centerVertical}}
+              @onChange={{fn this.updateProperty 'centerVertical'}}
+              @options={{array true}}
+            />
+          </Item>
+        </Layout::Cluster>
+      </SectionItem>
+
+      <SectionItem>
+        <CodeBlock @code={{this.centerCode}} @language='handlebars' />
+      </SectionItem>
+
+      <SectionItem>
+        {{! template-lint-disable no-inline-styles }}
+        <div style='height: 300px; background: lightgrey;'>
+          <Layout::Center
+            @horizontal={{this.centerHorizontal}}
+            @vertical={{this.centerVertical}}
+          >
+            <DemoItem />
+          </Layout::Center>
+        </div>
+        {{! template-lint-enable no-inline-styles }}
+      </SectionItem>
+    </Layout::VerticalStack>
+  </Section>
+
+  <Section>
+    <Layout::VerticalStack as |SectionItem|>
+      <SectionItem>
+        <h2>
+          Wrapper
+        </h2>
+      </SectionItem>
+
+      <SectionItem>
+        <p>
+          A wrapper that will reach the maximum wrapper size (or smaller), keeping horizontal spacing at any time.
+          Can be customized with
+          <CodeInline @code='--layout-wrapper-width' />
+
+          (default:
+          <CodeInline @code='60rem' />
+          ) and
+          <CodeInline @code='--layout-wrapper-spacing' />
+          (default:
+          <CodeInline @code='2rem' />
+          ).
+        </p>
+      </SectionItem>
+
+      <SectionItem>
+        <CodeBlock @code={{this.wrapperCode}} @language='handlebars' />
+      </SectionItem>
+
+      <SectionItem>
+        <Layout::Wrapper>
+          <DemoItem />
+        </Layout::Wrapper>
       </SectionItem>
     </Layout::VerticalStack>
   </Section>
