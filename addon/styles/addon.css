@@ -114,6 +114,10 @@
   --cluster-gap-size: calc(var(--layout-cluster-gap) * 4);
 }
 
+.layout-cluster-item--grow {
+  flex-grow: 1;
+}
+
 /* "Floating" is achieved via margin: auto */
 .layout-cluster-item--left {
   margin-right: auto;

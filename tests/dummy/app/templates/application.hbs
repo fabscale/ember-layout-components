@@ -278,6 +278,37 @@
           </Item>
         </Layout::Cluster>
       </SectionItem>
+
+      <SectionItem>
+        <h3>
+          Grow items
+        </h3>
+      </SectionItem>
+
+      <SectionItem>
+        <CodeBlock @code={{this.clusterCodeGrow}} @language='handlebars' />
+      </SectionItem>
+
+      <SectionItem>
+        <Layout::Cluster
+          @size={{this.clusterSize}}
+          @position={{this.clusterPosition}}
+          @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
+        >
+          <Item @grow={{true}}>
+            <DemoItem />
+          </Item>
+          <Item>
+            <DemoItem />
+          </Item>
+          <Item>
+            <DemoItem />
+          </Item>
+          <Item>
+            <DemoItem />
+          </Item>
+        </Layout::Cluster>
+      </SectionItem>
     </Layout::VerticalStack>
   </Section>
 

@@ -3,6 +3,7 @@
       'layout-cluster-item'
       (layout-class-if @float "right" "layout-cluster-item--right")
       (layout-class-if @float "left" "layout-cluster-item--left")
+      (layout-class-if @grow true "layout-cluster-item--grow")
     }}
   ...attributes
 >{{yield}}</div>

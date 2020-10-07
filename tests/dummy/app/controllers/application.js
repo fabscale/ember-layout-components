@@ -47,6 +47,13 @@ export default class ApplicationController extends Controller {
   <Item @float="right">Fourth item</Item>
 </Layout::Cluster>`;
 
+  clusterCodeGrow = `<Layout::Cluster as |Item|>
+<Item @grow={{true}}>First item</Item>
+<Item>Second item</Item>
+<Item>Third item</Item>
+<Item>Fourth item</Item>
+</Layout::Cluster>`;
+
   gridCode = `<Layout::Grid as |Item|>
   <Item>First item</Item>
   <Item>Second item</Item>
