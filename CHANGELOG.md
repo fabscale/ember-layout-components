@@ -1,3 +1,12 @@
+# [0.8.0](https://github.com/fabscale/ember-layout-components/compare/0.7.0...0.8.0) (2020-10-07)
+
+
+### Features
+
+* Allow to specify `[@grow](https://github.com/grow)={{true}}` on cluster items ([3ce28cc](https://github.com/fabscale/ember-layout-components/commit/3ce28cc7a8a5482dfa1ab87ad6d45a411d514de4))
+* Allow to specify `[@no](https://github.com/no)Wrap` for <Layout::Cluster> ([2e568e5](https://github.com/fabscale/ember-layout-components/commit/2e568e5e610bbd969631e701c448921a154cf179))
+* Allow to specify `[@vertical](https://github.com/vertical)Align="top"|"bottom"` for <Layout::Cluster> ([b08bc7b](https://github.com/fabscale/ember-layout-components/commit/b08bc7bddbbdbbc5f52cf746997d779077e949fb))
+
 # [0.7.0](https://github.com/fabscale/ember-layout-components/compare/0.6.0...0.7.0) (2020-09-07)
 
 
