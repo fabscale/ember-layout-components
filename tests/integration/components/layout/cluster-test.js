@@ -31,7 +31,7 @@ module('Integration | Component | layout/cluster', function (hooks) {
     assert.dom('.layout-cluster-item').hasClass('item-class');
   });
 
-  test('float works', async function (assert) {
+  test('@float works', async function (assert) {
     await render(hbs`
       <Layout::Cluster as |Item|>
         <Item @float="left">A</Item>
@@ -45,6 +45,22 @@ module('Integration | Component | layout/cluster', function (hooks) {
     assert
       .dom('.layout-cluster-item:nth-child(2)')
       .hasClass('layout-cluster-item--right');
+  });
+
+  test('@grow works', async function (assert) {
+    await render(hbs`
+      <Layout::Cluster as |Item|>
+        <Item @grow={{true}}>A</Item>
+        <Item>B</Item>
+      </Layout::Cluster>
+    `);
+
+    assert
+      .dom('.layout-cluster-item:nth-child(1)')
+      .hasClass('layout-cluster-item--grow');
+    assert
+      .dom('.layout-cluster-item:nth-child(2)')
+      .doesNotHaveClass('layout-cluster-item--grow');
   });
 
   module('@size', function () {
