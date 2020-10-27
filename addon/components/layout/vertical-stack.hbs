@@ -1,15 +1,27 @@
+{{layout-deprecate
+  '@size is deprecated, use @gap instead'
+  (if @size false true)
+  id='ember-layout-components.vertical-stack-size'
+  until='0.10.0'
+}}
+
 <div
-  class={{layout-join-classes
-    "layout-vertical-stack"
-    (layout-class-if @size "xlarge" "layout-vertical-stack--xlarge")
-    (layout-class-if @size "large" "layout-vertical-stack--large")
-    (layout-class-if @size "small" "layout-vertical-stack--small")
-    (layout-class-if @size "xsmall" "layout-vertical-stack--xsmall")
-    (layout-class-if @withSeparator true "layout-vertical-stack--with-separator")
+  class={{
+    layout-join-classes
+    'layout-vertical-stack'
+    (layout-class-if @size 'xlarge' 'layout-vertical-stack--xlarge')
+    (layout-class-if @size 'large' 'layout-vertical-stack--large')
+    (layout-class-if @size 'small' 'layout-vertical-stack--small')
+    (layout-class-if @size 'xsmall' 'layout-vertical-stack--xsmall')
+    (layout-class-if @gap 'xlarge' 'layout-vertical-stack--xlarge')
+    (layout-class-if @gap 'large' 'layout-vertical-stack--large')
+    (layout-class-if @gap 'small' 'layout-vertical-stack--small')
+    (layout-class-if @gap 'xsmall' 'layout-vertical-stack--xsmall')
+    (layout-class-if
+      @withSeparator true 'layout-vertical-stack--with-separator'
+    )
   }}
   ...attributes
 >
-  {{yield
-    (component 'layout/vertical-stack/item')
-  }}
+  {{yield (component 'layout/vertical-stack/item')}}
 </div>

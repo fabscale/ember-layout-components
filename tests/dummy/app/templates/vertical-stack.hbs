@@ -1,5 +1,5 @@
 <Layout::Wrapper>
-  <Layout::VerticalStack @size='xlarge' as |SectionItem|>
+  <Layout::VerticalStack @gap='xlarge' as |SectionItem|>
     <SectionItem>
       <h1>
         Vertical Stack
@@ -42,9 +42,9 @@
           <Layout::Cluster @fullWidthOnMobile={{true}} as |Item|>
             <Item>
               <ConfigOption
-                @label='@size'
-                @value={{this.verticalStackSize}}
-                @onChange={{fn this.updateProperty 'verticalStackSize'}}
+                @label='@gap'
+                @value={{this.verticalStackGap}}
+                @onChange={{fn this.updateProperty 'verticalStackGap'}}
                 @options={{array 'xsmall' 'small' 'large' 'xlarge'}}
               />
             </Item>
@@ -64,7 +64,7 @@
 
         <StackItem>
           <Layout::VerticalStack
-            @size={{this.verticalStackSize}}
+            @gap={{this.verticalStackGap}}
             @withSeparator={{this.verticalStackWithSeparator}} as |Item|
           >
             <Item>

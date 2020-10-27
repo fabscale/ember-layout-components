@@ -27,7 +27,7 @@ ember install ember-layout-components
 
 ```hbs
 <Layout::Wrapper>
-  <Layout::VerticalStack @size="large" as |Section|>
+  <Layout::VerticalStack @gap="large" as |Section|>
     <Section>
       First section goes here.
     </Section>
