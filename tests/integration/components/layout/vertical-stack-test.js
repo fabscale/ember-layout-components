@@ -51,6 +51,26 @@ module('Integration | Component | layout/vertical-stack', function (hooks) {
     });
   });
 
+  module('@gap', function () {
+    [
+      { gap: 'xsmall', className: 'layout-vertical-stack--xsmall' },
+      { gap: 'small', className: 'layout-vertical-stack--small' },
+      { gap: 'large', className: 'layout-vertical-stack--large' },
+      { gap: 'xlarge', className: 'layout-vertical-stack--xlarge' },
+    ].forEach((scenario) => {
+      test(`it works with ${scenario.gap}`, async function (assert) {
+        this.gap = scenario.gap;
+
+        await render(hbs`
+          <Layout::VerticalStack @gap={{this.gap}}>
+          </Layout::VerticalStack>
+        `);
+
+        assert.dom('.layout-vertical-stack').hasClass(scenario.className);
+      });
+    });
+  });
+
   module('@withSeparator', function () {
     [
       {

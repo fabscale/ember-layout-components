@@ -3,7 +3,7 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
 export default class ClusterController extends Controller {
-  @tracked clusterSize;
+  @tracked clusterGap;
   @tracked clusterPosition;
   @tracked clusterVerticalAlign;
   @tracked clusterFullWidthOnMobile;
