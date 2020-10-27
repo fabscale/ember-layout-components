@@ -139,6 +139,7 @@
   .layout-cluster--full-width-on-mobile {
     margin-left: 0;
     margin-right: 0;
+    flex-wrap: wrap;
   }
 
   .layout-cluster--full-width-on-mobile > .layout-cluster-item {
