@@ -19,8 +19,16 @@
         The size options are quarter/half/double the gap size.
         The position can be used to align stuff to the right, or space it evenly.
         The
-        <CodeInline @code='fullWidthOnMobile' />
+        <CodeInline @code='@fullWidthOnMobile' />
         option will ensure all items get the full width under 420px.
+      </p>
+
+      <p>
+        If you specify
+        <CodeInline @code='@gapVertical' />
+        , 
+        you can specify another gap size as for the horizontal spacing. By default, they use the same gap size.
+        This can be useful especially when using the larger gap size, as they can appear too large vertically.
       </p>
     </SectionItem>
 
@@ -46,6 +54,15 @@
                 @value={{this.clusterGap}}
                 @onChange={{fn this.updateProperty 'clusterGap'}}
                 @options={{array 'xsmall' 'small' 'large' 'xlarge'}}
+              />
+            </Item>
+
+            <Item>
+              <ConfigOption
+                @label='@gapVertical'
+                @value={{this.clusterGapVertical}}
+                @onChange={{fn this.updateProperty 'clusterGapVertical'}}
+                @options={{array 'xsmall' 'small' 'medium' 'large' 'xlarge'}}
               />
             </Item>
 
@@ -90,6 +107,7 @@
         <StackItem>
           <Layout::Cluster
             @gap={{this.clusterGap}}
+            @gapVertical={{this.clusterGapVertical}}
             @position={{this.clusterPosition}}
             @verticalAlign={{this.clusterVerticalAlign}}
             @fullWidthOnMobile={{this.clusterFullWidthOnMobile}}
@@ -134,6 +152,7 @@
         <StackItem>
           <Layout::Cluster
             @gap={{this.clusterGap}}
+            @gapVertical={{this.clusterGapVertical}}
             @position={{this.clusterPosition}}
             @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
           >
@@ -167,6 +186,7 @@
         <StackItem>
           <Layout::Cluster
             @gap={{this.clusterGap}}
+            @gapVertical={{this.clusterGapVertical}}
             @position={{this.clusterPosition}}
             @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
           >
@@ -200,6 +220,7 @@
         <StackItem>
           <Layout::Cluster
             @gap={{this.clusterGap}}
+            @gapVertical={{this.clusterGapVertical}}
             @position={{this.clusterPosition}}
             @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
           >

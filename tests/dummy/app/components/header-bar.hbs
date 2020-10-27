@@ -1,5 +1,5 @@
 <header class='header'>
-  <Layout::Cluster @gap='xlarge' as |OuterItem|>
+  <Layout::Cluster @gap='xlarge' @gapVertical='medium' as |OuterItem|>
     <OuterItem>
       <LinkTo @route='index' class='header-logo-link'>
         ember-layout-components
@@ -8,7 +8,7 @@
 
     <OuterItem>
       <nav>
-        <Layout::Cluster @gap='large' as |Item|>
+        <Layout::Cluster @gap='large' @gapVertical='xsmall' as |Item|>
           <Item>
             <LinkTo @route='cluster' class='main-nav-item'>
               Cluster

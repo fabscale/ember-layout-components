@@ -103,6 +103,27 @@ module('Integration | Component | layout/cluster', function (hooks) {
     });
   });
 
+  module('@gapVertical', function () {
+    [
+      { gapVertical: 'xsmall', className: 'layout-cluster--vertical-xsmall' },
+      { gapVertical: 'small', className: 'layout-cluster--vertical-small' },
+      { gapVertical: 'medium', className: 'layout-cluster--vertical-medium' },
+      { gapVertical: 'large', className: 'layout-cluster--vertical-large' },
+      { gapVertical: 'xlarge', className: 'layout-cluster--vertical-xlarge' },
+    ].forEach((scenario) => {
+      test(`it works with ${scenario.gapVertical}`, async function (assert) {
+        this.gapVertical = scenario.gapVertical;
+
+        await render(hbs`
+          <Layout::Cluster @gapVertical={{this.gapVertical}}>
+          </Layout::Cluster>
+        `);
+
+        assert.dom('.layout-cluster').hasClass(scenario.className);
+      });
+    });
+  });
+
   module('@position', function () {
     [
       { position: 'right', className: 'layout-cluster--right' },
