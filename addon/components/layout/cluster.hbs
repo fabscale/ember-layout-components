@@ -1,3 +1,10 @@
+{{layout-deprecate
+  '@size is deprecated, use @gap instead'
+  (if @size false true)
+  id='ember-layout-components.cluster-size'
+  until='0.10.0'
+}}
+
 <div class='layout-cluster-wrapper'>
   <div
     class={{
@@ -5,6 +12,10 @@
       'layout-cluster'
       (layout-class-if @position 'right' 'layout-cluster--right')
       (layout-class-if @position 'spaced' 'layout-cluster--spaced')
+      (layout-class-if @gap 'xsmall' 'layout-cluster--xsmall')
+      (layout-class-if @gap 'small' 'layout-cluster--small')
+      (layout-class-if @gap 'large' 'layout-cluster--large')
+      (layout-class-if @gap 'xlarge' 'layout-cluster--xlarge')
       (layout-class-if @size 'xsmall' 'layout-cluster--xsmall')
       (layout-class-if @size 'small' 'layout-cluster--small')
       (layout-class-if @size 'large' 'layout-cluster--large')

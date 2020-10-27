@@ -1,5 +1,5 @@
 <Layout::Wrapper>
-  <Layout::VerticalStack @size='xlarge' as |SectionItem|>
+  <Layout::VerticalStack @gap='xlarge' as |SectionItem|>
     <SectionItem>
       <h1>
         Cluster
@@ -42,9 +42,9 @@
           <Layout::Cluster @fullWidthOnMobile={{true}} as |Item|>
             <Item>
               <ConfigOption
-                @label='@size'
-                @value={{this.clusterSize}}
-                @onChange={{fn this.updateProperty 'clusterSize'}}
+                @label='@gap'
+                @value={{this.clusterGap}}
+                @onChange={{fn this.updateProperty 'clusterGap'}}
                 @options={{array 'xsmall' 'small' 'large' 'xlarge'}}
               />
             </Item>
@@ -89,7 +89,7 @@
 
         <StackItem>
           <Layout::Cluster
-            @size={{this.clusterSize}}
+            @gap={{this.clusterGap}}
             @position={{this.clusterPosition}}
             @verticalAlign={{this.clusterVerticalAlign}}
             @fullWidthOnMobile={{this.clusterFullWidthOnMobile}}
@@ -133,7 +133,7 @@
         </StackItem>
         <StackItem>
           <Layout::Cluster
-            @size={{this.clusterSize}}
+            @gap={{this.clusterGap}}
             @position={{this.clusterPosition}}
             @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
           >
@@ -166,7 +166,7 @@
 
         <StackItem>
           <Layout::Cluster
-            @size={{this.clusterSize}}
+            @gap={{this.clusterGap}}
             @position={{this.clusterPosition}}
             @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
           >
@@ -199,7 +199,7 @@
 
         <StackItem>
           <Layout::Cluster
-            @size={{this.clusterSize}}
+            @gap={{this.clusterGap}}
             @position={{this.clusterPosition}}
             @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
           >

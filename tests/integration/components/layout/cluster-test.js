@@ -83,6 +83,26 @@ module('Integration | Component | layout/cluster', function (hooks) {
     });
   });
 
+  module('@gap', function () {
+    [
+      { gap: 'xsmall', className: 'layout-cluster--xsmall' },
+      { gap: 'small', className: 'layout-cluster--small' },
+      { gap: 'large', className: 'layout-cluster--large' },
+      { gap: 'xlarge', className: 'layout-cluster--xlarge' },
+    ].forEach((scenario) => {
+      test(`it works with ${scenario.gap}`, async function (assert) {
+        this.gap = scenario.gap;
+
+        await render(hbs`
+          <Layout::Cluster @gap={{this.gap}}>
+          </Layout::Cluster>
+        `);
+
+        assert.dom('.layout-cluster').hasClass(scenario.className);
+      });
+    });
+  });
+
   module('@position', function () {
     [
       { position: 'right', className: 'layout-cluster--right' },
