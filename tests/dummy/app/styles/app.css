@@ -76,7 +76,6 @@ p {
   padding: 1rem;
   background: var(--primary-color);
   color: #fff;
-  overflow-x: hidden;
 }
 
 .header-logo-link {

@@ -69,17 +69,22 @@
 }
 
 /* Cluster */
+.layout-cluster-wrapper {
+  /* ↓ Suppress horizontal scrolling caused by the negative margin in some circumstances */
+  overflow: hidden;
+}
+
+/* Without this, the overflow: hidden; would not work, sometimes showing unexpected scrollbars... */
 .layout-cluster {
   --cluster-gap-size: var(--layout-cluster-gap);
-  --cluster-half-gap: calc(var(--cluster-gap-size) / 2);
+  --cluster-horizontal-gap: calc(var(--cluster-gap-size) / 2);
+  --cluster-vertical-gap: calc(var(--cluster-gap-size) / 2);
 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: calc(var(--cluster-half-gap) * -1) calc(var(--cluster-half-gap) * -1);
-
-  /* ↓ Suppress horizontal scrolling caused by the negative margin in some circumstances */
-  overflow: hidden;
+  margin: calc(var(--cluster-vertical-gap) * -1)
+    calc(var(--cluster-horizontal-gap) * -1);
 }
 
 .layout-cluster--no-wrap {
@@ -87,7 +92,7 @@
 }
 
 .layout-cluster-item {
-  margin: var(--cluster-half-gap);
+  margin: var(--cluster-vertical-gap) var(--cluster-horizontal-gap);
 }
 
 .layout-cluster--right {
