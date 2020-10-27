@@ -78,7 +78,9 @@
 .layout-cluster {
   --cluster-gap-size: var(--layout-cluster-gap);
   --cluster-horizontal-gap: calc(var(--cluster-gap-size) / 2);
-  --cluster-vertical-gap: calc(var(--cluster-gap-size) / 2);
+  --cluster-vertical-gap: calc(
+    var(--cluster-vertical-gap-size, var(--cluster-gap-size)) / 2
+  );
 
   display: flex;
   flex-wrap: wrap;
@@ -129,6 +131,26 @@
 
 .layout-cluster--xlarge {
   --cluster-gap-size: calc(var(--layout-cluster-gap) * 4);
+}
+
+.layout-cluster--vertical-xsmall {
+  --cluster-vertical-gap-size: calc(var(--layout-cluster-gap) * 0.25);
+}
+
+.layout-cluster--vertical-small {
+  --cluster-vertical-gap-size: calc(var(--layout-cluster-gap) * 0.5);
+}
+
+.layout-cluster--vertical-medium {
+  --cluster-vertical-gap-size: var(--layout-cluster-gap);
+}
+
+.layout-cluster--vertical-large {
+  --cluster-vertical-gap-size: calc(var(--layout-cluster-gap) * 2);
+}
+
+.layout-cluster--vertical-xlarge {
+  --cluster-vertical-gap-size: calc(var(--layout-cluster-gap) * 4);
 }
 
 .layout-cluster-item--grow {

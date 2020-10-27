@@ -4,6 +4,7 @@ import { tracked } from '@glimmer/tracking';
 
 export default class ClusterController extends Controller {
   @tracked clusterGap;
+  @tracked clusterGapVertical;
   @tracked clusterPosition;
   @tracked clusterVerticalAlign;
   @tracked clusterFullWidthOnMobile;
