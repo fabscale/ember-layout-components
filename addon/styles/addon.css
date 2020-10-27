@@ -111,6 +111,10 @@
   align-items: flex-end;
 }
 
+.layout-cluster--stretch {
+  align-items: stretch;
+}
+
 .layout-cluster--xsmall {
   --cluster-gap-size: calc(var(--layout-cluster-gap) * 0.25);
 }

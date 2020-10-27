@@ -105,6 +105,7 @@ module('Integration | Component | layout/cluster', function (hooks) {
     [
       { verticalAlign: 'top', className: 'layout-cluster--top' },
       { verticalAlign: 'bottom', className: 'layout-cluster--bottom' },
+      { verticalAlign: 'stretch', className: 'layout-cluster--stretch' },
     ].forEach((scenario) => {
       test(`it works with ${scenario.verticalAlign}`, async function (assert) {
         this.verticalAlign = scenario.verticalAlign;
