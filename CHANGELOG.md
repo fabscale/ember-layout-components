@@ -1,3 +1,19 @@
+# [0.9.0](https://github.com/fabscale/ember-layout-components/compare/0.8.0...0.9.0) (2020-10-27)
+
+
+### Bug Fixes
+
+* Ensure full-width-on-mobile cluster always wraps ([c558d25](https://github.com/fabscale/ember-layout-components/commit/c558d2542dce7654d4fd553e1b8dc258c33dd5b8))
+* Introduce wrapper element for cluster to avoid scrollbars ([6c4d66b](https://github.com/fabscale/ember-layout-components/commit/6c4d66b916a6bd5e0c05d7ff02f8d36ce32fb203))
+
+
+### Features
+
+* Add `[@vertical](https://github.com/vertical)Align='stretch'` option to cluster ([183a535](https://github.com/fabscale/ember-layout-components/commit/183a53573a9e89083eadea008036f8d5748794c0))
+* Allow to specify `[@gap](https://github.com/gap)Vertical` for cluster ([fad827e](https://github.com/fabscale/ember-layout-components/commit/fad827e67fe09ed92521646726c21c8e612f26fd))
+* Replace `[@size](https://github.com/size)` with `[@gap](https://github.com/gap)` for `<Layout::Cluster>` ([73d6df2](https://github.com/fabscale/ember-layout-components/commit/73d6df22b95add0a2a4a5ee56c8e445a75065fee))
+* Replace `[@size](https://github.com/size)` with `[@gap](https://github.com/gap)` for `<Layout::VerticalStack>` ([84c11b8](https://github.com/fabscale/ember-layout-components/commit/84c11b8f028e0288caf07ee83938e8e6957707f2))
+
 # [0.8.0](https://github.com/fabscale/ember-layout-components/compare/0.7.0...0.8.0) (2020-10-07)
 
 
