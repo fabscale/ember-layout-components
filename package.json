@@ -33,7 +33,7 @@
     "@ember/optional-features": "~2.0.0",
     "@glimmer/component": "~1.0.2",
     "@glimmer/tracking": "~1.0.2",
-    "@release-it/conventional-changelog": "~1.1.0",
+    "@release-it/conventional-changelog": "~2.0.0",
     "babel-eslint": "~10.1.0",
     "broccoli-asset-rev": "~3.0.0",
     "ember-auto-import": "~1.6.0",
