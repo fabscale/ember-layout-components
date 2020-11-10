@@ -22,11 +22,12 @@ module('Integration | Component | layout/cluster', function (hooks) {
 
   test('it allows to add HTML attributes', async function (assert) {
     await render(hbs`
-      <Layout::Cluster class="my-class" as |Item|>
+      <Layout::Cluster class="my-class" @wrapperClasses='wrapper-class' as |Item|>
       <Item class="item-class"></Item>
       </Layout::Cluster>
     `);
 
+    assert.dom('.layout-cluster-wrapper').hasClass('wrapper-class');
     assert.dom('.layout-cluster').hasClass('my-class');
     assert.dom('.layout-cluster-item').hasClass('item-class');
   });
