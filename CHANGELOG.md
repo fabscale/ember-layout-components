@@ -1,3 +1,10 @@
+## [0.9.1](https://github.com/fabscale/ember-layout-components/compare/0.9.0...0.9.1) (2020-11-10)
+
+
+### Features
+
+* Allow to specify `[@wrapper](https://github.com/wrapper)Classes` for cluster ([bb02748](https://github.com/fabscale/ember-layout-components/commit/bb02748813326bc1584cecc7c1b3e2b4ca217890))
+
 # [0.9.0](https://github.com/fabscale/ember-layout-components/compare/0.8.0...0.9.0) (2020-10-27)
 
 
