@@ -1,4 +1,1 @@
-export {
-  default,
-  layoutDeprecate,
-} from 'ember-layout-components/helpers/layout-deprecate';
+export { default } from 'ember-layout-components/helpers/layout-deprecate';
