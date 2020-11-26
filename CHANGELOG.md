@@ -1,3 +1,10 @@
+## [0.9.2](https://github.com/fabscale/ember-layout-components/compare/0.9.1...0.9.2) (2020-11-26)
+
+
+### Bug Fixes
+
+* Remove incorrect re-export of layoutDeprecate helper ([764dc00](https://github.com/fabscale/ember-layout-components/commit/764dc0086aaaef32fc4eaf6935a045fb59585144))
+
 ## [0.9.1](https://github.com/fabscale/ember-layout-components/compare/0.9.0...0.9.1) (2020-11-10)
 
 
