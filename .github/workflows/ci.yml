@@ -37,7 +37,7 @@ jobs:
             ember-release,
             ember-beta,
             ember-canary,
-            embroider,
+            embroider-optimized,
           ]
 
     steps:
