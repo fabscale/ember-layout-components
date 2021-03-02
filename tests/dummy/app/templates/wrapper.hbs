@@ -1,7 +1,7 @@
 {{! template-lint-disable no-potential-path-strings }}
 
 <Layout::Wrapper>
-  <Layout::Stack @gap='xlarge' as |SectionItem|>
+  <Layout::VerticalStack @gap='xlarge' as |SectionItem|>
     <SectionItem>
       <h1>
         Wrapper
@@ -35,7 +35,7 @@
         Configuration options
       </h2>
 
-      <Layout::Stack as |StackItem|>
+      <Layout::VerticalStack as |StackItem|>
         <StackItem>
           <p>
             There are no configuration options for the wrapper.
@@ -47,7 +47,7 @@
             <DemoItem />
           </Layout::Wrapper>
         </StackItem>
-      </Layout::Stack>
+      </Layout::VerticalStack>
     </SectionItem>
-  </Layout::Stack>
+  </Layout::VerticalStack>
 </Layout::Wrapper>

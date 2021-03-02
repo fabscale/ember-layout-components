@@ -1,16 +1,16 @@
 {{! template-lint-disable no-potential-path-strings }}
 
 <Layout::Wrapper>
-  <Layout::Stack @gap='xlarge' as |SectionItem|>
+  <Layout::VerticalStack @gap='xlarge' as |SectionItem|>
     <SectionItem>
       <h1>
-        Stack
+        Vertical Stack
       </h1>
 
       <p>
         Place items one below each other, with equal spacing between them.
         Can be customized with
-        <CodeInline @code='--layout-stack-gap' />
+        <CodeInline @code='--layout-vertical-stack-gap' />
         (default:
         <CodeInline @code='1rem' />
         ).
@@ -19,7 +19,7 @@
       <p>
         The size options are quarter/half/double of the gap size.
         The separator color can be customized with
-        <CodeInline @code='--layout-stack-separator-color' />
+        <CodeInline @code='--layout-vertical-stack-separator-color' />
         (default:
         <CodeInline @code='grey' />
         ).
@@ -31,7 +31,7 @@
         Basic usage
       </h2>
 
-      <CodeBlock @code={{this.stackCode}} @language='handlebars' />
+      <CodeBlock @code={{this.verticalStackCode}} @language='handlebars' />
     </SectionItem>
 
     <SectionItem>
@@ -39,14 +39,14 @@
         Configuration options
       </h2>
 
-      <Layout::Stack as |StackItem|>
+      <Layout::VerticalStack as |StackItem|>
         <StackItem>
           <Layout::Cluster @fullWidthOnMobile={{true}} as |Item|>
             <Item>
               <ConfigOption
                 @label='@gap'
-                @value={{this.stackGap}}
-                @onChange={{fn this.updateProperty 'stackGap'}}
+                @value={{this.verticalStackGap}}
+                @onChange={{fn this.updateProperty 'verticalStackGap'}}
                 @options={{array 'xsmall' 'small' 'large' 'xlarge'}}
               />
             </Item>
@@ -54,9 +54,9 @@
             <Item>
               <ConfigOption
                 @label='@withSeparator'
-                @value={{this.stackWithSeparator}}
+                @value={{this.verticalStackWithSeparator}}
                 @onChange={{
-                  fn this.updateProperty 'stackWithSeparator'
+                  fn this.updateProperty 'verticalStackWithSeparator'
                 }}
                 @options={{array true}}
               />
@@ -65,9 +65,9 @@
         </StackItem>
 
         <StackItem>
-          <Layout::Stack
-            @gap={{this.stackGap}}
-            @withSeparator={{this.stackWithSeparator}} as |Item|
+          <Layout::VerticalStack
+            @gap={{this.verticalStackGap}}
+            @withSeparator={{this.verticalStackWithSeparator}} as |Item|
           >
             <Item>
               <DemoItem />
@@ -78,9 +78,9 @@
             <Item>
               <DemoItem />
             </Item>
-          </Layout::Stack>
+          </Layout::VerticalStack>
         </StackItem>
-      </Layout::Stack>
+      </Layout::VerticalStack>
     </SectionItem>
-  </Layout::Stack>
+  </Layout::VerticalStack>
 </Layout::Wrapper>

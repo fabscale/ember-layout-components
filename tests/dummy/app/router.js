@@ -8,7 +8,7 @@ export default class Router extends EmberRouter {
 
 Router.map(function () {
   this.route('cluster');
-  this.route('stack');
+  this.route('vertical-stack');
   this.route('grid');
   this.route('wrapper');
   this.route('center');

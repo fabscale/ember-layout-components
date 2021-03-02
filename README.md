@@ -27,7 +27,7 @@ ember install ember-layout-components
 
 ```hbs
 <Layout::Wrapper>
-  <Layout::Stack @gap="large" as |Section|>
+  <Layout::VerticalStack @gap="large" as |Section|>
     <Section>
       First section goes here.
     </Section>
@@ -35,7 +35,7 @@ ember install ember-layout-components
     <Section>
       Second section goes here.
     </Section>
-  </Layout::Stack>
+  </Layout::VerticalStack>
 </Layout::Wrapper>
 ```
 
@@ -45,7 +45,7 @@ For more details, see the [documentation](https://fabscale.github.io/ember-layou
 
 - `<Layout::Wrapper>`
 - `<Layout::Center>`
-- `<Layout::Stack>`
+- `<Layout::VerticalStack>`
 - `<Layout::Cluster>`
 - `<Layout::Grid>`
 
