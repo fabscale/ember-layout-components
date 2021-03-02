@@ -1,5 +1,5 @@
 import { helper } from '@ember/component/helper';
-import { htmlSafe } from '@ember/string';
+import { htmlSafe } from '@ember/template';
 import { isNone } from '@ember/utils';
 
 export default helper(function layoutCssVar(_, hash) {
