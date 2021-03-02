@@ -1,3 +1,10 @@
+## [0.10.1](https://github.com/fabscale/ember-layout-components/compare/0.9.2...0.10.1) (2021-03-02)
+
+
+### Features
+
+* Import from `@ember/template` instead of `@ember/string` ([de97ee4](https://github.com/fabscale/ember-layout-components/commit/de97ee4537bb03a2bba2af825864346ca87abbfa))
+
 ## [0.9.2](https://github.com/fabscale/ember-layout-components/compare/0.9.1...0.9.2) (2020-11-26)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "ember-layout-components",
-  "version": "0.9.2",
+  "version": "0.10.1",
   "description": "Generic & reusable layout components for your Ember app.",
   "keywords": [
     "ember-addon"
