@@ -64,26 +64,6 @@ module('Integration | Component | layout/cluster', function (hooks) {
       .doesNotHaveClass('layout-cluster-item--grow');
   });
 
-  module('@size', function () {
-    [
-      { size: 'xsmall', className: 'layout-cluster--xsmall' },
-      { size: 'small', className: 'layout-cluster--small' },
-      { size: 'large', className: 'layout-cluster--large' },
-      { size: 'xlarge', className: 'layout-cluster--xlarge' },
-    ].forEach((scenario) => {
-      test(`it works with ${scenario.size}`, async function (assert) {
-        this.size = scenario.size;
-
-        await render(hbs`
-          <Layout::Cluster @size={{this.size}}>
-          </Layout::Cluster>
-        `);
-
-        assert.dom('.layout-cluster').hasClass(scenario.className);
-      });
-    });
-  });
-
   module('@gap', function () {
     [
       { gap: 'xsmall', className: 'layout-cluster--xsmall' },
