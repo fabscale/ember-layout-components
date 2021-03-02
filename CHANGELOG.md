@@ -1,3 +1,5 @@
+# [0.11.0](https://github.com/fabscale/ember-layout-components/compare/0.10.1...0.11.0) (2021-03-02)
+
 ## [0.10.1](https://github.com/fabscale/ember-layout-components/compare/0.9.2...0.10.1) (2021-03-02)
 
 
