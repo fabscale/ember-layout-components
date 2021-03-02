@@ -1,7 +1,7 @@
 {{! template-lint-disable no-potential-path-strings }}
 
 <Layout::Wrapper>
-  <Layout::VerticalStack @gap='xlarge' as |SectionItem|>
+  <Layout::Stack @gap='xlarge' as |SectionItem|>
     <SectionItem>
       <h1>
         Cluster
@@ -54,7 +54,7 @@
         Configuration options
       </h2>
 
-      <Layout::VerticalStack as |StackItem|>
+      <Layout::Stack as |StackItem|>
         <StackItem>
           <Layout::Cluster @fullWidthOnMobile={{true}} as |Item|>
             <Item>
@@ -136,7 +136,7 @@
             </Item>
           </Layout::Cluster>
         </StackItem>
-      </Layout::VerticalStack>
+      </Layout::Stack>
     </SectionItem>
 
     <SectionItem>
@@ -154,7 +154,7 @@
         Float items to the right
       </h3>
 
-      <Layout::VerticalStack as |StackItem|>
+      <Layout::Stack as |StackItem|>
         <StackItem>
           <CodeBlock @code={{this.clusterCodeRight}} @language='handlebars' />
         </StackItem>
@@ -179,7 +179,7 @@
             </Item>
           </Layout::Cluster>
         </StackItem>
-      </Layout::VerticalStack>
+      </Layout::Stack>
     </SectionItem>
 
     <SectionItem>
@@ -187,7 +187,7 @@
         Float items to the left
       </h3>
 
-      <Layout::VerticalStack as |StackItem|>
+      <Layout::Stack as |StackItem|>
         <StackItem>
           <CodeBlock @code={{this.clusterCodeLeft}} @language='handlebars' />
         </StackItem>
@@ -213,7 +213,7 @@
             </Item>
           </Layout::Cluster>
         </StackItem>
-      </Layout::VerticalStack>
+      </Layout::Stack>
     </SectionItem>
 
     <SectionItem>
@@ -221,7 +221,7 @@
         Grow items
       </h3>
 
-      <Layout::VerticalStack as |StackItem|>
+      <Layout::Stack as |StackItem|>
         <StackItem>
           <CodeBlock @code={{this.clusterCodeGrow}} @language='handlebars' />
         </StackItem>
@@ -247,7 +247,7 @@
             </Item>
           </Layout::Cluster>
         </StackItem>
-      </Layout::VerticalStack>
+      </Layout::Stack>
     </SectionItem>
-  </Layout::VerticalStack>
+  </Layout::Stack>
 </Layout::Wrapper>
