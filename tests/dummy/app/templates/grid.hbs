@@ -1,7 +1,7 @@
 {{! template-lint-disable no-potential-path-strings }}
 
 <Layout::Wrapper>
-  <Layout::VerticalStack @gap='xlarge' as |SectionItem|>
+  <Layout::Stack @gap='xlarge' as |SectionItem|>
     <SectionItem>
       <h1>
         Grid
@@ -44,7 +44,7 @@
         Configuration options
       </h2>
 
-      <Layout::VerticalStack as |StackItem|>
+      <Layout::Stack as |StackItem|>
         <StackItem>
           <p>
             There are no configuration options for the grid.
@@ -67,7 +67,7 @@
             </Item>
           </Layout::Grid>
         </StackItem>
-      </Layout::VerticalStack>
+      </Layout::Stack>
     </SectionItem>
-  </Layout::VerticalStack>
+  </Layout::Stack>
 </Layout::Wrapper>
