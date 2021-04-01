@@ -1,6 +1,6 @@
 {{! template-lint-disable no-potential-path-strings }}
 <Layout::Wrapper>
-  <Layout::VerticalStack @gap='xlarge' as |SectionItem|>
+  <Layout::Stack @gap='xlarge' as |SectionItem|>
     <SectionItem>
       <h1>
         Center
@@ -13,7 +13,7 @@
       <p>
         The size options are quarter/half/double of the gap size.
         The separator color can be customized with
-        <CodeInline @code='--layout-vertical-stack-separator-color' />
+        <CodeInline @code='--layout-stack-separator-color' />
         (default:
         <CodeInline @code='grey' />
         ).
@@ -33,7 +33,7 @@
         Configuration options
       </h2>
 
-      <Layout::VerticalStack as |StackItem|>
+      <Layout::Stack as |StackItem|>
         <StackItem>
           <Layout::Cluster @fullWidthOnMobile={{true}} as |Item|>
             <Item>
@@ -68,7 +68,7 @@
           </div>
           {{! template-lint-enable no-inline-styles }}
         </StackItem>
-      </Layout::VerticalStack>
+      </Layout::Stack>
     </SectionItem>
-  </Layout::VerticalStack>
+  </Layout::Stack>
 </Layout::Wrapper>

@@ -2,18 +2,18 @@ import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
-export default class VerticalStackController extends Controller {
-  @tracked verticalStackGap;
-  @tracked verticalStackWithSeparator;
+export default class StackController extends Controller {
+  @tracked stackGap;
+  @tracked stackWithSeparator;
 
   @action
   updateProperty(property, value) {
     this[property] = value;
   }
 
-  verticalStackCode = `<Layout::VerticalStack as |Item|>
+  stackCode = `<Layout::Stack as |Item|>
   <Item>First item</Item>
   <Item>Second item</Item>
   <Item>Third item</Item>
-</Layout::VerticalStack>`;
+</Layout::Stack>`;
 }
