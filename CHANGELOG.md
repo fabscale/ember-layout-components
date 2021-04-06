@@ -1,3 +1,10 @@
+## [0.11.2](https://github.com/fabscale/ember-layout-components/compare/0.11.1...0.11.2) (2021-04-06)
+
+
+### Reverts
+
+* Revert "feat!: Rename VerticalStack to Stack" ([4bf29c9](https://github.com/fabscale/ember-layout-components/commit/4bf29c9d05a81da64942106b2a7481d4343b3734))
+
 ## [0.11.1](https://github.com/fabscale/ember-layout-components/compare/0.11.0...0.11.1) (2021-04-01)
 
 ### Features
