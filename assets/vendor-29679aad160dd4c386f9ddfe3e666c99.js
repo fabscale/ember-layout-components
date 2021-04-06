@@ -3673,14 +3673,14 @@ e.default=r})),define("ember-layout-components/components/layout/grid/item",["ex
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 const t=Ember.HTMLBars.template({id:"TCnNhtnn",block:'[[[11,0],[24,0,"layout-grid-item"],[17,1],[12],[18,2,null],[13],[1,"\\n"]],["&attrs","&default"],false,["yield"]]',moduleName:"ember-layout-components/components/layout/grid/item.hbs",isStrictMode:!1})
 var r=Ember._setComponentTemplate(t,Ember._templateOnlyComponent())
-e.default=r})),define("ember-layout-components/components/layout/stack",["exports"],(function(e){"use strict"
+e.default=r})),define("ember-layout-components/components/layout/vertical-stack",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-const t=Ember.HTMLBars.template({id:"YxuF0QVi",block:'[[[11,0],[16,0,[28,[37,0],["layout-stack",[28,[37,1],[[30,1],"xlarge","layout-stack--xlarge"],null],[28,[37,1],[[30,1],"large","layout-stack--large"],null],[28,[37,1],[[30,1],"small","layout-stack--small"],null],[28,[37,1],[[30,1],"xsmall","layout-stack--xsmall"],null],[28,[37,1],[[30,2],"xlarge","layout-stack--xlarge"],null],[28,[37,1],[[30,2],"large","layout-stack--large"],null],[28,[37,1],[[30,2],"small","layout-stack--small"],null],[28,[37,1],[[30,2],"xsmall","layout-stack--xsmall"],null],[28,[37,1],[[30,3],true,"layout-stack--with-separator"],null]],null]],[17,4],[12],[1,"\\n  "],[18,5,[[50,"layout/stack/item",0,null,null]]],[1,"\\n"],[13]],["@size","@gap","@withSeparator","&attrs","&default"],false,["layout-join-classes","layout-class-if","yield","component"]]',moduleName:"ember-layout-components/components/layout/stack.hbs",isStrictMode:!1})
+const t=Ember.HTMLBars.template({id:"YLYlSW5S",block:'[[[11,0],[16,0,[28,[37,0],["layout-vertical-stack",[28,[37,1],[[30,1],"xlarge","layout-vertical-stack--xlarge"],null],[28,[37,1],[[30,1],"large","layout-vertical-stack--large"],null],[28,[37,1],[[30,1],"small","layout-vertical-stack--small"],null],[28,[37,1],[[30,1],"xsmall","layout-vertical-stack--xsmall"],null],[28,[37,1],[[30,2],true,"layout-vertical-stack--with-separator"],null]],null]],[17,3],[12],[1,"\\n  "],[18,4,[[50,"layout/vertical-stack/item",0,null,null]]],[1,"\\n"],[13]],["@gap","@withSeparator","&attrs","&default"],false,["layout-join-classes","layout-class-if","yield","component"]]',moduleName:"ember-layout-components/components/layout/vertical-stack.hbs",isStrictMode:!1})
 var r=Ember._setComponentTemplate(t,Ember._templateOnlyComponent())
 e.default=r}))
-define("ember-layout-components/components/layout/stack/item",["exports"],(function(e){"use strict"
+define("ember-layout-components/components/layout/vertical-stack/item",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-const t=Ember.HTMLBars.template({id:"l1v1a5OU",block:'[[[11,0],[24,0,"layout-stack-item"],[17,1],[12],[18,2,null],[13],[1,"\\n"]],["&attrs","&default"],false,["yield"]]',moduleName:"ember-layout-components/components/layout/stack/item.hbs",isStrictMode:!1})
+const t=Ember.HTMLBars.template({id:"k3l0rvp5",block:'[[[11,0],[24,0,"layout-vertical-stack-item"],[17,1],[12],[18,2,null],[13],[1,"\\n"]],["&attrs","&default"],false,["yield"]]',moduleName:"ember-layout-components/components/layout/vertical-stack/item.hbs",isStrictMode:!1})
 var r=Ember._setComponentTemplate(t,Ember._templateOnlyComponent())
 e.default=r})),define("ember-layout-components/components/layout/wrapper",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
