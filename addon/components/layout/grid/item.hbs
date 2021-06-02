@@ -1,1 +1,10 @@
-<div class="layout-grid-item" ...attributes>{{yield}}</div>
+<div
+  class={{
+    layout-join-classes
+    'layout-grid-item'
+    (layout-class-if @fullWidth true 'layout-grid-item--full-width ')
+  }}
+  ...attributes
+>
+  {{yield}}
+</div>

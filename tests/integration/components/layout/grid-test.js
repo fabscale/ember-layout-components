@@ -42,4 +42,21 @@ module('Integration | Component | layout/grid', function (hooks) {
       .dom('.layout-grid')
       .hasAttribute('style', '--grid-gap-size: 123px; --grid-size: 45px');
   });
+
+  test('it allows to set @fullWidth on items', async function (assert) {
+    await render(hbs`
+      <Layout::Grid as |Item|>
+        <Item>first</Item>
+        <Item @fullWidth={{true}}>second</Item>
+      </Layout::Grid>
+    `);
+
+    assert.dom('.layout-grid-item').exists({ count: 2 });
+    assert
+      .dom('.layout-grid-item:nth-child(1)')
+      .doesNotHaveClass('layout-grid-item--full-width');
+    assert
+      .dom('.layout-grid-item:nth-child(2)')
+      .hasClass('layout-grid-item--full-width');
+  });
 });

@@ -62,8 +62,7 @@
   --stack-gap-size: calc(var(--layout-stack-gap) * 3);
 }
 
-.layout-stack--with-separator
-  > .layout-stack-item:not(:last-child) {
+.layout-stack--with-separator > .layout-stack-item:not(:last-child) {
   padding-bottom: var(--stack-gap-size);
   border-bottom: 1px solid var(--layout-stack-separator-color);
 }
@@ -192,4 +191,8 @@
 
 .layout-grid-item {
   min-width: 0;
+}
+
+.layout-grid-item--full-width {
+  grid-column: 1 / -1;
 }

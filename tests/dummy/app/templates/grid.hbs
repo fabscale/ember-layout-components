@@ -69,5 +69,41 @@
         </StackItem>
       </Layout::Stack>
     </SectionItem>
+
+    <SectionItem>
+      <h2>
+        Configuration options for items
+      </h2>
+
+      <Layout::Stack as |StackItem|>
+        <StackItem>
+          <p>
+            You can also specify
+            <CodeInline @code='@fullWidth={{true}}' />
+            on a grid item, 
+        to make it span the full size of the grid no matter what.
+          </p>
+        </StackItem>
+
+        <StackItem>
+          <Layout::Grid as |Item|>
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item @fullWidth={{true}}>
+              <DemoItem>
+                This item has full width!
+              </DemoItem>
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+            <Item>
+              <DemoItem />
+            </Item>
+          </Layout::Grid>
+        </StackItem>
+      </Layout::Stack>
+    </SectionItem>
   </Layout::Stack>
 </Layout::Wrapper>
