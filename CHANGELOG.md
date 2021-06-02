@@ -1,3 +1,10 @@
+## [0.12.1](https://github.com/fabscale/ember-layout-components/compare/0.12.0...0.12.1) (2021-06-02)
+
+
+### Features
+
+* Allow to make grid items full width ([0d765fb](https://github.com/fabscale/ember-layout-components/commit/0d765fb1a91d86e3917a7d24fd64d62e935a08a3))
+
 # [0.12.0](https://github.com/fabscale/ember-layout-components/compare/0.11.2...0.12.0) (2021-04-06)
 
 
