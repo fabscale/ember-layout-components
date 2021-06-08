@@ -5,8 +5,7 @@
   "plugins": {
     "release-it-lerna-changelog": {
       "infile": "CHANGELOG.md"
-    },
-    "release-it-yarn-workspaces": {}
+    }
   },
   "git": {
     "tagName": "v${version}"
