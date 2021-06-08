@@ -1,5 +1,7 @@
 <div
-  class="layout-grid"
+  class={{
+    layout-join-classes 'layout-grid' (if @noGrow 'layout-grid--no-grow')
+  }}
   style={{layout-css-var grid-gap-size=@gapSize grid-size=@gridSize}}
   ...attributes
 >

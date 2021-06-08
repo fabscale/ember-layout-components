@@ -189,6 +189,10 @@
   grid-template-columns: repeat(auto-fit, minmax(var(--grid-size), 1fr));
 }
 
+.layout-grid--no-grow {
+  grid-template-columns: repeat(auto-fill, var(--grid-size));
+}
+
 .layout-grid-item {
   min-width: 0;
 }
