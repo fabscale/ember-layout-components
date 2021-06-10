@@ -46,13 +46,20 @@
 
       <Layout::Stack as |StackItem|>
         <StackItem>
-          <p>
-            There are no configuration options for the grid.
-          </p>
+          <Layout::Cluster @fullWidthOnMobile={{true}} as |Item|>
+            <Item>
+              <ConfigOption
+                @label='@noGrow'
+                @value={{this.gridNoGrow}}
+                @onChange={{fn this.updateProperty 'gridNoGrow'}}
+                @options={{array true}}
+              />
+            </Item>
+          </Layout::Cluster>
         </StackItem>
 
         <StackItem>
-          <Layout::Grid as |Item|>
+          <Layout::Grid @noGrow={{this.gridNoGrow}} as |Item|>
             <Item>
               <DemoItem />
             </Item>

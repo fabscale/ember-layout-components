@@ -2,6 +2,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
+import settled from '@ember/test-helpers/settled';
 
 module('Integration | Component | layout/grid', function (hooks) {
   setupRenderingTest(hooks);
@@ -41,6 +42,20 @@ module('Integration | Component | layout/grid', function (hooks) {
     assert
       .dom('.layout-grid')
       .hasAttribute('style', '--grid-gap-size: 123px; --grid-size: 45px');
+  });
+
+  test('it allows to specify @noGrow', async function (assert) {
+    await render(hbs`
+      <Layout::Grid @noGrow={{this.noGrow}}>
+      </Layout::Grid>
+    `);
+
+    assert.dom('.layout-grid').doesNotHaveClass('layout-grid--no-grow');
+
+    this.set('noGrow', true);
+    await settled();
+
+    assert.dom('.layout-grid').hasClass('layout-grid--no-grow');
   });
 
   test('it allows to set @fullWidth on items', async function (assert) {
