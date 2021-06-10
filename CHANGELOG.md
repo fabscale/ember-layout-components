@@ -1,3 +1,14 @@
+## v1.0.0 (2021-06-10)
+
+#### :rocket: Enhancement
+* [#241](https://github.com/fabscale/ember-layout-components/pull/241) feat: Add `@noGrow` option to grid to have exact grid column widths ([@mydea](https://github.com/mydea))
+
+#### :house: Internal
+* [#240](https://github.com/fabscale/ember-layout-components/pull/240) chore: Update release-it config to use PRs instead of commits ([@mydea](https://github.com/mydea))
+
+#### Committers: 1
+- Francesco Novy ([@mydea](https://github.com/mydea))
+
 ## [0.12.1](https://github.com/fabscale/ember-layout-components/compare/0.12.0...0.12.1) (2021-06-02)
 
 
