@@ -70,7 +70,9 @@ module.exports = {
       extends: ['plugin:node/recommended'],
     },
     {
-      files: ['tests/**/*.js'],
+      // Test files:
+      files: ['tests/**/*-test.{js,ts}'],
+      extends: ['plugin:qunit/recommended'],
       rules: {
         'ember/avoid-leaking-state-in-ember-objects': 'off',
       },
