@@ -72,32 +72,31 @@
 }
 
 /* Cluster */
-.layout-cluster-wrapper {
-  /* ↓ Suppress horizontal scrolling caused by the negative margin in some circumstances */
-  overflow: hidden;
-}
-
-/* Without this, the overflow: hidden; would not work, sometimes showing unexpected scrollbars... */
 .layout-cluster {
   --cluster-gap-size: var(--layout-cluster-gap);
-  --cluster-horizontal-gap: calc(var(--cluster-gap-size) / 2);
-  --cluster-vertical-gap: calc(
-    var(--cluster-vertical-gap-size, var(--cluster-gap-size)) / 2
+  --cluster-horizontal-gap: var(--cluster-gap-size);
+  --cluster-vertical-gap: var(
+    --cluster-vertical-gap-size,
+    var(--cluster-gap-size)
   );
 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: calc(var(--cluster-vertical-gap) * -1)
-    calc(var(--cluster-horizontal-gap) * -1);
+  gap: var(--cluster-vertical-gap) var(--cluster-horizontal-gap);
 }
 
 .layout-cluster--no-wrap {
   flex-wrap: nowrap;
 }
 
-.layout-cluster-item {
-  margin: var(--cluster-vertical-gap) var(--cluster-horizontal-gap);
+.layout-cluster--no-gap-support {
+  gap: 0;
+}
+
+.layout-cluster--no-gap-support .layout-cluster-item {
+  margin: calc(var(--cluster-vertical-gap) / 2)
+    calc(var(--cluster-horizontal-gap) / 2);
 }
 
 .layout-cluster--right {
@@ -173,18 +172,19 @@
 }
 
 /* "Floating" is achieved via margin: auto */
-.layout-cluster-item--left {
+/* We have to also add the no-gap-support child declaration to ensure it has a high enough specifity */
+.layout-cluster-item--left,
+.layout-cluster--no-gap-support > .layout-cluster-item--left {
   margin-right: auto;
 }
 
-.layout-cluster-item--right {
+.layout-cluster-item--right,
+.layout-cluster--no-gap-support > .layout-cluster-item--right {
   margin-left: auto;
 }
 
 @media all and (max-width: 420px) {
   .layout-cluster--full-width-on-mobile {
-    margin-left: 0;
-    margin-right: 0;
     flex-wrap: wrap;
   }
 
