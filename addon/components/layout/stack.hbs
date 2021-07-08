@@ -1,8 +1,9 @@
 {{layout-deprecate
   '<Layout::Stack>: You have to use @gap instead of @size'
-  @size
+  (if @size false true)
   id='ember-layout-components.gap-instead-of-size'
   until='2.0.0'
+  since='1.1.0'
   for='ember-layout-components'
 }}
 <div
