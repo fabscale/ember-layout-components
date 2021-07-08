@@ -111,6 +111,7 @@ module('Integration | Component | layout/cluster', function (hooks) {
     [
       { position: 'right', className: 'layout-cluster--right' },
       { position: 'spaced', className: 'layout-cluster--spaced' },
+      { position: 'center', className: 'layout-cluster--center' },
     ].forEach((scenario) => {
       test(`it works with ${scenario.position}`, async function (assert) {
         this.position = scenario.position;
