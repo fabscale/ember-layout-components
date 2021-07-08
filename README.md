@@ -17,6 +17,11 @@ Based on [every-layout.dev](https://every-layout.dev/).
 - Ember CLI v3.20 or above
 - Node.js v10 or above
 
+This addon makes use of some modern CSS features, which means that browser support might be limited:
+
+- It makes heavy use of runtime CSS Variables, which means it will not work in IE11
+- The Cluster uses [flex gap](https://caniuse.com/flexbox-gap), which is supported in all modern browsers (Safari 14.1+). There is an included fallback behavior for browsers that do not support it.
+
 ## Installation
 
 ```
@@ -27,7 +32,7 @@ ember install ember-layout-components
 
 ```hbs
 <Layout::Wrapper>
-  <Layout::Stack @gap="large" as |Section|>
+  <Layout::Stack @gap='large' as |Section|>
     <Section>
       First section goes here.
     </Section>

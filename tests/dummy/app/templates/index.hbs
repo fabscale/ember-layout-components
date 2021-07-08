@@ -5,13 +5,11 @@
 
   <p>
     This addon provides easy to use and flexible layout components.
-          By using these components, your layout will automatically be flexible and consistent.
-          Instead of defining exactly how something should look like at a given viewport, let the intrinsic size of
-          content and CSS calcualte the best possible layout, based on the basic rules these layout components define.
-          This addon is heavily inspired by
-    <a href='https://every-layout.dev/'>
-      every-layout.dev
-    </a>
+    By using these components, your layout will automatically be flexible and consistent.
+    Instead of defining exactly how something should look like at a given viewport, let the intrinsic size of
+    content and CSS calcualte the best possible layout, based on the basic rules these layout components define.
+    This addon is heavily inspired by
+    <a href='https://every-layout.dev/'>every-layout.dev</a>.
   </p>
 
   <h2>
@@ -20,11 +18,15 @@
 
   <p>
     All layout components use CSS Properties. If you need to support IE11, you could use something like
-    <a href='https://github.com/MadLittleMods/postcss-css-variables'>
-      postcss-css-variables
-    </a>
-    to get a gracious
-          fallback.
+    <a href='https://github.com/MadLittleMods/postcss-css-variables'>postcss-css-variables</a>
+    to get a gracious fallback.
+  </p>
+
+  <p>
+    The Cluster uses 
+    <a href='https://caniuse.com/flexbox-gap'>flex gap</a>, 
+    which is supported in all modern browsers (Safari 14.1+). 
+    There is an included fallback behavior for browsers that do not support it.
   </p>
 
   <h2>
