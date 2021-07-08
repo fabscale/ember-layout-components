@@ -66,6 +66,7 @@ module('Integration | Component | layout/cluster', function (hooks) {
 
   module('@gap', function () {
     [
+      { gap: 'none', className: 'layout-cluster--no-gap' },
       { gap: 'xsmall', className: 'layout-cluster--xsmall' },
       { gap: 'small', className: 'layout-cluster--small' },
       { gap: 'large', className: 'layout-cluster--large' },
@@ -86,6 +87,7 @@ module('Integration | Component | layout/cluster', function (hooks) {
 
   module('@gapVertical', function () {
     [
+      { gapVertical: 'none', className: 'layout-cluster--vertical-no-gap' },
       { gapVertical: 'xsmall', className: 'layout-cluster--vertical-xsmall' },
       { gapVertical: 'small', className: 'layout-cluster--vertical-small' },
       { gapVertical: 'medium', className: 'layout-cluster--vertical-medium' },

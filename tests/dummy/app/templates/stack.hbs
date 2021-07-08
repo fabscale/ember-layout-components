@@ -47,7 +47,7 @@
                 @label='@gap'
                 @value={{this.stackGap}}
                 @onChange={{fn this.updateProperty 'stackGap'}}
-                @options={{array 'xsmall' 'small' 'large' 'xlarge'}}
+                @options={{array 'none' 'xsmall' 'small' 'large' 'xlarge'}}
               />
             </Item>
 
@@ -55,9 +55,7 @@
               <ConfigOption
                 @label='@withSeparator'
                 @value={{this.stackWithSeparator}}
-                @onChange={{
-                  fn this.updateProperty 'stackWithSeparator'
-                }}
+                @onChange={{fn this.updateProperty 'stackWithSeparator'}}
                 @options={{array true}}
               />
             </Item>

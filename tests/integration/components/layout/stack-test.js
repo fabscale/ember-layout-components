@@ -33,6 +33,7 @@ module('Integration | Component | layout/stack', function (hooks) {
 
   module('@gap', function () {
     [
+      { gap: 'none', className: 'layout-stack--no-gap' },
       { gap: 'xsmall', className: 'layout-stack--xsmall' },
       { gap: 'small', className: 'layout-stack--small' },
       { gap: 'large', className: 'layout-stack--large' },
