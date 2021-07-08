@@ -108,6 +108,10 @@
   justify-content: space-between;
 }
 
+.layout-cluster--center {
+  justify-content: center;
+}
+
 .layout-cluster--top {
   align-items: flex-start;
 }
