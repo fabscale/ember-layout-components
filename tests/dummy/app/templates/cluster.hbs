@@ -62,7 +62,7 @@
                 @label='@gap'
                 @value={{this.clusterGap}}
                 @onChange={{fn this.updateProperty 'clusterGap'}}
-                @options={{array 'xsmall' 'small' 'large' 'xlarge'}}
+                @options={{array 'none' 'xsmall' 'small' 'large' 'xlarge'}}
               />
             </Item>
 
@@ -71,7 +71,9 @@
                 @label='@gapVertical'
                 @value={{this.clusterGapVertical}}
                 @onChange={{fn this.updateProperty 'clusterGapVertical'}}
-                @options={{array 'xsmall' 'small' 'medium' 'large' 'xlarge'}}
+                @options={{
+                  array 'none' 'xsmall' 'small' 'medium' 'large' 'xlarge'
+                }}
               />
             </Item>
 
