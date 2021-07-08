@@ -1,3 +1,15 @@
+## v1.1.0 (2021-07-08)
+
+#### :rocket: Enhancement
+* [#261](https://github.com/fabscale/ember-layout-components/pull/261) feat: Add none option for gap size ([@mydea](https://github.com/mydea))
+
+#### :house: Internal
+* [#262](https://github.com/fabscale/ember-layout-components/pull/262) chore: Add forgotten deprecation for Stack `@size` ([@mydea](https://github.com/mydea))
+* [#260](https://github.com/fabscale/ember-layout-components/pull/260) Update dev dependencies ([@mydea](https://github.com/mydea))
+
+#### Committers: 1
+- Francesco Novy ([@mydea](https://github.com/mydea))
+
 ## v1.0.0 (2021-06-10)
 
 #### :rocket: Enhancement
