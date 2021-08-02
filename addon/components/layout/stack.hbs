@@ -1,19 +1,7 @@
-{{layout-deprecate
-  '<Layout::Stack>: You have to use @gap instead of @size'
-  (if @size false true)
-  id='ember-layout-components.gap-instead-of-size'
-  until='2.0.0'
-  since='1.1.0'
-  for='ember-layout-components'
-}}
 <div
   class={{
     layout-join-classes
     'layout-stack'
-    (layout-class-if @size 'xlarge' 'layout-stack--xlarge')
-    (layout-class-if @size 'large' 'layout-stack--large')
-    (layout-class-if @size 'small' 'layout-stack--small')
-    (layout-class-if @size 'xsmall' 'layout-stack--xsmall')
     (layout-class-if @gap 'none' 'layout-stack--no-gap')
     (layout-class-if @gap 'xsmall' 'layout-stack--xsmall')
     (layout-class-if @gap 'small' 'layout-stack--small')
