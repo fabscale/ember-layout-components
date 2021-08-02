@@ -1,3 +1,15 @@
+
+## v1.2.0 (2021-08-02)
+
+#### :rocket: Enhancement
+* [#266](https://github.com/fabscale/ember-layout-components/pull/266) feat: Add `@position='center'` to Cluster ([@mydea](https://github.com/mydea))
+
+#### :house: Internal
+* [#274](https://github.com/fabscale/ember-layout-components/pull/274) Update dev dependencies ([@mydea](https://github.com/mydea))
+
+#### Committers: 1
+- Francesco Novy ([@mydea](https://github.com/mydea))
+
 ## v1.1.0 (2021-07-08)
 
 #### :rocket: Enhancement
