@@ -1,4 +1,13 @@
 
+
+## v1.3.0 (2021-08-02)
+
+#### :house: Internal
+* [#265](https://github.com/fabscale/ember-layout-components/pull/265) chore: Remove deprecated Stack `@size` property ([@mydea](https://github.com/mydea))
+
+#### Committers: 1
+- Francesco Novy ([@mydea](https://github.com/mydea))
+
 ## v1.2.0 (2021-08-02)
 
 #### :rocket: Enhancement
