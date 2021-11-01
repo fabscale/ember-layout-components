@@ -8,6 +8,6 @@ module('Acceptance | layout', function (hooks) {
   test('dummy app renderes', async function (assert) {
     await visit('/');
 
-    assert.equal(currentURL(), '/');
+    assert.strictEqual(currentURL(), '/');
   });
 });
