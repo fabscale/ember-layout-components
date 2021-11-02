@@ -9,6 +9,6 @@ module('Integration | Helper | layout-join-classes', function (hooks) {
   test('it works', async function (assert) {
     await render(hbs`{{layout-join-classes 'aa' '' 'bb' false 'cc'}}`);
 
-    assert.equal(this.element.textContent.trim(), 'aa bb cc');
+    assert.strictEqual(this.element.textContent.trim(), 'aa bb cc');
   });
 });
