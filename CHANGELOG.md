@@ -1,5 +1,14 @@
 
 
+
+## v1.4.0 (2021-11-02)
+
+#### :house: Internal
+* [#286](https://github.com/fabscale/ember-layout-components/pull/286) chore(deps-dev): bump ember-cli from 3.27.0 to 3.28.0 ([@dependabot[bot]](https://github.com/apps/dependabot))
+
+#### Committers: 1
+- Francesco Novy ([@mydea](https://github.com/mydea))
+
 ## v1.3.0 (2021-08-02)
 
 #### :house: Internal
