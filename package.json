@@ -81,8 +81,8 @@
     "edition": "octane"
   },
   "volta": {
-    "node": "14.17.4",
-    "yarn": "1.22.11"
+    "node": "16.13.0",
+    "yarn": "1.22.17"
   },
   "resolutions": {
     "*/ember-auto-import": "~2.2.0"
