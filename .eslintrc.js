@@ -1,42 +1,6 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-    ecmaFeatures: {
-      legacyDecorators: true,
-    },
-  },
-
-  plugins: ['ember', 'ember-es6-class'],
-
-  extends: [
-    'eslint:recommended',
-    'plugin:ember/recommended',
-    'plugin:prettier/recommended',
-  ],
-
-  env: {
-    browser: true,
-  },
-
-  rules: {
-    'ember/no-deeply-nested-dependent-keys-with-each': 2,
-    'ember/no-ember-super-in-es-classes': 2,
-    'ember-es6-class/no-object-extend': 2,
-    'no-console': 2,
-    'ember/no-invalid-debug-function-arguments': 2,
-    'ember/require-return-from-computed': 2,
-    'ember/no-new-mixins': 2,
-    'ember/no-jquery': 2,
-    'ember/route-path-style': 2,
-    'lines-between-class-members': [
-      'error',
-      'always',
-      { exceptAfterSingleLine: true },
-    ],
-  },
+  ...require('fabscale-eslint-config/lib/ember'),
 
   overrides: [
     // node files
@@ -52,23 +16,12 @@ module.exports = {
         './config/**/*.js',
         './tests/dummy/config/**/*.js',
       ],
-      parserOptions: {
-        sourceType: 'script',
-      },
-      env: {
-        browser: false,
-        node: true,
-      },
-      plugins: ['node'],
-      extends: ['plugin:node/recommended'],
+      ...require('fabscale-eslint-config/lib/node'),
     },
     {
-      // Test files:
+      // test files:
       files: ['tests/**/*-test.{js,ts}'],
-      extends: ['plugin:qunit/recommended'],
-      rules: {
-        'ember/avoid-leaking-state-in-ember-objects': 'off',
-      },
+      ...require('fabscale-eslint-config/lib/ember-tests'),
     },
   ],
 };
