@@ -34,10 +34,17 @@
       </p>
 
       <p>
-        Any splattributes will be added to the inner flexbox container. 
-        If you need to add classes to the wrapper, you can do so via
-        <CodeInline @code="@wrapperClasses='outer-class'" />
-        .
+        Any splattributes will be added to the flexbox container.
+      </p>
+
+      <p>
+        Note that the Cluster uses 
+        <a href='https://caniuse.com/flexbox-gap'>flex gap</a>, 
+        which might not be supported in all browsers.
+        Coverage is pretty good nowadays, but especially Safari &lt;= 14 do not support it. 
+        For these browsers, a fallback is provided that handles the spacing via margins. 
+        This should be serviceable, but please do note that in those cases there will be an outer spacing due to the limitations
+        of this approach. It should still serve as an acceptable fallback behavior in the spirit of progressive enhancement, though.
       </p>
     </SectionItem>
 

@@ -2,6 +2,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
+import { _setIsSupported } from 'ember-layout-components/helpers/layout-has-flex-gap-support';
 
 module('Integration | Component | layout/cluster', function (hooks) {
   setupRenderingTest(hooks);
@@ -22,12 +23,11 @@ module('Integration | Component | layout/cluster', function (hooks) {
 
   test('it allows to add HTML attributes', async function (assert) {
     await render(hbs`
-      <Layout::Cluster class="my-class" @wrapperClasses='wrapper-class' as |Item|>
+      <Layout::Cluster class="my-class" as |Item|>
       <Item class="item-class"></Item>
       </Layout::Cluster>
     `);
 
-    assert.dom('.layout-cluster-wrapper').hasClass('wrapper-class');
     assert.dom('.layout-cluster').hasClass('my-class');
     assert.dom('.layout-cluster-item').hasClass('item-class');
   });
@@ -218,6 +218,37 @@ module('Integration | Component | layout/cluster', function (hooks) {
       `);
 
       assert.dom('.layout-cluster').hasClass('layout-cluster--no-wrap');
+    });
+  });
+
+  module('flex gap support', function (hooks) {
+    hooks.afterEach(function () {
+      // Reset it so it can be calculated correctly again
+      _setIsSupported(undefined);
+    });
+
+    test('it works with flex gap support', async function (assert) {
+      _setIsSupported(true);
+
+      await render(hbs`
+        <Layout::Cluster>
+        </Layout::Cluster>
+      `);
+
+      assert
+        .dom('.layout-cluster')
+        .doesNotHaveClass('layout-cluster--no-gap-support');
+    });
+
+    test('it works without flex gap support', async function (assert) {
+      _setIsSupported(false);
+
+      await render(hbs`
+        <Layout::Cluster>
+        </Layout::Cluster>
+      `);
+
+      assert.dom('.layout-cluster').hasClass('layout-cluster--no-gap-support');
     });
   });
 });
