@@ -1,6 +1,24 @@
 
 
 
+
+## v2.0.0 (2022-02-28)
+
+#### :boom: Breaking Change
+* [#264](https://github.com/fabscale/ember-layout-components/pull/264) feat: Use flex gap for Cluster ([@mydea](https://github.com/mydea))
+
+#### :rocket: Enhancement
+* [#264](https://github.com/fabscale/ember-layout-components/pull/264) feat: Use flex gap for Cluster ([@mydea](https://github.com/mydea))
+
+#### :house: Internal
+* [#330](https://github.com/fabscale/ember-layout-components/pull/330) Update dev dependencies ([@mydea](https://github.com/mydea))
+* [#321](https://github.com/fabscale/ember-layout-components/pull/321) Update dev dependencies ([@mydea](https://github.com/mydea))
+* [#312](https://github.com/fabscale/ember-layout-components/pull/312) Update dev dependencies ([@mydea](https://github.com/mydea))
+* [#309](https://github.com/fabscale/ember-layout-components/pull/309) chore(deps): Use fabscale-eslint-config ([@mydea](https://github.com/mydea))
+
+#### Committers: 1
+- Francesco Novy ([@mydea](https://github.com/mydea))
+
 ## v1.4.0 (2021-11-02)
 
 #### :house: Internal
