@@ -606,14 +606,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.14.5"
 
-"@babel/plugin-syntax-decorators@^7.16.0":
-  version "7.16.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-decorators/-/plugin-syntax-decorators-7.16.0.tgz#eb8d811cdd1060f6ac3c00956bf3f6335505a32f"
-  integrity sha512-nxnnngZClvlY13nHJAIDow0S7Qzhq64fQ/NlqS+VER3kjW/4F0jLhXjeL8jcwSwz6Ca3rotT5NJD2T9I7lcv7g==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.14.5"
-
-"@babel/plugin-syntax-decorators@^7.16.7":
+"@babel/plugin-syntax-decorators@^7.16.0", "@babel/plugin-syntax-decorators@^7.16.7":
   version "7.16.7"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-decorators/-/plugin-syntax-decorators-7.16.7.tgz#f66a0199f16de7c1ef5192160ccf5d069739e3d3"
   integrity sha512-vQ+PxL+srA7g6Rx6I1e15m55gftknl2X8GCUW1JTlkTaXZLJOS0UcaY0eK9jYT7IYf4awn6qwyghVHLDz1WyMw==
@@ -5384,10 +5377,10 @@ extract-stack@^2.0.0:
   resolved "https://registry.yarnpkg.com/extract-stack/-/extract-stack-2.0.0.tgz#11367bc865bfcd9bc0db3123e5edb57786f11f9b"
   integrity sha512-AEo4zm+TenK7zQorGK1f9mJ8L14hnTDi2ZQPR+Mub1NX8zimka1mXpV5LpH8x9HoUmFSHZCfLHqWvp0Y4FxxzQ==
 
-fabscale-eslint-config@~1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/fabscale-eslint-config/-/fabscale-eslint-config-1.2.0.tgz#5dc99a3a9bcc4d0729ba174ec278102ed755b7ee"
-  integrity sha512-GBZW75CU88ZCQSCg64qBTc2tDd8yDpkQTO5sCXOQBf5DIFa7XzeZ1RveHtZ6GZx8c0scRgFwpEZoTinFyfexKg==
+fabscale-eslint-config@~1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/fabscale-eslint-config/-/fabscale-eslint-config-1.4.0.tgz#7c59c9b044868b543121ec4f281f004d11bbc1b7"
+  integrity sha512-yJ4ETUrUYo9uCHTb5CVcSU5VKfdexRZoESrAxHHUbh/ylRmS5mNVExJ3qzQaCV//t9+Bjs18Mi6hakf1juH8UA==
   dependencies:
     "@babel/core" "^7.16.0"
     "@babel/plugin-syntax-decorators" "^7.16.0"
