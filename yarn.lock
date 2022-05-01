@@ -1185,10 +1185,10 @@
     ember-compatibility-helpers "^1.2.5"
     ember-modifier-manager-polyfill "^1.2.0"
 
-"@ember/test-helpers@~2.6.0":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@ember/test-helpers/-/test-helpers-2.6.0.tgz#d687515c6ab49ba72717fc62046970ef4a72ea9c"
-  integrity sha512-N5sr3layWk60wB3maCy+/5hFHQRcTh8aqxcZTSs3Od9QkuHdWBtRgMGLP/35mXpJlgWuu3xqLpt6u3dGHc8gCg==
+"@ember/test-helpers@~2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@ember/test-helpers/-/test-helpers-2.7.0.tgz#d8e08b614cdd5eac647689d655e78e1de725f474"
+  integrity sha512-eWFtw5+sbci1Fw+E+HoyaMxY126LvK7jul6i8tad48zlWoxrOalbhJhz1mKqIo4daHbqIZWuFgQhOib4QfTKCQ==
   dependencies:
     "@ember/test-waiters" "^3.0.0"
     broccoli-debug "^0.6.5"
@@ -7954,24 +7954,12 @@ mime-db@1.52.0:
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.52.0.tgz#bbabcdc02859f4987301c856e3387ce5ec43bf70"
   integrity sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==
 
-mime-db@1.52.0:
-  version "1.52.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.52.0.tgz#bbabcdc02859f4987301c856e3387ce5ec43bf70"
-  integrity sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==
-
 "mime-db@>= 1.43.0 < 2":
   version "1.48.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.48.0.tgz#e35b31045dd7eada3aaad537ed88a33afbef2d1d"
   integrity sha512-FM3QwxV+TnZYQ2aRqhlKBMHxk10lTbMt3bBkMAp54ddrNeVSfcQYOOKuGuy3Ddrm38I04If834fOUSq1yzslJQ==
 
-mime-types@2.1.35, mime-types@^2.1.12, mime-types@^2.1.18, mime-types@^2.1.26, mime-types@^2.1.27, mime-types@~2.1.24:
-  version "2.1.35"
-  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.35.tgz#381a871b62a734450660ae3deee44813f70d959a"
-  integrity sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==
-  dependencies:
-    mime-db "1.52.0"
-
-mime-types@~2.1.34:
+mime-types@2.1.35, mime-types@^2.1.12, mime-types@^2.1.18, mime-types@^2.1.26, mime-types@^2.1.27, mime-types@~2.1.24, mime-types@~2.1.34:
   version "2.1.35"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.35.tgz#381a871b62a734450660ae3deee44813f70d959a"
   integrity sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==
