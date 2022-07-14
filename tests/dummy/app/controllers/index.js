@@ -6,4 +6,14 @@ export default class IndexController extends Controller {
   as |Item|
 >
 </Layout::Grid>`;
+
+  styleCode = `:root {
+  --layout-wrapper-width: 60rem;
+  --layout-wrapper-spacing: 2rem;
+  --layout-stack-gap: 1rem;
+  --layout-stack-separator-color: grey;
+  --layout-cluster-gap: 1rem;
+  --layout-grid-gap: 2rem;
+  --layout-grid-width: 20rem;
+}`;
 }
