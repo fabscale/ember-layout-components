@@ -1,19 +1,33 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: monthly
-  open-pull-requests-limit: 15
-  assignees:
-  - mydea
-  labels:
-  - dependencies
-  - internal
-  commit-message:
-    prefix: chore
-    prefix-development: chore
-    include: scope
-  ignore:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 15
+    assignees:
+      - mydea
+    labels:
+      - dependencies
+      - internal
+    commit-message:
+      prefix: chore
+      prefix-development: chore
+      include: scope
+    ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-patch"]
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    assignees:
+      - mydea
+    labels:
+      - dependencies
+      - internal
+    commit-message:
+      prefix: chore
+      prefix-development: chore
+      include: scope
