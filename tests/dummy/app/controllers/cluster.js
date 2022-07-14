@@ -36,9 +36,9 @@ export default class ClusterController extends Controller {
 </Layout::Cluster>`;
 
   clusterCodeGrow = `<Layout::Cluster as |Item|>
-<Item @grow={{true}}>First item</Item>
-<Item>Second item</Item>
-<Item>Third item</Item>
-<Item>Fourth item</Item>
+  <Item @grow={{true}}>First item</Item>
+  <Item>Second item</Item>
+  <Item>Third item</Item>
+  <Item>Fourth item</Item>
 </Layout::Cluster>`;
 }

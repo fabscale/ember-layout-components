@@ -8,9 +8,9 @@
       </h1>
 
       <p>
-        Lay out items horizontally, but breaking the line if necessary. Each item uses its intrinsic size.
-        There is equal spacing horizontally and vertically between them.
-        Can be customized with
+        Lay out items horizontally, but breaking the line if necessary. Each
+        item uses its intrinsic size. There is equal spacing horizontally and
+        vertically between them. Can be customized with
         <CodeInline @code='--layout-cluster-gap' />
         (default:
         <CodeInline @code='1rem' />
@@ -18,9 +18,8 @@
       </p>
 
       <p>
-        The size options are quarter/half/double the gap size.
-        The position can be used to align stuff to the right, or space it evenly.
-        The
+        The size options are quarter/half/double the gap size. The position can
+        be used to align stuff to the right, or space it evenly. The
         <CodeInline @code='@fullWidthOnMobile' />
         option will ensure all items get the full width under 420px.
       </p>
@@ -28,9 +27,9 @@
       <p>
         If you specify
         <CodeInline @code='@gapVertical' />
-        , 
-        you can specify another gap size as for the horizontal spacing. By default, they use the same gap size.
-        This can be useful especially when using the larger gap size, as they can appear too large vertically.
+        , you can specify another gap size as for the horizontal spacing. By
+        default, they use the same gap size. This can be useful especially when
+        using the larger gap size, as they can appear too large vertically.
       </p>
 
       <p>
@@ -38,13 +37,15 @@
       </p>
 
       <p>
-        Note that the Cluster uses 
-        <a href='https://caniuse.com/flexbox-gap'>flex gap</a>, 
-        which might not be supported in all browsers.
-        Coverage is pretty good nowadays, but especially Safari &lt;= 14 do not support it. 
-        For these browsers, a fallback is provided that handles the spacing via margins. 
-        This should be serviceable, but please do note that in those cases there will be an outer spacing due to the limitations
-        of this approach. It should still serve as an acceptable fallback behavior in the spirit of progressive enhancement, though.
+        Note that the Cluster uses
+        <a href='https://caniuse.com/flexbox-gap'>flex gap</a>, which might not
+        be supported in all browsers. Coverage is pretty good nowadays, but
+        especially Safari &lt;= 14 do not support it. For these browsers, a
+        fallback is provided that handles the spacing via margins. This should
+        be serviceable, but please do note that in those cases there will be an
+        outer spacing due to the limitations of this approach. It should still
+        serve as an acceptable fallback behavior in the spirit of progressive
+        enhancement, though.
       </p>
     </SectionItem>
 
@@ -78,8 +79,13 @@
                 @label='@gapVertical'
                 @value={{this.clusterGapVertical}}
                 @onChange={{fn this.updateProperty 'clusterGapVertical'}}
-                @options={{
-                  array 'none' 'xsmall' 'small' 'medium' 'large' 'xlarge'
+                @options={{array
+                  'none'
+                  'xsmall'
+                  'small'
+                  'medium'
+                  'large'
+                  'xlarge'
                 }}
               />
             </Item>
@@ -129,7 +135,8 @@
             @position={{this.clusterPosition}}
             @verticalAlign={{this.clusterVerticalAlign}}
             @fullWidthOnMobile={{this.clusterFullWidthOnMobile}}
-            @noWrap={{this.clusterNoWrap}} as |Item|
+            @noWrap={{this.clusterNoWrap}}
+            as |Item|
           >
             <Item>
               <DemoItem />
@@ -172,7 +179,10 @@
             @gap={{this.clusterGap}}
             @gapVertical={{this.clusterGapVertical}}
             @position={{this.clusterPosition}}
-            @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
+            @verticalAlign={{this.clusterVerticalAlign}}
+            @fullWidthOnMobile={{this.clusterFullWidthOnMobile}}
+            @noWrap={{this.clusterNoWrap}}
+            as |Item|
           >
             <Item>
               <DemoItem />
@@ -206,7 +216,10 @@
             @gap={{this.clusterGap}}
             @gapVertical={{this.clusterGapVertical}}
             @position={{this.clusterPosition}}
-            @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
+            @verticalAlign={{this.clusterVerticalAlign}}
+            @fullWidthOnMobile={{this.clusterFullWidthOnMobile}}
+            @noWrap={{this.clusterNoWrap}}
+            as |Item|
           >
             <Item>
               <DemoItem />
@@ -240,7 +253,10 @@
             @gap={{this.clusterGap}}
             @gapVertical={{this.clusterGapVertical}}
             @position={{this.clusterPosition}}
-            @fullWidthOnMobile={{this.clusterFullWidthOnMobile}} as |Item|
+            @verticalAlign={{this.clusterVerticalAlign}}
+            @fullWidthOnMobile={{this.clusterFullWidthOnMobile}}
+            @noWrap={{this.clusterNoWrap}}
+            as |Item|
           >
             <Item @grow={{true}}>
               <DemoItem />
