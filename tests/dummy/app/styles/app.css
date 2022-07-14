@@ -90,3 +90,7 @@ p {
   color: #fff;
   font-size: 1.25em;
 }
+
+.height-auto {
+  height: auto;
+}
