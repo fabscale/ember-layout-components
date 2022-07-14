@@ -11,7 +11,7 @@ jobs:
     timeout-minutes: 7
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: volta-cli/action@v1
       - uses: mydea/actions-ember-testing@v2
       - name: Install dependencies
@@ -41,7 +41,7 @@ jobs:
           ]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: volta-cli/action@v1
       - uses: mydea/actions-ember-testing@v2
       - name: Install dependencies
