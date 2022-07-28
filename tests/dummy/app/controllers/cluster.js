@@ -9,6 +9,7 @@ export default class ClusterController extends Controller {
   @tracked clusterVerticalAlign;
   @tracked clusterFullWidthOnMobile;
   @tracked clusterNoWrap;
+  @tracked clusterFullHeight;
 
   @action
   updateProperty(property, value) {
