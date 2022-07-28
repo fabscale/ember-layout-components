@@ -75,6 +75,17 @@
   border-bottom: 1px solid var(--layout-stack-separator-color);
 }
 
+/* "Floating" is achieved via margin: auto */
+.layout-stack-item--bottom {
+  margin-top: auto;
+}
+
+.layout-stack-item--center,
+.layout-stack-item--center:not(:last-child) {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 /* Cluster */
 .layout-cluster {
   --cluster-gap-size: var(--layout-cluster-gap);

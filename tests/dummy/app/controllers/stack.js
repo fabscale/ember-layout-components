@@ -17,4 +17,18 @@ export default class StackController extends Controller {
   <Item>Second item</Item>
   <Item>Third item</Item>
 </Layout::Stack>`;
+
+  stackCodeBottom = `<Layout::Stack @fullHeight={{true}} as |Item|>
+  <Item>First item</Item>
+  <Item>Second item</Item>
+  <Item>Third item</Item>
+  <Item @float="bottom">Fourth item</Item>
+</Layout::Stack>`;
+
+  stackCodeCenter = `<Layout::Stack @fullHeight={{true}} as |Item|>
+  <Item>First item</Item>
+  <Item>Second item</Item>
+  <Item>Third item</Item>
+  <Item @float="center">Fourth item</Item>
+</Layout::Stack>`;
 }

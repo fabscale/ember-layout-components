@@ -91,5 +91,98 @@
         </StackItem>
       </Layout::Stack>
     </SectionItem>
+
+    <SectionItem>
+      <h2>
+        Configuration options on items
+      </h2>
+
+      <p>
+        You can also specify some options on the stack items.
+      </p>
+    </SectionItem>
+
+    <SectionItem>
+      <h3>
+        Float items to the bottom
+      </h3>
+
+      <p>
+        Note that this will require the stack to be a specified height (e.g.
+        full height) to have an effect.
+      </p>
+
+      <Layout::Stack as |StackItem|>
+        <StackItem>
+          <CodeBlock @code={{this.stackCodeBottom}} @language='handlebars' />
+        </StackItem>
+        <StackItem>
+          {{! template-lint-disable no-inline-styles }}
+          <div style='height: 20rem; background: lightgrey'>
+            <Layout::Stack
+              @gap={{this.stackGap}}
+              @withSeparator={{this.stackWithSeparator}}
+              @fullHeight={{true}}
+              as |Item|
+            >
+              <Item>
+                <DemoItem />
+              </Item>
+              <Item>
+                <DemoItem />
+              </Item>
+              <Item>
+                <DemoItem />
+              </Item>
+              <Item @float='bottom'>
+                <DemoItem />
+              </Item>
+            </Layout::Stack>
+          </div>
+        </StackItem>
+      </Layout::Stack>
+    </SectionItem>
+
+    <SectionItem>
+      <h3>
+        Float items to the center
+      </h3>
+
+      <p>
+        Note that this will require the stack to be a specified height (e.g.
+        full height) to have an effect.
+      </p>
+
+      <Layout::Stack as |StackItem|>
+        <StackItem>
+          <CodeBlock @code={{this.stackCodeCenter}} @language='handlebars' />
+        </StackItem>
+        <StackItem>
+          {{! template-lint-disable no-inline-styles }}
+          <div style='height: 20rem; background: lightgrey'>
+            <Layout::Stack
+              @gap={{this.stackGap}}
+              @withSeparator={{this.stackWithSeparator}}
+              @fullHeight={{true}}
+              as |Item|
+            >
+              <Item>
+                <DemoItem />
+              </Item>
+              <Item>
+                <DemoItem />
+              </Item>
+              <Item>
+                <DemoItem />
+              </Item>
+              <Item @float='center'>
+                <DemoItem />
+              </Item>
+            </Layout::Stack>
+          </div>
+        </StackItem>
+      </Layout::Stack>
+    </SectionItem>
+
   </Layout::Stack>
 </Layout::Wrapper>
