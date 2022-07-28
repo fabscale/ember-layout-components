@@ -5,6 +5,7 @@ import { tracked } from '@glimmer/tracking';
 export default class StackController extends Controller {
   @tracked stackGap;
   @tracked stackWithSeparator;
+  @tracked stackFullHeight;
 
   @action
   updateProperty(property, value) {
