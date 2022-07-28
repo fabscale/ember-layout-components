@@ -2,6 +2,44 @@
 
 
 
+
+## v2.1.0 (2022-07-28)
+
+#### :rocket: Enhancement
+* [#392](https://github.com/fabscale/ember-layout-components/pull/392) Add `@grow` parameter to `<Layout::Stack>` ([@mydea](https://github.com/mydea))
+* [#391](https://github.com/fabscale/ember-layout-components/pull/391) Add `@float` parameter to `<Layout::Stack>` ([@mydea](https://github.com/mydea))
+* [#390](https://github.com/fabscale/ember-layout-components/pull/390) Add `@fullHeight` parameter to `<Layout::Cluster>` ([@mydea](https://github.com/mydea))
+* [#389](https://github.com/fabscale/ember-layout-components/pull/389) Add `@fullHeight` parameter to `<Layout::Stack>` ([@mydea](https://github.com/mydea))
+
+#### :house: Internal
+* [#388](https://github.com/fabscale/ember-layout-components/pull/388) chore(deps): bump terser from 5.7.0 to 5.14.2 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#385](https://github.com/fabscale/ember-layout-components/pull/385) chore(deps-dev): bump ember-cli from 4.4.0 to 4.5.0 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#386](https://github.com/fabscale/ember-layout-components/pull/386) chore(deps-dev): bump eslint from 8.18.0 to 8.19.0 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#381](https://github.com/fabscale/ember-layout-components/pull/381) chore(deps-dev): bump fabscale-eslint-config from 1.4.0 to 1.5.0 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#384](https://github.com/fabscale/ember-layout-components/pull/384) chore(deps): bump ember-cli-htmlbars from 6.0.1 to 6.1.0 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#382](https://github.com/fabscale/ember-layout-components/pull/382) chore(deps): bump dependabot/fetch-metadata from 1.3.1 to 1.3.3 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#380](https://github.com/fabscale/ember-layout-components/pull/380) chore(deps-dev): bump eslint from 8.16.0 to 8.18.0 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#379](https://github.com/fabscale/ember-layout-components/pull/379) chore(deps-dev): bump prettier from 2.6.1 to 2.7.1 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#378](https://github.com/fabscale/ember-layout-components/pull/378) chore(deps-dev): bump @embroider/test-setup from 1.7.1 to 1.8.0 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#377](https://github.com/fabscale/ember-layout-components/pull/377) chore(deps-dev): bump ember-source from 4.4.1 to 4.5.0 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#376](https://github.com/fabscale/ember-layout-components/pull/376) chore(deps): bump shell-quote from 1.7.2 to 1.7.3 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#358](https://github.com/fabscale/ember-layout-components/pull/358) chore(deps-dev): bump ember-cli-dependency-checker from 3.2.0 to 3.3.1 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#366](https://github.com/fabscale/ember-layout-components/pull/366) chore(deps-dev): bump ember-source from 4.3.0 to 4.4.1 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#369](https://github.com/fabscale/ember-layout-components/pull/369) chore(deps-dev): bump @ember/test-helpers from 2.6.0 to 2.8.1 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#370](https://github.com/fabscale/ember-layout-components/pull/370) chore(deps-dev): bump @babel/core from 7.17.5 to 7.18.2 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#371](https://github.com/fabscale/ember-layout-components/pull/371) chore(deps-dev): bump qunit from 2.18.0 to 2.19.1 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#367](https://github.com/fabscale/ember-layout-components/pull/367) chore(deps-dev): bump @embroider/test-setup from 1.5.0 to 1.7.1 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#375](https://github.com/fabscale/ember-layout-components/pull/375) chore(deps-dev): bump webpack from 5.70.0 to 5.73.0 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#373](https://github.com/fabscale/ember-layout-components/pull/373) chore(deps-dev): bump ember-cli from 4.2.0 to 4.4.0 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#365](https://github.com/fabscale/ember-layout-components/pull/365) chore(deps-dev): bump eslint from 8.12.0 to 8.16.0 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#374](https://github.com/fabscale/ember-layout-components/pull/374) chore(deps-dev): bump @babel/eslint-parser from 7.17.0 to 7.18.2 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#372](https://github.com/fabscale/ember-layout-components/pull/372) chore(deps-dev): bump ember-template-lint from 4.3.0 to 4.10.0 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#355](https://github.com/fabscale/ember-layout-components/pull/355) Update dev dependencies ([@mydea](https://github.com/mydea))
+* [#343](https://github.com/fabscale/ember-layout-components/pull/343) Update dev dependencies ([@mydea](https://github.com/mydea))
+
+#### Committers: 1
+- Francesco Novy ([@mydea](https://github.com/mydea))
+
 ## v2.0.0 (2022-02-28)
 
 #### :boom: Breaking Change
