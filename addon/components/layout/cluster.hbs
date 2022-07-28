@@ -8,8 +8,7 @@
 }}
 
 <div
-  class={{
-    layout-join-classes
+  class={{layout-join-classes
     'layout-cluster'
     (layout-class-if @position 'right' 'layout-cluster--right')
     (layout-class-if @position 'spaced' 'layout-cluster--spaced')
@@ -29,6 +28,7 @@
       @fullWidthOnMobile true 'layout-cluster--full-width-on-mobile'
     )
     (layout-class-if @noWrap true 'layout-cluster--no-wrap')
+    (layout-class-if @fullHeight true 'layout-cluster--full-height')
     (layout-class-if @verticalAlign 'top' 'layout-cluster--top')
     (layout-class-if @verticalAlign 'bottom' 'layout-cluster--bottom')
     (layout-class-if @verticalAlign 'stretch' 'layout-cluster--stretch')

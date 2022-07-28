@@ -125,6 +125,15 @@
                 @options={{array 'top' 'bottom' 'stretch'}}
               />
             </Item>
+
+            <Item>
+              <ConfigOption
+                @label='@fullHeight'
+                @value={{this.clusterFullHeight}}
+                @onChange={{fn this.updateProperty 'clusterFullHeight'}}
+                @options={{array true}}
+              />
+            </Item>
           </Layout::Cluster>
         </StackItem>
 
@@ -135,6 +144,7 @@
             @position={{this.clusterPosition}}
             @verticalAlign={{this.clusterVerticalAlign}}
             @fullWidthOnMobile={{this.clusterFullWidthOnMobile}}
+            @fullHeight={{this.clusterFullHeight}}
             @noWrap={{this.clusterNoWrap}}
             as |Item|
           >
