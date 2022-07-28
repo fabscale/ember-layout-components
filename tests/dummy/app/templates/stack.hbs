@@ -184,5 +184,46 @@
       </Layout::Stack>
     </SectionItem>
 
+    <SectionItem>
+      <h3>
+        Grow item
+      </h3>
+
+      <p>
+        Note that this will require the stack to be a specified height (e.g.
+        full height) to have an effect.
+      </p>
+
+      <Layout::Stack as |StackItem|>
+        <StackItem>
+          <CodeBlock @code={{this.stackCodeGrow}} @language='handlebars' />
+        </StackItem>
+        <StackItem>
+          {{! template-lint-disable no-inline-styles }}
+          <div style='height: 20rem; background: lightgrey'>
+            <Layout::Stack
+              @gap={{this.stackGap}}
+              @withSeparator={{this.stackWithSeparator}}
+              @fullHeight={{true}}
+              as |Item|
+            >
+              <Item>
+                <DemoItem />
+              </Item>
+              <Item>
+                <DemoItem />
+              </Item>
+              <Item>
+                <DemoItem />
+              </Item>
+              <Item @grow={{true}}>
+                <DemoItem />
+              </Item>
+            </Layout::Stack>
+          </div>
+        </StackItem>
+      </Layout::Stack>
+    </SectionItem>
+
   </Layout::Stack>
 </Layout::Wrapper>

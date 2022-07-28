@@ -86,6 +86,10 @@
   margin-bottom: auto;
 }
 
+.layout-stack-item--grow {
+  flex-grow: 1;
+}
+
 /* Cluster */
 .layout-cluster {
   --cluster-gap-size: var(--layout-cluster-gap);
