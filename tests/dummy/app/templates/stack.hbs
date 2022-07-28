@@ -59,13 +59,24 @@
                 @options={{array true}}
               />
             </Item>
+
+            <Item>
+              <ConfigOption
+                @label='@fullHeight'
+                @value={{this.stackFullHeight}}
+                @onChange={{fn this.updateProperty 'stackFullHeight'}}
+                @options={{array true}}
+              />
+            </Item>
           </Layout::Cluster>
         </StackItem>
 
         <StackItem>
           <Layout::Stack
             @gap={{this.stackGap}}
-            @withSeparator={{this.stackWithSeparator}} as |Item|
+            @withSeparator={{this.stackWithSeparator}}
+            @fullHeight={{this.stackFullHeight}}
+            as |Item|
           >
             <Item>
               <DemoItem />

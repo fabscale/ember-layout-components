@@ -66,6 +66,10 @@
   --stack-gap-size: calc(var(--layout-stack-gap) * 3);
 }
 
+.layout-stack--full-height {
+  height: 100%;
+}
+
 .layout-stack--with-separator > .layout-stack-item:not(:last-child) {
   padding-bottom: var(--stack-gap-size);
   border-bottom: 1px solid var(--layout-stack-separator-color);
