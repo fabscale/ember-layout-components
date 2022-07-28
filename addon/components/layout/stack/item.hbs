@@ -1,4 +1,8 @@
 <div
-  class="layout-stack-item"
+  class={{layout-join-classes
+    'layout-stack-item'
+    (layout-class-if @float 'bottom' 'layout-stack-item--bottom')
+    (layout-class-if @float 'center' 'layout-stack-item--center')
+  }}
   ...attributes
 >{{yield}}</div>
