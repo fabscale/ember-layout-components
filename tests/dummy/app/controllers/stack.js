@@ -31,4 +31,11 @@ export default class StackController extends Controller {
   <Item>Third item</Item>
   <Item @float="center">Fourth item</Item>
 </Layout::Stack>`;
+
+  stackCodeGrow = `<Layout::Stack @fullHeight={{true}} as |Item|>
+  <Item>First item</Item>
+  <Item>Second item</Item>
+  <Item>Third item</Item>
+  <Item @grow={{true}}>Fourth item</Item>
+</Layout::Stack>`;
 }

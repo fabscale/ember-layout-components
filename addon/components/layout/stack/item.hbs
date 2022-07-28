@@ -3,6 +3,7 @@
     'layout-stack-item'
     (layout-class-if @float 'bottom' 'layout-stack-item--bottom')
     (layout-class-if @float 'center' 'layout-stack-item--center')
+    (layout-class-if @grow true 'layout-stack-item--grow')
   }}
   ...attributes
 >{{yield}}</div>
