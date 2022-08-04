@@ -13,9 +13,9 @@ Based on [every-layout.dev](https://every-layout.dev/).
 
 ## Compatibility
 
-- Ember.js v3.20 or above
-- Ember CLI v3.20 or above
-- Node.js v12 or above
+* Ember.js v3.24 or above
+* Ember CLI v3.24 or above
+* Node.js v14 or above
 
 This addon makes use of some modern CSS features, which means that browser support might be limited:
 
