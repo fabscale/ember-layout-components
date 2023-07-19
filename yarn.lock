@@ -1781,6 +1781,13 @@
   dependencies:
     "@simple-dom/interface" "^1.4.0"
 
+"@glimmer/interfaces@0.84.3":
+  version "0.84.3"
+  resolved "https://registry.yarnpkg.com/@glimmer/interfaces/-/interfaces-0.84.3.tgz#629777a4abe373b0785656f6c8d08989f5784805"
+  integrity sha512-dk32ykoNojt0mvEaIW6Vli5MGTbQo58uy3Epj7ahCgTHmWOKuw/0G83f2UmFprRwFx689YTXG38I/vbpltEjzg==
+  dependencies:
+    "@simple-dom/interface" "^1.4.0"
+
 "@glimmer/low-level@0.78.2":
   version "0.78.2"
   resolved "https://registry.yarnpkg.com/@glimmer/low-level/-/low-level-0.78.2.tgz#bca5f666760ce98345e87c5b3e37096e772cb2de"
@@ -1903,6 +1910,16 @@
     "@handlebars/parser" "~2.0.0"
     simple-html-tokenizer "^0.5.11"
 
+"@glimmer/syntax@^0.84.3":
+  version "0.84.3"
+  resolved "https://registry.yarnpkg.com/@glimmer/syntax/-/syntax-0.84.3.tgz#4045a1708cef7fd810cff42fe6deeba40c7286d0"
+  integrity sha512-ioVbTic6ZisLxqTgRBL2PCjYZTFIwobifCustrozRU2xGDiYvVIL0vt25h2c1ioDsX59UgVlDkIK4YTAQQSd2A==
+  dependencies:
+    "@glimmer/interfaces" "0.84.3"
+    "@glimmer/util" "0.84.3"
+    "@handlebars/parser" "~2.0.0"
+    simple-html-tokenizer "^0.5.11"
+
 "@glimmer/tracking@~1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@glimmer/tracking/-/tracking-1.1.2.tgz#74e71be07b0a7066518d24044d2665d0cf8281eb"
@@ -1927,6 +1944,15 @@
   dependencies:
     "@glimmer/env" "0.1.7"
     "@glimmer/interfaces" "0.84.2"
+    "@simple-dom/interface" "^1.4.0"
+
+"@glimmer/util@0.84.3":
+  version "0.84.3"
+  resolved "https://registry.yarnpkg.com/@glimmer/util/-/util-0.84.3.tgz#9ae0166982c0b48aa94b02d6ba8c2c81976ade4b"
+  integrity sha512-qFkh6s16ZSRuu2rfz3T4Wp0fylFj3HBsONGXQcrAdZjdUaIS6v3pNj6mecJ71qRgcym9Hbaq/7/fefIwECUiKw==
+  dependencies:
+    "@glimmer/env" "0.1.7"
+    "@glimmer/interfaces" "0.84.3"
     "@simple-dom/interface" "^1.4.0"
 
 "@glimmer/util@^0.44.0":
@@ -2391,6 +2417,13 @@
   integrity sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==
   dependencies:
     "@types/ms" "*"
+
+"@types/ember-qunit@^6.1.1":
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/@types/ember-qunit/-/ember-qunit-6.1.1.tgz#8350944aced173024135d9ae2b7e55105c44564e"
+  integrity sha512-1g5A3vPKhvB/CuN/EP9rBLXYaJOjzKyLYWeBtNDEQNkTuG1dAo/Hg0CCixgbBgLlzaDP8mR/n1xpg8HqQ8SUKg==
+  dependencies:
+    ember-qunit "*"
 
 "@types/eslint-scope@^3.7.3":
   version "3.7.3"
@@ -3192,6 +3225,11 @@ babel-import-util@^1.3.0:
   resolved "https://registry.yarnpkg.com/babel-import-util/-/babel-import-util-1.3.0.tgz#dc9251ea39a7747bd586c1c13b8d785a42797f8e"
   integrity sha512-PPzUT17eAI18zn6ek1R3sB4Krc/MbnmT1MkZQFmyhjoaEGBVwNABhfVU9+EKcDSKrrOm9OIpGhjxukx1GCiy1g==
 
+babel-import-util@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/babel-import-util/-/babel-import-util-2.0.0.tgz#99a2e7424bcde01898bc61bb19700ff4c74379a3"
+  integrity sha512-pkWynbLwru0RZmA9iKeQL63+CkkW0RCP3kL5njCtudd6YPUKb5Pa0kL4fb3bmuKn2QDBFwY5mvvhEK/+jv2Ynw==
+
 babel-loader@^8.0.6:
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.2.2.tgz#9363ce84c10c9a40e6c753748e1441b60c8a0b81"
@@ -3243,6 +3281,14 @@ babel-plugin-ember-template-compilation@^2.0.0:
   integrity sha512-d+4jaB2ik0rt9TH0K9kOlKJeRBHEb373FgFMcU9ZaJL2zYuVXe19bqy+cWlLpLf1tpOBcBG9QTlFBCoImlOt1g==
   dependencies:
     babel-import-util "^1.3.0"
+
+babel-plugin-ember-template-compilation@^2.0.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-ember-template-compilation/-/babel-plugin-ember-template-compilation-2.1.1.tgz#215c6e983617d514811361a521d61ca4f81450df"
+  integrity sha512-vwEUw7qfwAgwUokQc5xMxrcJMhCu2dVvDDMIXFyOpXwxt+kqZ2FKvXFV+rJjYchIgHH5rBduEtt4Qk1qeZ6RDA==
+  dependencies:
+    "@glimmer/syntax" "^0.84.3"
+    babel-import-util "^2.0.0"
 
 babel-plugin-filter-imports@^4.0.0:
   version "4.0.0"
@@ -5145,6 +5191,43 @@ ember-auto-import@^2.2.4, ember-auto-import@^2.6.0, ember-auto-import@^2.6.3, em
     typescript-memoize "^1.0.0-alpha.3"
     walk-sync "^3.0.0"
 
+ember-auto-import@^2.6.1:
+  version "2.6.3"
+  resolved "https://registry.yarnpkg.com/ember-auto-import/-/ember-auto-import-2.6.3.tgz#f18d1b93dd10b08ba5496518436f9d56dd4e000a"
+  integrity sha512-uLhrRDJYWCRvQ4JQ1e64XlSrqAKSd6PXaJ9ZsZI6Tlms9T4DtQFxNXasqji2ZRJBVrxEoLCRYX3RTldsQ0vNGQ==
+  dependencies:
+    "@babel/core" "^7.16.7"
+    "@babel/plugin-proposal-class-properties" "^7.16.7"
+    "@babel/plugin-proposal-decorators" "^7.16.7"
+    "@babel/preset-env" "^7.16.7"
+    "@embroider/macros" "^1.0.0"
+    "@embroider/shared-internals" "^2.0.0"
+    babel-loader "^8.0.6"
+    babel-plugin-ember-modules-api-polyfill "^3.5.0"
+    babel-plugin-ember-template-compilation "^2.0.1"
+    babel-plugin-htmlbars-inline-precompile "^5.2.1"
+    babel-plugin-syntax-dynamic-import "^6.18.0"
+    broccoli-debug "^0.6.4"
+    broccoli-funnel "^3.0.8"
+    broccoli-merge-trees "^4.2.0"
+    broccoli-plugin "^4.0.0"
+    broccoli-source "^3.0.0"
+    css-loader "^5.2.0"
+    debug "^4.3.1"
+    fs-extra "^10.0.0"
+    fs-tree-diff "^2.0.0"
+    handlebars "^4.3.1"
+    js-string-escape "^1.0.1"
+    lodash "^4.17.19"
+    mini-css-extract-plugin "^2.5.2"
+    parse5 "^6.0.1"
+    resolve "^1.20.0"
+    resolve-package-path "^4.0.3"
+    semver "^7.3.4"
+    style-loader "^2.0.0"
+    typescript-memoize "^1.0.0-alpha.3"
+    walk-sync "^3.0.0"
+
 ember-auto-import@~2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/ember-auto-import/-/ember-auto-import-2.6.0.tgz#c7a2f799c9b700d74648cb02e35cf7bc1b44ac02"
@@ -5572,6 +5655,21 @@ ember-prism@~0.13.0:
     ember-cli-node-assets "^0.2.2"
     prismjs "^1.22.0"
     prismjs-glimmer "^1.1.1"
+
+ember-qunit@*:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/ember-qunit/-/ember-qunit-7.0.0.tgz#658aa51dcb376b5eda7fa77c83be89aaf0bedbd1"
+  integrity sha512-KhrndHYEXsHnXvmsGyJLJQ6VCudXaRs5dzPZBsdttZJIhsB6PmYAvq2Q+mh3GRDT/59T/sRDrB3FD3/lATS8aA==
+  dependencies:
+    broccoli-funnel "^3.0.8"
+    broccoli-merge-trees "^3.0.2"
+    common-tags "^1.8.0"
+    ember-auto-import "^2.6.1"
+    ember-cli-babel "^7.26.11"
+    ember-cli-test-loader "^3.0.0"
+    resolve-package-path "^4.0.3"
+    silent-error "^1.1.1"
+    validate-peer-dependencies "^2.2.0"
 
 ember-qunit@~6.2.0:
   version "6.2.0"
