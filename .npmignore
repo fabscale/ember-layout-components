@@ -12,6 +12,7 @@
 /.env*
 /.eslintcache
 /.eslintignore
+/.eslintrc.js
 /.git/
 /.github/
 /.gitignore
