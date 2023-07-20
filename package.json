@@ -36,6 +36,7 @@
     "@babel/core": "~7.22.1",
     "@babel/eslint-parser": "~7.22.5",
     "@ember/optional-features": "~2.0.0",
+    "@ember/string": "^3.1.1",
     "@ember/test-helpers": "~2.9.3",
     "@embroider/test-setup": "~1.8.3",
     "@glimmer/component": "~1.1.2",
@@ -54,7 +55,7 @@
     "ember-prism": "~0.13.0",
     "ember-qunit": "~5.1.5",
     "ember-resolver": "~8.0.3",
-    "ember-source": "~4.12.0",
+    "ember-source": "~5.1.2",
     "ember-source-channel-url": "~3.0.0",
     "ember-template-lint": "~4.17.0",
     "ember-try": "~2.0.0",
@@ -75,7 +76,7 @@
     "edition": "octane"
   },
   "volta": {
-    "node": "16.13.0",
+    "node": "16.14.2",
     "yarn": "1.22.17"
   },
   "resolutions": {
