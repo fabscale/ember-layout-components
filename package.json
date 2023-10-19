@@ -58,7 +58,7 @@
     "ember-source": "~5.3.0",
     "ember-source-channel-url": "~3.0.0",
     "ember-template-lint": "~5.11.1",
-    "ember-try": "~2.0.0",
+    "ember-try": "~3.0.0",
     "eslint": "~8.50.0",
     "fabscale-eslint-config": "~1.6.0",
     "loader.js": "~4.7.0",
