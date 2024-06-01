@@ -10692,10 +10692,10 @@ qunit-dom@~2.0.0:
     ember-cli-babel "^7.23.0"
     ember-cli-version-checker "^5.1.1"
 
-qunit@~2.20.0:
-  version "2.20.0"
-  resolved "https://registry.yarnpkg.com/qunit/-/qunit-2.20.0.tgz#66a404a0142781316bbda91535869ce5671555b1"
-  integrity sha512-N8Fp1J55waE+QG1KwX2LOyqulZUToRrrPBqDOfYfuAMkEglFL15uwvmH1P4Tq/omQ/mGbBI8PEB3PhIfvUb+jg==
+qunit@~2.21.0:
+  version "2.21.0"
+  resolved "https://registry.yarnpkg.com/qunit/-/qunit-2.21.0.tgz#c3d35adb1c9df8176459665f2daf33170c0f8662"
+  integrity sha512-kJJ+uzx5xDWk0oRrbOZ3zsm+imPULE58ZMIrNl+3POZl4a1k6VXj2E4OiqTmZ9j6hh9egE3kNgnAti9Q+BG6Yw==
   dependencies:
     commander "7.2.0"
     node-watch "0.7.3"
