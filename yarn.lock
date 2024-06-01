@@ -2235,14 +2235,14 @@
     "@pnpm/network.ca-file" "^1.0.1"
     config-chain "^1.1.11"
 
-"@release-it-plugins/lerna-changelog@~5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@release-it-plugins/lerna-changelog/-/lerna-changelog-5.0.0.tgz#cbbbc47fd40ef212f2d7c0e24867d3fcea4cd232"
-  integrity sha512-nMhAUptKSfIsiY0c//HuBcd2VT7D/IoxAQNwRgPx+jf3FM7HA5KD4KSl3oLoz4uA4GjvypWQP4ODX8UbWjmUZA==
+"@release-it-plugins/lerna-changelog@~7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@release-it-plugins/lerna-changelog/-/lerna-changelog-7.0.0.tgz#0f89abc015d8617331dc68f91d581e04af516aa8"
+  integrity sha512-IGHKdcUCyQ5ibtfkF2AQNMrMtyWF1aigic/ZWHPbD77B2zCcymzsyzVskhrGnHVeZGoOOG3vqGuE6U2INz8k6w==
   dependencies:
     execa "^5.1.1"
     lerna-changelog "^2.2.0"
-    lodash.template "^4.5.0"
+    lodash "^4.17.21"
     mdast-util-from-markdown "^1.2.0"
     tmp "^0.2.1"
     validate-peer-dependencies "^2.0.0"
