@@ -33,7 +33,7 @@
     "ember-cli-htmlbars": "^6.1.0"
   },
   "devDependencies": {
-    "@babel/core": "~7.25.2",
+    "@babel/core": "~7.26.0",
     "@babel/eslint-parser": "~7.25.1",
     "@ember/optional-features": "~2.1.0",
     "@ember/string": "^3.1.1",
